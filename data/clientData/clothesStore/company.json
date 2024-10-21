@@ -1,0 +1,57 @@
+[
+    {
+        "name" : "Clothes Store",
+        "description": "Ecomerse de ropa",
+
+        "image": "",
+        "icon": "",
+        "heroBackgroundImage": "",
+
+        "whatsapp": "123456789",
+        "address": "Calle 1 # 2 - 3",
+
+        "horarios": [
+            {
+                "day": "Monday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Tuesday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Wednesday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Thursday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Friday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Saturday",
+                "hours": "9:00 - 18:00"
+            },
+            {
+                "day": "Sunday",
+                "hours": "9:00 - 18:00"
+            }
+        ],
+        
+        "socialNetworks": [
+            {
+                "name": "Facebook",
+                "link": "www.facebook.com"
+            },
+            {
+                "name": "Instagram",
+                "link": "www.instagram.com"
+            }
+        ],
+
+        "store": "./clientData/clothesStore/products.json"
+    }
+]

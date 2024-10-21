@@ -1,0 +1,33 @@
+[
+    {
+        "company": "ClothesStore",
+        "description": "Ecomerse de ropa",
+        "url": "./clientData/ClothesStore/company.json"
+    },
+    {
+        "company": "foodStore",
+        "description": "Ecomerse de comida",
+        "url": "./clientData/foodStore/company.json"
+    },
+    {
+        "company": "gameStore",
+        "description": "Ecomerse de videojuegos",
+        "url": "./clientData/gameStore/company.json"
+    },
+    {
+        "company": "hippieStore",
+        "description": "Ecomerse de cosas hippies",
+        "url": "./clientData/hippieStore/company.json"
+    },
+    {
+        "company": "icecreamMenu",
+        "description": "Menu de heladeria",
+        "url": "./clientData/icecreamMenu/company.json"
+    },
+    {
+        "company": "restoMenu",
+        "description": "Menu para restaurantes",
+        "url": "./clientData/hippieStore/company.json"
+    }
+    
+]
