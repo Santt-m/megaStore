@@ -7,7 +7,7 @@
     --background-color: rgba(255, 255, 255, 0.13);
 
     --primary-color: #42b883;
-    --primary-color-hover: #5cd39f;
+    --primary-color-hover: #93bd21;
 
     --secondary-color: #0c478a;
     --secondary-color-hover: #2b5d5d;
@@ -58,7 +58,7 @@ body {
 /* nav */
 header {
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     padding: 0px 10px 0px 0px;
 
     position: fixed;
@@ -113,18 +113,19 @@ nav {
 nav a {
     padding: 10px;
     width: 100%;
+    height: auto;
     text-align: center;
     color: var(--primary-color);
     font-size: var(--secondary-font-size);
     font-weight: var(--secondary-font-weight);
     letter-spacing: var(--secondary-letter-spacing);
-
+    border-radius: var(--std-borderRadius);
     transition: all 0.5s ease;
 }
 
 nav a:hover {
     color: var(--primary-color-hover);
-    font-weight: var(--secondary-font-weightHover)
+    box-shadow: var(--std-box-shadow);
 }
 
 #navBtnCont {
@@ -202,7 +203,9 @@ section {
     nav {
         /* desktop style */
         width: 80%;
-        height: 100%;
+        height: 90%;
+        box-shadow: none;
+        padding: 10px;
         position: static;
 
         display: flex;

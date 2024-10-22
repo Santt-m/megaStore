@@ -29,5 +29,5 @@ export function init () {
     });
 };
 
-init();
-
+// Init al cargar el dom
+document.addEventListener('DOMContentLoaded', init);
