@@ -12,23 +12,47 @@
 
 <body>
 
-    <head>
+    <header>
+        <div class="logoContainer">
+            <img src="./src/components/header/logo.png" alt="Mega Store logo">
+        </div>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="#secExamples">Ejemplos</a>
+            <a href="#secBenefits">Beneficios</a>
+            <a href="#secContact">Contacto</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./store.html">Store</a>
+            <a href="./contact.html">Contacto</a>
+        </nav>
+        <div id="cartMenu">
 
-    </head>
+        </div>
+        <div id="navBtnCont">
+            <div id="navBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div id="cartBtn">
+                <img src="./src/icon/cart-emply.svg" alt="cart emply icon">
+            </div>
+        </div>
+    </header>
     <main>
         <section class="hero">
             <h1>MegaStore</h1>
             <h2>Crea un ecomerse para tus productos en linea o un menu para tu comercio gastronomico</h2>
             <a href="#" class="btn">Comenzar</a>
         </section>
-        <section class="examples">
+        <section id="secExamples" class="examples">
             <h3>Ejemplos</h3>
             <ol id="examples-list"></ol>
         </section>
-        <section class="benefits">
+        <section id="secBenefits" class="benefits">
             <h3>Beneficios de MegaStore</h3>
         </section>
-        <section class="contact">
+        <section id="secContact" class="contact">
             <h3>Contacto</h3>
             <form>
                 <input type="text" name="name" id="name" placeholder="Nombre">
@@ -53,6 +77,7 @@
         </div>
 
     </footer>
+    <script src="./app.js" type="module"></script>
 </body>
 
 </html>
