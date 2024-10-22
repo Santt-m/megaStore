@@ -22,14 +22,12 @@ export function init () {
         else{
             // forzar cierre cart
             cartMenu.classList.add('dnone')
-            navMenu.classList('active')
-            
-        }
+            // activa el nav
+            navMenu.classList.add('fx-active');
+        };
 
-        
-
-    })
-}
+    });
+};
 
 init();
 

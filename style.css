@@ -7,7 +7,7 @@
     --background-color: rgba(255, 255, 255, 0.13);
 
     --primary-color: #42b883;
-    --primary-color-hover: #339a6d;
+    --primary-color-hover: #5cd39f;
 
     --secondary-color: #0c478a;
     --secondary-color-hover: #2b5d5d;
@@ -21,7 +21,9 @@
     --secondary-font-size: 1.5em;
     /* weight */
     --primary-font-weight: 600;
+    --primary-font-weightHover: 700;
     --secondary-font-weight: 400;
+    --secondary-font-weightHover: 600;
     /* letter-spacing */
     --primary-lletter-spacing: 1.5px;
     --secondary-letter-spacing: 1px;
@@ -54,10 +56,14 @@ body {
 }
 
 /* nav */
-header{
+header {
     width: 100%;
     height: 10vh;
     padding: 0px 10px 0px 0px;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
 
     display: flex;
     flex-direction: row;
@@ -67,44 +73,70 @@ header{
     background-color: var(--secondary-color);
     box-shadow: var(--std-box-shadow);
 }
-.logoContainer{
-   padding-left: 10px;
+
+.logoContainer {
+    padding-left: 10px;
     width: 20%;
     height: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.logoContainer img{
+
+.logoContainer img {
     width: auto;
     max-height: 75px;
     border-radius: var(--std-borderRadius);
 }
-nav{
-    width: 50%;
-    height: 100%;
+
+nav {
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+
+    /* mobile style */
+    padding: 10px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 10vh;
+
+    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    background-color: var(--secondary-color);
+
+    transition: all 0.5s ease;
+
 }
-nav a{
+
+nav a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
     color: var(--primary-color);
     font-size: var(--secondary-font-size);
     font-weight: var(--secondary-font-weight);
     letter-spacing: var(--secondary-letter-spacing);
+
+    transition: all 0.5s ease;
 }
 
-#navBtnCont{
-    width: 20%;
-    
+nav a:hover {
+    color: var(--primary-color-hover);
+    font-weight: var(--secondary-font-weightHover)
+}
+
+#navBtnCont {
+    width: auto;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 15px;
 }
-#navBtn{
+
+#navBtn {
     width: 30px;
     height: 30px;
 
@@ -117,22 +149,26 @@ nav a{
 
     transition: all 1s ease;
 }
-#navBtn:hover{
+
+#navBtn:hover {
     justify-content: space-around;
 }
-.bar{
+
+.bar {
     width: 90%;
     height: 2px;
     background-color: var(--primary-color);
     border-radius: 25px;
 }
-#cartBtn{
+
+#cartBtn {
     display: none;
     width: 30px;
     height: 30px;
 }
 
 main {
+    margin-top: 10vh;
     width: 100%;
     max-width: 1440px;
     padding: 10px;
@@ -144,7 +180,7 @@ main {
 }
 
 section {
-    background: var(--background-color) ;
+    background: var(--background-color);
     box-shadow: var(--std-box-shadow);
 
     backdrop-filter: blur(20px);
@@ -157,22 +193,74 @@ section {
 /* mediaqueries tablet 968px */
 
 @media (min-width: 768px) {
-    nav{
+
+}
+
+/* mediaqueries desktop 1000px */
+
+@media (min-width: 1000px) {
+    nav {
+        /* desktop style */
+        width: 80%;
+        height: 100%;
+        position: static;
+
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        background-color: var(--secondary-color);
+
+    }
+    nav a{
+        width: auto;
     }
     #navBtn{
         display: none;
     }
 }
 
-
 /* animaciones */
-.fx-active{
+.fx-active {
+    display: flex;
+    animation: SlideInTop 0.5s ease 0s 1 normal forwards;
 
+    box-shadow: var(--std-box-shadow);
+}
+
+.fx-close {
+    animation: SlideInBottom 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes SlideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideInBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
 }
 
 /* styles generales */
 
-.dnone{
+.dnone {
     display: none;
 }
