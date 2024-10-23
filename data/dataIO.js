@@ -1,26 +1,17 @@
-import modal from '../src/js/modal.js'
-
-// Exportar funciones para ser usadas en otras partes de la aplicación
-module.exports = {
-    loadDataList,               // return datalist.json
-    getStoreData,               // return los datos de un store
-    loadCompanyData,            // return company.json de un input store
-    loadProducts,
-    filterStoresByDescription,
-    updateStoreData
-};
-
-
-const fs = require('fs').promises;
+// dataIO.js
 
 // Cargar todo el archivo dataList.json
 async function loadDataList() {
     try {
-        const data = await fs.readFile('./data/dataList.json', 'utf-8');
-        return JSON.parse(data);
+        const response = await fetch('./data/dataList.json'); // Cambiamos fs por fetch
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; // Retorna el contenido de dataList.json como un objeto JavaScript
     } catch (err) {
         console.error('Error al cargar dataList.json:', err);
-        return null;
+        return null; // Retorna null en caso de error
     }
 }
 
@@ -30,12 +21,12 @@ async function getStoreData(storeName) {
     if (dataList) {
         const storeData = dataList.find(store => store.company === storeName);
         if (storeData) {
-            return storeData;
+            return storeData; // Retorna un objeto con los datos de la tienda
         } else {
             console.error(`No se encontró la tienda: ${storeName}`);
         }
     }
-    return null;
+    return null; // Retorna null si no se encuentra la tienda
 }
 
 // Cargar el archivo company.json de una tienda específica
@@ -43,14 +34,18 @@ async function loadCompanyData(storeName) {
     const storeData = await getStoreData(storeName);
     if (storeData) {
         try {
-            const data = await fs.readFile(storeData.url, 'utf-8');
-            return JSON.parse(data);
+            const response = await fetch(storeData.url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data; // Retorna el contenido de company.json como un objeto JavaScript
         } catch (err) {
             console.error(`Error al cargar ${storeName}/company.json:`, err);
-            return null;
+            return null; // Retorna null en caso de error
         }
     } else {
-        return null;
+        return null; // Retorna null si no se encuentra la tienda
     }
 }
 
@@ -59,15 +54,19 @@ async function loadProducts(storeName) {
     const companyData = await loadCompanyData(storeName);
     if (companyData && companyData.store) {
         try {
-            const data = await fs.readFile(companyData.store, 'utf-8');
-            return JSON.parse(data);
+            const response = await fetch(companyData.store);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data; // Retorna el contenido de products.json como un objeto JavaScript
         } catch (err) {
             console.error(`Error al cargar productos de ${storeName}:`, err);
-            return null;
+            return null; // Retorna null en caso de error
         }
     } else {
         console.log(`${storeName} no tiene productos asociados.`);
-        return null;
+        return null; // Retorna null si no hay productos asociados
     }
 }
 
@@ -75,23 +74,17 @@ async function loadProducts(storeName) {
 async function filterStoresByDescription(description) {
     const dataList = await loadDataList();
     if (dataList) {
-        return dataList.filter(store => store.description.includes(description));
+        return dataList.filter(store => store.description.includes(description)); // Retorna un array de tiendas que coinciden con la descripción
     }
-    return [];
+    return []; // Retorna un array vacío si no hay coincidencias
 }
 
-// Actualizar los datos de company.json de una tienda
-async function updateStoreData(storeName, newData) {
-    const storeData = await getStoreData(storeName);
-    if (storeData) {
-        try {
-            await fs.writeFile(storeData.url, JSON.stringify(newData, null, 2), 'utf-8');
-            console.log('Datos actualizados correctamente.');
-        } catch (err) {
-            console.error(`Error al actualizar ${storeName}/company.json:`, err);
-        }
-    } else {
-        console.error('No se encontró la tienda solicitada.');
-    }
-}
-
+// Exportar funciones para ser usadas en otras partes de la aplicación
+// Agregar estas funciones al objeto global para poder accederlas desde otros scripts
+window.dataIO = {
+    loadDataList,
+    getStoreData,
+    loadCompanyData,
+    loadProducts,
+    filterStoresByDescription,
+};

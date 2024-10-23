@@ -1,10 +1,12 @@
 import "./src/components/header/header.js"
+import "./src/js/index.js"
 import modal from "./src/js/modal.js"
 
 const examplesList = document.getElementById('examples-list');
 
 function examplesInit (){
-    
+    // index.html
+     
 }
 
 
