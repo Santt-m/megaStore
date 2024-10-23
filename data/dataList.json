@@ -1,33 +1,32 @@
 [
     {
         "company": "ClothesStore",
-        "description": "Ecomerse de ropa",
+        "description": "Ecommerce de ropa",
         "url": "./clientData/ClothesStore/company.json"
     },
     {
         "company": "foodStore",
-        "description": "Ecomerse de comida",
+        "description": "Ecommerce de comida",
         "url": "./clientData/foodStore/company.json"
     },
     {
         "company": "gameStore",
-        "description": "Ecomerse de videojuegos",
+        "description": "Ecommerce de videojuegos",
         "url": "./clientData/gameStore/company.json"
     },
     {
         "company": "hippieStore",
-        "description": "Ecomerse de cosas hippies",
+        "description": "Ecommerce de cosas hippies",
         "url": "./clientData/hippieStore/company.json"
     },
     {
         "company": "icecreamMenu",
-        "description": "Menu de heladeria",
+        "description": "Menú de heladería",
         "url": "./clientData/icecreamMenu/company.json"
     },
     {
         "company": "restoMenu",
-        "description": "Menu para restaurantes",
-        "url": "./clientData/hippieStore/company.json"
+        "description": "Menú para restaurantes",
+        "url": "./clientData/restoMenu/company.json"
     }
-    
 ]
