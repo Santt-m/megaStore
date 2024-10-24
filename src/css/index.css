@@ -27,7 +27,12 @@
     width: 95%;
     min-height: 200px;
     height: auto;
-
+    padding: 10px;
+    overflow-x: auto; /* scroll en eje x */
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
     border: 1px solid var(--std-borderColor);
     border-radius: var(--std-borderRadius);
 
@@ -36,7 +41,23 @@
     align-items: center;
     gap: 10px;
 }
+#examples-list::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
+#examples-list .store-card{
+    min-width: 250px;
+    height: 170px;
+    padding: 10px;
 
+    border: 5px solid var(--std-borderColor);
+    border-radius: var(--std-borderRadius);
+    box-shadow: var(--std-box-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #secBenefits{
     width: 100%;
@@ -76,6 +97,8 @@
 
     background-color: var(--secondary-color);
 }
+
+
 
 @keyframes move {
     100% {

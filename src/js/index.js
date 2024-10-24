@@ -1,42 +1,33 @@
-// Importamos las funciones de dataIO.js
-import * as dataIO from '../../data/dataIO.js';
+import { loadDataList } from '../../data/dataIO.js';  // Importamos dataIO
 
 // Función para renderizar las tarjetas en el <ol> con id "examples-list"
 async function renderStoreCards() {
-    // Cargamos los datos de las tiendas desde dataList.json
-    const stores = await dataIO.loadDataList();
-    console.log('Stores:', stores); // Verificar los datos cargados
+    try {
+        const stores = await loadDataList();  // Cargar los datos de la lista
 
-    // Obtenemos el elemento <ol> donde se renderizarán las tarjetas
-    const examplesList = document.getElementById('examples-list');
-    console.log('Examples List Element:', examplesList); // Verificar el elemento
+        const examplesList = document.getElementById('examples-list');
+        examplesList.innerHTML = '';  // Limpiamos cualquier contenido previo
 
-    if (stores && stores.length > 0) {
-        // Recorremos cada tienda en stores y generamos las tarjetas
-        stores.forEach(store => {
-            console.log('Store Data:', store); // Verificar cada tienda
-
-            // Crear un elemento <li> para la tarjeta
-            const card = document.createElement('li');
-            card.classList.add('store-card'); // Clase para estilizar la tarjeta
-            
-            // Plantilla HTML para el contenido de la tarjeta
-            card.innerHTML = `
-                <div class="card">
-                    <h3>${store.company}</h3>
-                    <p>${store.description}</p>
-                    <a href="${store.url}" class="btn">Ver más</a>
-                </div>
-            `;
-
-            // Añadir la tarjeta al <ol> con id "examples-list"
-            examplesList.appendChild(card);
-        });
-    } else {
-        // Si no se encontraron tiendas, mostramos un mensaje
-        examplesList.innerHTML = '<li>No se encontraron tiendas disponibles.</li>';
+        if (stores && stores.length > 0) {
+            stores.forEach(store => {
+                const card = document.createElement('li');
+                card.classList.add('store-card');  // Clase para estilizar la tarjeta
+                
+                card.innerHTML = `
+                        <h3>${store.company}</h3>
+                        <p>${store.description}</p>
+                        <a href="store.html?storeName=${store.company}" class="btn">Ver más</a>
+                `;
+                examplesList.appendChild(card);
+            });
+        } else {
+            examplesList.innerHTML = '<li>No se encontraron tiendas disponibles.</li>';
+        }
+    } catch (error) {
+        console.error("Error cargando las tiendas: ", error);
+        document.getElementById('examples-list').innerHTML = '<li>Error cargando tiendas.</li>';
     }
 }
 
-// Llamamos a la función para renderizar las tarjetas
+// Cuando el DOM está cargado, renderizamos las tarjetas
 document.addEventListener('DOMContentLoaded', renderStoreCards);

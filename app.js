@@ -1,21 +1,28 @@
 import "./src/components/header/header.js"
-import "./src/js/index.js"
 import modal from "./src/js/modal.js"
 
-const examplesList = document.getElementById('examples-list');
+// Función para detectar qué página está activa y cargar el script correspondiente
+function loadPageScript() {
+    const currentPage = window.location.pathname;
 
-function examplesInit (){
-    // index.html
-     
+    if (currentPage.includes('index.html')) {
+        import('./src/js/index.js').then(module => {
+            console.log('Script de Index cargado');
+        });
+    } else if (currentPage.includes('store.html')) {
+        import('./src/js/store.js').then(module => {
+            console.log('Script de Store cargado');
+        });
+    } else if (currentPage.includes('menu.html')) {
+        import('./src/js/menu.js').then(module => {
+            console.log('Script de Menu cargado');
+        });
+    }
 }
 
-
-function init (){
-    console.log('app init')
-}
 
 // Inicia la app 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', loadPageScript);
 
 
 

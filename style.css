@@ -1,5 +1,5 @@
 @import url(./src/css/index.css);
-
+@import url(./src/css/store.css);
 
 :root {
     /* Paleta de colores */
@@ -34,6 +34,7 @@
     --font-p-weight: 500;
     --font-p-letter-spacing: 1px;
 
+    --primary-font-color-hover: #011b05;
 
     /* Bordes y sombras */
     --std-borderRadius: 10px;
@@ -50,6 +51,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
     color: var(--font-Color);
 }
 
@@ -189,6 +191,7 @@ main {
     margin-top: 12vh;
     width: 100%;
     max-width: 1440px;
+    min-height: 90vh;
     padding: 10px;
 
     display: flex;
@@ -374,4 +377,32 @@ footer .ContIcons img {
 
 .dnone {
     display: none;
+}
+
+.btn{
+    width: 100%;
+    max-width: 150px;
+    padding: 5px;
+
+    border: 2px solid green;
+    border-radius: var(--std-borderRadius);
+    background-color: var(--primary-color);
+    box-shadow: var(--std-box-shadow);
+    text-align: center;
+    color: var(--font-p-color);
+    font-size: var(--font-p-size);
+    font-weight: var(--font-p-weight);
+    letter-spacing: var(--font-p-letter-spacing);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.btn:hover{
+    background-color: var(--primary-color-hover);
+    color: var(--primary-font-color-hover);
+    box-shadow: var(--std-hover-box-shadow);
 }
