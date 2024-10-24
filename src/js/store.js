@@ -27,8 +27,6 @@ async function loadStore() {
 
         renderCompanySection(companyData);
 
-        try {
-    try {
     const productsData = await loadProducts(storeName);
     if (!productsData || productsData.length === 0) {
         console.log(`No hay productos disponibles para la tienda ${storeName}.`);
@@ -36,17 +34,11 @@ async function loadStore() {
         console.log("Datos de productos cargados:", productsData); // Verificamos si se cargan los productos
         renderProductSection(productsData); // Esta función manejará la visualización de productos
     }
-} catch (error) {
+    } catch (error) {
     console.error(error);
     displayError(`Error al cargar los productos de la tienda ${storeName}`);
-}
-
-} catch (error) {
-    console.error(error);
-    displayError(`Error al cargar los productos de la tienda ${storeName}`);
-}
-
-}
+    }
+};
 
 // Función para mostrar error en el main
 function displayError(message) {
