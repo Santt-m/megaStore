@@ -1,33 +1,33 @@
-import { loadDataList } from '../../data/dataIO.js';  // Importamos dataIO
+// ./src/js/index.js
 
-// Función para renderizar las tarjetas en el <ol> con id "examples-list"
-async function renderStoreCards() {
-    try {
-        const stores = await loadDataList();  // Cargar los datos de la lista
+// Importa las funciones de dataIO.js
+import { fetchDataList } from '../../data/dataIO.js';
 
-        const examplesList = document.getElementById('examples-list');
-        examplesList.innerHTML = '';  // Limpiamos cualquier contenido previo
+document.addEventListener("DOMContentLoaded", async () => {
+    const examplesList = document.getElementById("examples-list");
 
-        if (stores && stores.length > 0) {
-            stores.forEach(store => {
-                const card = document.createElement('li');
-                card.classList.add('store-card');  // Clase para estilizar la tarjeta
-                
-                card.innerHTML = `
-                        <h3>${store.company}</h3>
-                        <p>${store.description}</p>
-                        <a href="store.html?storeName=${store.company}" class="btn">Ver más</a>
-                `;
-                examplesList.appendChild(card);
-            });
-        } else {
-            examplesList.innerHTML = '<li>No se encontraron tiendas disponibles.</li>';
-        }
-    } catch (error) {
-        console.error("Error cargando las tiendas: ", error);
-        document.getElementById('examples-list').innerHTML = '<li>Error cargando tiendas.</li>';
+    if (!examplesList) {
+        console.error("No se encontró el elemento examples-list");
+        return;
     }
-}
 
-// Cuando el DOM está cargado, renderizamos las tarjetas
-document.addEventListener('DOMContentLoaded', renderStoreCards);
+    // Carga los datos desde dataList.json
+    const dataList = await fetchDataList();
+
+    // Genera una tarjeta para cada tienda en dataList
+    dataList.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        
+        // Genera el contenido HTML de la tarjeta
+        card.innerHTML = `
+            <h3>${item.company}</h3>
+            <p>${item.description}</p>
+            <a href="${item.url}" target="_blank">Ver tienda</a>
+        `;
+
+        // Agrega la tarjeta al contenedor examples-list
+        examplesList.appendChild(card);
+        console.log(card);
+    });
+});
