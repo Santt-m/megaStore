@@ -41,7 +41,7 @@
     --std-borderRadius: 25px;
     --std-borderColor: #333;
     --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    --std-hover-box-shadow: 0 8px 15px rgba(170, 153, 3, 0.2);
+    --std-hover-box-shadow: 0 4px 10px rgba(170, 153, 3, 0.2);
 
 
 }
