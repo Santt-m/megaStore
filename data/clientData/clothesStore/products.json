@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Camiseta",
+        "price": 19.99,
+        "description": "Camiseta de algodón"
+    },
+    {
+        "id": 2,
+        "name": "Pantalones",
+        "price": 39.99,
+        "description": "Pantalones de mezclilla"
+    }
+]

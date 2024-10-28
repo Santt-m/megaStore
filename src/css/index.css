@@ -57,8 +57,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
 
+    transition: all 0.5s ease;
+}
+#examples-list .store-card:hover{
+    box-shadow: var(--std-box-shadow-hover);
+}
 #secBenefits{
     width: 100%;
     height: 30vh;
