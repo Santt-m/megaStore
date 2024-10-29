@@ -6,7 +6,7 @@
       "name": "Brochetas",
       "description": "Brochetas frescas con rúcula, queso y tomate cherry, sazonadas con orégano. Perfectas para un bocado saludable.",
       "price": 2000,
-      "image": "./productsData/1/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/1/img0.jpg",
       "promo": true,
       "alcoholic": false
     },
@@ -17,7 +17,7 @@
       "name": "Ñoquis de espinaca",
       "description": "Ñoquis caseros hechos con espinaca fresca. Un plato lleno de sabor y nutrientes.",
       "price": 3000,
-      "image": "./productsData/2/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/2/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -28,7 +28,7 @@
       "name": "Ñoquis de remolacha",
       "description": "Ñoquis de remolacha, suaves y coloridos, con un toque dulce y terroso. ¡Ideal para algo diferente!",
       "price": 3000,
-      "image": "./productsData/3/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/3/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -39,7 +39,7 @@
       "name": "Tarta de verdura",
       "description": "Tarta de verdura con masa casera, queso gratinado y una mezcla de acelga, cebolla y pimientos.",
       "price": 7000,
-      "image": "./productsData/4/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/4/img0.jpg",
       "promo": true,
       "alcoholic": false
     },
@@ -50,7 +50,7 @@
       "name": "Aros de cebolla",
       "description": "Crocantes aros de cebolla, fritos a la perfección. Un snack irresistible.",
       "price": 3000,
-      "image": "./productsData/5/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/5/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -61,7 +61,7 @@
       "name": "Papas fritas",
       "description": "Papas fritas doradas y crujientes. El acompañamiento perfecto para cualquier comida.",
       "price": 3000,
-      "image": "./productsData/6/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/6/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -72,7 +72,7 @@
       "name": "Tarta Frutal individual",
       "description": "Tarta frutal individual con una base crujiente y un relleno cremoso, decorada con frutas frescas.",
       "price": 4700,
-      "image": "./productsData/7/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/7/img0.jpg",
       "promo": true,
       "alcoholic": false
     },
@@ -83,7 +83,7 @@
       "name": "Tarta Frutal Grande",
       "description": "Tarta frutal grande, ideal para compartir, con frutas frescas y una base crujiente.",
       "price": 9000,
-      "image": "./productsData/8/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/8/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -94,7 +94,7 @@
       "name": "Tarta Frutal Mediana",
       "description": "Tarta frutal mediana, equilibrada en tamaño y sabor, con una mezcla de frutas frescas.",
       "price": 7000,
-      "image": "./productsData/9/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/9/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -105,7 +105,7 @@
       "name": "Pasta Frola grande",
       "description": "Pasta Frola grande con dulce de membrillo y una masa suave. Un clásico irresistible.",
       "price": 8000,
-      "image": "./productsData/10/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/10/img0.jpg",
       "promo": true,
       "alcoholic": false
     },
@@ -116,7 +116,7 @@
       "name": "Pasta Frola chica",
       "description": "Pasta Frola chica con dulce de membrillo, perfecta para un postre individual.",
       "price": 4500,
-      "image": "./productsData/11/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/11/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -127,7 +127,7 @@
       "name": "Pasta Frola grande",
       "description": "Pasta Frola grande con masa casera y relleno de dulce de membrillo. Ideal para compartir.",
       "price": 8000,
-      "image": "./productsData/12/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/12/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -138,7 +138,7 @@
       "name": "Tarta de ricota chica",
       "description": "Tarta de ricota chica, suave y cremosa, con un toque de limón. Perfecta para un bocado dulce.",
       "price": 3500,
-      "image": "./productsData/13/img0.jpg",
+      "image": "./data/clientData/foodStore/productsData/13/img0.jpg",
       "promo": false,
       "alcoholic": false
     },
@@ -149,7 +149,7 @@
       "name": "Coca Cola",
       "description": "Refresco de cola.",
       "price": 1500,
-      "image": "./productsData/1/img0.webp",
+      "image": "./data/clientData/foodStore/productsData/14/img0.webp",
       "promo": true,
       "alcoholic": false
     },
@@ -160,7 +160,7 @@
       "name": "Pepsi",
       "description": "Refresco de cola.",
       "price": 1400,
-      "image": "./productsData/2/img0.webp",
+      "image": "./data/clientData/foodStore/productsData/15/img0.webp",
       "promo": false,
       "alcoholic": false
     },
@@ -171,7 +171,7 @@
       "name": "Corona",
       "description": "Cerveza rubia mexicana.",
       "price": 3000,
-      "image": "./productsData/3/img0.webp",
+      "image": "./data/clientData/foodStore/productsData/16/img0.webp",
       "promo": true,
       "alcoholic": true
     },
@@ -182,7 +182,7 @@
       "name": "Heineken",
       "description": "Cerveza rubia holandesa.",
       "price": 3500,
-      "image": "./productsData/4/img0.webp",
+      "image": "./data/clientData/foodStore/productsData/17/img0.webp",
       "promo": false,
       "alcoholic": true
     },
@@ -193,7 +193,7 @@
       "name": "Jugo de Naranja",
       "description": "Jugo natural de naranja.",
       "price": 2000,
-      "image": "./productsData/5/img0.webp",
+      "image": "./data/clientData/foodStore/productsData/18/img0.webp",
       "promo": true,
       "alcoholic": false
     }

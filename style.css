@@ -1,10 +1,12 @@
 @import url(./src/css/index.css);
 @import url(./src/css/store.css);
 @import url(./src/css/modal.css);
+
+/* Variables globales */
 :root {
     /* Paleta de colores */
-    --bodybackgroundcolor: #727171;
-    --background-color: rgba(255, 255, 255, 0.13);
+    --bodybackgroundcolor: #fcf5f5;
+    --background-color: rgba(255, 255, 255, 0);
 
     --primary-color: #42b883;
     --primary-color-hover: #93bd21;
@@ -28,8 +30,11 @@
     --primary-lletter-spacing: 1.5px;
     --secondary-letter-spacing: 1px;
 
-    --font-Color: #fffdfd;
-    --font-p-color: #f1ebeb;
+    --font-Color: #412e2e;
+    
+    --font-p-color: #000000;
+    --font-p-color-hover: #1eff00;
+
     --font-p-size: 14px;
     --font-p-weight: 500;
     --font-p-letter-spacing: 1px;
@@ -181,8 +186,15 @@ nav a:hover {
 }
 
 #cartBtn {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+
+    transition: all 0.5s ease;
+}
+#cartBtn:hover{
+    scale: 1.1;
 }
 
 main {
@@ -200,13 +212,9 @@ main {
 
 section {
     background: var(--background-color);
-    box-shadow: var(--std-box-shadow);
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(116, 102, 102, 0.418);
-
-    border-radius: var(--std-borderRadius);
 }
 
 

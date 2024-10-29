@@ -3,9 +3,9 @@
         "name" : "Food Store",
         "description": "Ecomerse de comida",
 
-        "image": "",
+        "image": "./data/clientData/foodStore/logo.jpeg",
         "icon": "",
-        "heroBackgroundImage": "",
+        "heroBackgroundImage": "./data/clientData/foodStore/hero_background.webp",
 
         "whatsapp": "",
         "address": "",
