@@ -1,7 +1,8 @@
-// Importa las funciones de dataIO.js
+// Importa las funciones necesarias
 import { loadCompanyData, loadProducts, fetchDataList } from '../../../data/dataIO.js';
 import Modal from './modal.js';
-import { renderCompanySection } from './companyCard.js'; // Asegúrate de importar la función
+import { renderCompanySection } from './companyCard.js'; 
+import { renderProductSections } from './productsCard.js'; // Importa renderProductSections para la sección de productos
 
 // Función para obtener el parámetro "store" de la URL
 function getStoreFromURL() {
@@ -42,13 +43,17 @@ async function loadStore() {
         if (productsData && Array.isArray(productsData) && productsData.length > 0) {
             renderProductSections(productsData); // Llama a la función para renderizar productos
         } else {
-            throw new Error(`No hay productos disponibles para la tienda: ${storeName}`);
+            console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
+            // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal
+            const emptyProductsSection = document.createElement('section');
+            emptyProductsSection.classList.add('product-section');
+            emptyProductsSection.innerHTML = `<p>No hay productos disponibles para la tienda: ${storeName}</p>`;
+            main.appendChild(emptyProductsSection);
         }
     } catch (error) {
         displayErrorModal(`Error al cargar la tienda: ${error.message}`);
     }
 }
-
 
 // Función para mostrar un modal de error
 function displayErrorModal(message) {

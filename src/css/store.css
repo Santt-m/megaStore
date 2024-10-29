@@ -1,19 +1,8 @@
-section{
-    width: 100%;
-    min-height: 200px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
 /* company */
 #secCompany{
-    margin-top: 10vh;
+    margin-top: 2vh;
     width: 95%;
-    height: 90vh;
+    min-height: 30vh;
     max-height: 500px;
     padding: 20px;
 
@@ -22,7 +11,28 @@ section{
     justify-content: space-between;
     align-items: center;
 }
+.socialNetworksList{
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1%;
+}
+.socialNetworksList li{
+    padding: 5px;
 
+    border-radius: 100%;
+    box-shadow: var(--std-box-shadow);
+}
+.socialNetworksList li:hover{
+    box-shadow: var(--std-box-shadow-hover);
+}
+.socialNetworksList img{
+    width: 30px;
+    height: 30px;
+}
 #companySocialNetworks{
     width: 100%;
     padding: 5px;
@@ -35,26 +45,28 @@ section{
 }
 
 #secCompany .companyDesc{
-    border: 1px solid black;
-
     width: 100%;
     padding: 5px;
-
+    border: 1px solid var(--std-borderColor);
+    border-radius: var(--std-borderRadius);
     display: flex;
     flex-direction: column;
     gap: 1px;
+
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.5s ease;
 }
 #secCompany .companyHeader{
-    border: 1px solid black;
-
-    width: 100%;
+    position: relative;
+    top: -80px;
+    width: 75%;
+    margin-left: 50px;
     padding: 5px;
     text-align: center;
 }
-#secCompany .companyLogoCont{
+#secCompany .companyLogo{
     width: 50px;
     height: 75px;
-    padding: 5px;
 
     position: relative;
     top: -50px;
@@ -66,18 +78,23 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-#secCompany .companyLogoCont img{
-    width: 25px;
-    height: 50px;
-}
 
+    transition: all 0.5s ease;
+}
+#secCompany .companyLogo:hover{
+    border-color: var(--std-borderColorHover);
+}
 #secCompany .companyInfo{
     border: 1px solid blue;
 
     width: 100%;
-    min-height: 100px;
-
+    min-height: 200px;
+}
+#secCompany .companyInfo p{
+    color: var(--secondary-color);
+    font-size: var(--secondary-font-size);
+    font-weight: var(--secondary-font-weight);
+    letter-spacing: var(--secondary-letter-spacing);
 }
 #secCompany .companyActions{
     width: 100%;
@@ -88,6 +105,58 @@ section{
     align-items: center;
     gap: 1%;
 }
+
+/* Estilos para la tabla de horarios en el modal */
+.horariosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.horariosTable th, .horariosTable td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--std-borderColor);
+}
+
+.horariosTable th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.horariosTable td {
+    background-color: #f9f9f9;
+}
+
+.horariosTable tr:hover {
+    background-color: #e0e0e0;
+}
+/* Estilos para la tabla de redes sociales en el modal */
+.socialNetworksTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.socialNetworksTable th, .socialNetworksTable td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--std-borderColor);
+}
+
+.socialNetworksTable th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.socialNetworksTable td {
+    background-color: #f9f9f9;
+}
+
+.socialNetworksTable tr:hover {
+    background-color: #e0e0e0;
+}
+
 
 /* products */
 
@@ -117,11 +186,14 @@ section{
 
 /* Contenedor de filtros */
 .filter-container {
+    padding: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+
+    box-shadow: var(--std-box-shadow);
 }
 
 /* Botones de filtro */
@@ -298,6 +370,8 @@ section{
     color: var(--font-p-color);
     font-weight: var(--font-p-weight);
 
+    box-shadow: var(--std-box-shadow);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,6 +384,7 @@ section{
     background-color: rgba(255, 0, 0, 1);
     font-weight: 800;
     color: var(--font-p-color-hover);
+    box-shadow: var(--std-box-shadow-hover);
 }
 
 /* Responsividad para pantallas pequeñas */

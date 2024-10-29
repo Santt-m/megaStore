@@ -20,7 +20,7 @@
     --secondary-font-color: #0036e9;
     /* size */
     --primary-font-size: 2em;
-    --secondary-font-size: 1.5em;
+    --secondary-font-size: 20px;
     /* weight */
     --primary-font-weight: 600;
     --primary-font-weightHover: 700;
@@ -45,8 +45,9 @@
     --std-borderRadius: 10px;
     --std-borderRadius: 25px;
     --std-borderColor: #333;
+    --std-borderColorHover: #93bd21;
     --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    --std-hover-box-shadow: 0px 2px 10px rgba(170, 153, 3, 0.473);
+    --std-box-shadow-hover: 0px 2px 10px rgba(170, 153, 3, 0.473);
 
 
 }
@@ -412,3 +413,4 @@ footer .ContIcons img {
     color: var(--primary-font-color-hover);
     box-shadow: var(--std-hover-box-shadow);
 }
+
