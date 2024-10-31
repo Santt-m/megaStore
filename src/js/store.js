@@ -1,4 +1,5 @@
 // store.js
+import "../components/header/header.js";
 
 // Importa las funciones necesarias
 import { loadCompanyData, loadProducts, fetchDataList, fetchStoreFile } from '../../../data/dataIO.js'; // Importa fetchStoreFile
@@ -58,9 +59,9 @@ async function loadStore() {
             }
 
             renderProductSections(productsData); // Llama a la función para renderizar productos
-            renderCart(productsData); // Renderiza el carrito con los datos de productos
-            initCart(productsData); // Inicializa el carrito con los datos de productos
-            initUser(productsData, whatsappNumber); // Inicializa los datos del usuario y el pedido
+            renderCart(productsData, storeName); // Renderiza el carrito con los datos de productos y storeName
+            initCart(productsData, storeName); // Inicializa el carrito con los datos de productos y storeName
+            initUser(productsData, whatsappNumber, storeName); // Inicializa los datos del usuario y el pedido con storeName
         } else {
             console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
             // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal

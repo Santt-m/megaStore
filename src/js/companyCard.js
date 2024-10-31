@@ -111,13 +111,13 @@ function getStoreStatus(horarios) {
 
     if (currentTime >= openTime && currentTime <= closeTime) {
         if (minutesToClose <= 30) {
-            return `<p>Estado del local: Pronto a cerrar</p>`;
+            return `<p>Dejaremos de atender pronto</p>`;
         }
-        return `<p>Estado del local: Abierto</p>`;
+        return `<p>Estamos atendiendo</p>`;
     } else if (currentTime < openTime) {
-        return `<p>Estado del local: Pronto a abrir</p>`;
+        return `<p>Comenzaremos a atender pronto</p>`;
     } else {
-        return `<p>Estado del local: Cerrado</p>`;
+        return `<p>No estamos atendiendo ahora</p>`;
     }
 }
 
@@ -142,13 +142,13 @@ function getDeliveryStatus(envios) {
 
     if (currentTime >= openTime && currentTime <= closeTime) {
         if (minutesToClose <= 30) {
-            return `<p>Estado de envíos: Pronto a dejar de recibir pedidos</p>`;
+            return `<p>Pronto a dejar de recibir pedidos</p>`;
         }
-        return `<p>Estado de envíos: Disponible</p>`;
+        return `<p>Envíos Disponible</p>`;
     } else if (currentTime < openTime) {
-        return `<p>Estado de envíos: Pronto a iniciar</p>`;
+        return `<p>Envios disponible en breve</p>`;
     } else {
-        return `<p>Estado de envíos: No disponible</p>`;
+        return `<p>Envios no disponible ahora</p>`;
     }
 }
 

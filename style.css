@@ -4,42 +4,33 @@
 
 /* Variables globales */
 :root {
-    /* Paleta de colores */
     --body-background-color: #fcf5f5;
     --background-color: rgba(255, 255, 255, 0);
-
     --primary-color: #42b883;
     --primary-color-hover: #93bd21;
-
     --secondary-color: #0c478a;
     --secondary-color-hover: #2b5d5d;
-
-    /* Tipografía */
     --primary-font-color: #333;
     --secondary-font-color: #0036e9;
-    --primary-font-size: 1.5em; /* Ajuste de tamaño para mejor legibilidad */
-    --secondary-font-size: 18px; /* Ajuste de tamaño para mejor legibilidad */
+    --primary-font-size: 1.5em;
+    --secondary-font-size: 18px;
     --primary-font-weight: 600;
     --primary-font-weight-hover: 700;
     --secondary-font-weight: 400;
     --secondary-font-weight-hover: 600;
-    --primary-letter-spacing: 1.2px; /* Ajuste de espaciado para mejor legibilidad */
+    --primary-letter-spacing: 1.2px;
     --secondary-letter-spacing: 1px;
-
     --font-color: #412e2e;
     --font-p-color: #000000;
     --font-p-color-hover: #1eff00;
-    --font-p-size: 16px; /* Ajuste de tamaño para mejor legibilidad */
+    --font-p-size: 16px;
     --font-p-weight: 500;
     --font-p-letter-spacing: 1px;
-
     --primary-font-color-hover: #011b05;
-
-    /* Bordes y sombras */
-    --std-border-radius: 8px; /* Ajuste de radio para mejor estética */
+    --std-border-radius: 8px;
     --std-border-color: #333;
     --std-border-color-hover: #93bd21;
-    --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajuste de sombra para mejor estética */
+    --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     --std-box-shadow-hover: 0px 2px 10px rgba(170, 153, 3, 0.473);
 }
 
@@ -72,17 +63,14 @@ p {
 header {
     width: 100%;
     min-height: 10vh;
-    padding: 0px 10px 0px 0px;
-
+    padding: 0 10px 0 0;
     position: fixed;
     top: 0;
     z-index: 99;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     background-color: var(--secondary-color);
     box-shadow: var(--std-box-shadow);
 }
@@ -104,23 +92,17 @@ header {
 
 nav {
     display: none;
-
-    /* mobile style */
     padding: 10px;
     width: 100%;
     z-index: 100;
     position: fixed;
     top: 10vh;
-
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 10px;
-
     background-color: var(--secondary-color);
-
     transition: all 0.5s ease;
-
 }
 
 nav a {
@@ -143,7 +125,6 @@ nav a:hover {
 
 #navBtnCont {
     width: auto;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -153,14 +134,12 @@ nav a:hover {
 #navBtn {
     width: 30px;
     height: 30px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
     cursor: pointer;
-
     transition: all 1s ease;
 }
 
@@ -180,18 +159,18 @@ nav a:hover {
     height: 40px;
     padding: 5px;
     margin-right: 10px;
-    position: relative; /* Añadir posición relativa para el contador */
+    position: relative;
     transition: all 0.5s ease;
 }
 
 #cartBtn:hover {
-    transform: scale(1.1); /* Cambiar 'scale' a 'transform' */
+    transform: scale(1.1);
 }
 
 #cartCount {
-    position: absolute; /* Cambiar a posición absoluta */
-    top: -10px; /* Ajustar la posición */
-    right: -10px; /* Ajustar la posición */
+    position: absolute;
+    top: -10px;
+    right: -10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -216,25 +195,65 @@ nav a:hover {
 
 #cartMenu {
     display: none;
-    position: fixed; /* Cambiar a posición fija */
+    position: fixed;
     top: 10vh;
-    right: 0; /* Alinear a la derecha */
+    right: 0;
     width: 100%;
     height: 90vh;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.514);
-    z-index: 100; /* Asegurar que esté por encima de otros elementos */
+    z-index: 100;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#cartMenu.show {
+    display: flex;
+    opacity: 1;
 }
 
 #cartCont {
+    margin: 10px;
     width: 100%;
     height: 90%;
-    max-width: 400px; /* Reducir el ancho máximo */
-    padding: 10px; /* Aumentar el padding */
-    background-color: #ffffff; /* Cambiar el color de fondo */
-    box-shadow: var(--std-box-shadow); /* Añadir sombra */
-    border-radius: var(--std-border-radius); /* Añadir borde redondeado */
-    overflow-y: auto; /* Añadir scroll vertical */
+    max-width: 400px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: var(--std-box-shadow);
+    border-radius: var(--std-border-radius);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+#cartCont.show {
+    transform: translateX(0);
+}
+
+#cartCont.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+#cartCont.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
 }
 
 .cartHeader {
@@ -245,7 +264,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    border-bottom: 1px solid #ccc; /* Añadir borde inferior */
+    border-bottom: 1px solid #ccc;
 }
 
 .cartHeader .btn {
@@ -268,14 +287,14 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Aumentar el espacio entre elementos */
-    padding: 10px; /* Añadir padding */
+    gap: 10px;
+    padding: 10px;
 }
 
 #cartList {
     width: 100%;
-    max-width: 100%; /* Ajustar el ancho máximo */
-    height: auto; /* Ajustar la altura */
+    max-width: 100%;
+    height: auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -308,22 +327,22 @@ nav a:hover {
 }
 
 .cart-item .product-controls {
-    width: auto; /* Ajustar el ancho */
+    width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px; /* Añadir espacio entre botones */
+    gap: 5px;
 }
 
 .cart-item img {
-    width: 60px; /* Reducir el tamaño de la imagen */
-    height: 60px; /* Reducir el tamaño de la imagen */
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: var(--std-border-radius);
 }
 
 .cart-item-details {
-    flex: 1; /* Permitir que el contenedor de detalles ocupe el espacio disponible */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -332,7 +351,7 @@ nav a:hover {
 }
 
 .cart-item-details p {
-    margin: 0; /* Eliminar márgenes */
+    margin: 0;
 }
 
 .remove-item {
@@ -369,7 +388,6 @@ main {
     max-width: 1440px;
     min-height: 90vh;
     padding: 10px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -378,19 +396,14 @@ main {
 
 section {
     background: var(--background-color);
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
 }
 
-
-
 /* footer */
-
 footer {
     width: 100%;
     min-height: 20vh;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -421,45 +434,35 @@ footer .footerMid {
 footer .ContIcons {
     width: 100%;
     max-width: 200px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
-
     gap: 5px;
 }
 
 footer .ContIcons a {
     min-width: 110px;
     padding: 10px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
-
     color: var(--font-p-color);
     font-size: var(--font-p-size);
     font-weight: var(--font-p-weight);
     letter-spacing: var(--font-p-letter-spacing);
-
     border: 1px solid var(--std-border-color);
     border-radius: var(--std-border-radius);
-    letter-spacing: var(--font-p-letter-spacing);
-
     background: rgba(8, 58, 252, 0.5);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(8, 58, 252, 0.29);
-
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
 footer .ContIcons a:hover {
     color: var(--primary-color-hover);
-
-    /* From https://css.glass */
     background: rgb(8, 106, 252);
     box-shadow: var(--std-box-shadow-hover);
     backdrop-filter: blur(20px);
@@ -473,29 +476,23 @@ footer .ContIcons img {
 }
 
 /* mediaqueries tablet 968px */
-
 @media (min-width: 768px) {}
 
 /* mediaqueries desktop 1000px */
-
 @media (min-width: 1024px) {
     nav {
-        /* desktop style */
         width: 80%;
         height: 90%;
         box-shadow: none;
         padding: 10px;
         position: static;
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         gap: 10px;
-
         background-color: var(--secondary-color);
-
     }
 
     nav a {
@@ -511,7 +508,6 @@ footer .ContIcons img {
 .fx-active {
     display: flex;
     animation: SlideInTop 0.5s ease 0s 1 normal forwards;
-
     box-shadow: var(--std-box-shadow);
 }
 
@@ -534,7 +530,7 @@ footer .ContIcons img {
 @keyframes SlideInBottom {
     0% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     100% {
@@ -544,7 +540,6 @@ footer .ContIcons img {
 }
 
 /* styles generales */
-
 .dnone {
     display: none;
 }
@@ -553,9 +548,8 @@ footer .ContIcons img {
     display: flex !important;
 }
 
-.btn{
+.btn {
     padding: 10px;
-
     border: 2px solid green;
     border-radius: var(--std-border-radius);
     background-color: var(--primary-color);
@@ -565,25 +559,24 @@ footer .ContIcons img {
     font-size: var(--font-p-size);
     font-weight: var(--font-p-weight);
     letter-spacing: var(--font-p-letter-spacing);
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
     transition: all 0.5s ease;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: var(--primary-color-hover);
     color: var(--primary-font-color-hover);
     box-shadow: var(--std-box-shadow-hover);
 }
 
-.icon{
+.icon {
     width: 30px;
     height: 30px;
 }
 
-vercel-live-feedback{
+vercel-live-feedback {
     display: none !important;
 }

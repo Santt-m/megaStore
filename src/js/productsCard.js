@@ -125,8 +125,6 @@ function crearProductCard(producto, productsData) { // Asegúrate de pasar produ
         </div>
     `;
 
-    console.log(`Imagen cargada: ${producto.image}`); // Verificar la ruta de la imagen
-
     // Eventos para sumar y restar productos en el carrito
     card.querySelector('.btn-sumar').addEventListener('click', () => {
         agregarAlCarrito(producto.id); // No es necesario pasar productsData aquí

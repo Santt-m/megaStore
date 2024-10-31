@@ -1,57 +1,52 @@
 [
     {
-        "name" : "Restaurante Menu",
+        "name": "Restaurante Menu",
         "description": "Menu del restaurant",
-
-        "image": "",
-        "icon": "",
-        "heroBackgroundImage": "",
-
-        "whatsapp": "",
+        "image": "https://picsum.photos/200",
+        "icon": "https://picsum.photos/50",
+        "heroBackgroundImage": "https://picsum.photos/800/400",
+        "whatsapp": "+1111111111",
         "address": "",
-
         "horarios": [
             {
-                "day": "Monday",
+                "day": "Lunes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Tuesday",
+                "day": "Martes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Wednesday",
+                "day": "Miércoles",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Thursday",
+                "day": "Jueves",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Friday",
+                "day": "Viernes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Saturday",
+                "day": "Sábado",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Sunday",
+                "day": "Domingo",
                 "hours": "9:00 - 18:00"
             }
         ],
-        
         "socialNetworks": [
             {
                 "name": "Facebook",
-                "link": "www.facebook.com"
+                "link": "https://www.facebook.com"
             },
             {
                 "name": "Instagram",
-                "link": "www.instagram.com"
+                "link": "https://www.instagram.com"
             }
         ],
-
-        "menu":"./clientData/restoMenu/products.json"
+        "menu": "./clientData/restoMenu/products.json"
     }
 ]

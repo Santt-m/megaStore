@@ -1,11 +1,12 @@
-import Modal from './modal.js'; // Importar Modal
+import Modal from './modal.js';
 
 let productsDataGlobal = []; // Variable global para almacenar los productos
+let currentStoreName = ''; // Variable global para almacenar el nombre de la tienda actual
 
 // Inicializa el carrito desde localStorage
 function obtenerCarrito() {
     try {
-        return JSON.parse(localStorage.getItem('cart')) || {};
+        return JSON.parse(localStorage.getItem(`cart_${currentStoreName}`)) || {};
     } catch (error) {
         console.error('Error al obtener el carrito de localStorage:', error);
         return {};
@@ -22,7 +23,7 @@ export function obtenerCantidadEnCarrito(productId) {
 export function agregarAlCarrito(productId) {
     const cart = obtenerCarrito();
     cart[productId] = (cart[productId] || 0) + 1;
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem(`cart_${currentStoreName}`, JSON.stringify(cart));
     renderCart(); // Renderiza el carrito después de agregar
     resetProductsRenders(); // Actualiza las cantidades en todas las tarjetas de productos
     actualizarContadorCarrito(); // Actualiza el contador del carrito
@@ -43,7 +44,7 @@ export function restarDelCarrito(productId) {
         cart[productId] = Math.max(0, cart[productId] - 1);
         if (cart[productId] === 0) delete cart[productId];
     }
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem(`cart_${currentStoreName}`, JSON.stringify(cart));
     renderCart(); // Renderiza el carrito después de restar
     resetProductsRenders(); // Actualiza las cantidades en todas las tarjetas de productos
     actualizarContadorCarrito(); // Actualiza el contador del carrito
@@ -61,7 +62,7 @@ export function restarDelCarrito(productId) {
 export function eliminarDelCarrito(productId) {
     const cart = obtenerCarrito();
     delete cart[productId];
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem(`cart_${currentStoreName}`, JSON.stringify(cart));
     renderCart(); // Renderiza el carrito después de eliminar
     resetProductsRenders(); // Actualiza las cantidades en todas las tarjetas de productos
     actualizarContadorCarrito(); // Actualiza el contador del carrito
@@ -77,7 +78,7 @@ export function eliminarDelCarrito(productId) {
 
 // Vacía el carrito
 export function vaciarCarrito() {
-    localStorage.removeItem('cart'); // Elimina el carrito del localStorage
+    localStorage.removeItem(`cart_${currentStoreName}`); // Elimina el carrito del localStorage
     renderCart(); // Renderiza el carrito después de vaciar
     resetProductsRenders(); // Actualiza las cantidades en todas las tarjetas de productos
     actualizarContadorCarrito(); // Actualiza el contador del carrito
@@ -188,8 +189,12 @@ function actualizarContadorCarrito() {
     const cart = obtenerCarrito();
     const cartCount = Object.values(cart).reduce((total, count) => total + count, 0);
     const cartSpan = document.getElementById('cartCount');
+    const cartIcon = document.getElementById('cartIcon');
     if (cartSpan) {
         cartSpan.textContent = cartCount; // Actualiza el número de productos en el carrito
+    }
+    if (cartIcon) {
+        cartIcon.src = cartCount > 0 ? './src/icon/cart-full.svg' : './src/icon/cart-emply.svg'; // Cambia el icono del carrito
     }
 }
 
@@ -212,10 +217,20 @@ export function resetProductsRenders() {
 // Función para abrir/cerrar el carrito y mostrar el div correspondiente
 export function toggleCart() {
     const cartMenu = document.getElementById('cartMenu');
-    cartMenu.classList.toggle('show'); // Alterna la clase 'show'
+    const cartCont = document.getElementById('cartCont');
+    const isVisible = cartMenu.classList.contains('show');
 
-    // Renderiza el carrito si está visible
-    if (cartMenu.classList.contains('show')) {
+    if (isVisible) {
+        cartCont.classList.remove('slide-in');
+        cartCont.classList.add('slide-out');
+        setTimeout(() => {
+            cartMenu.classList.remove('show');
+            cartCont.classList.remove('show');
+        }, 500); // Tiempo de la animación
+    } else {
+        cartMenu.classList.add('show');
+        cartCont.classList.add('show', 'slide-in');
+        cartCont.classList.remove('slide-out');
         renderCart(); // Renderiza el carrito al abrir
     }
 }
@@ -233,8 +248,9 @@ function showSection(target) {
 }
 
 // Función para inicializar el carrito
-export function initCart(productsData) {
+export function initCart(productsData, storeName) {
     productsDataGlobal = productsData; // Almacena los datos de productos en la variable global
+    currentStoreName = storeName; // Almacena el nombre de la tienda en la variable global
     renderCart(); // Renderiza el carrito inicialmente
     actualizarContadorCarrito(); // Actualiza el contador del carrito
 }

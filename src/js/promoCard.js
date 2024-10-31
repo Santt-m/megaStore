@@ -10,8 +10,6 @@ export function renderPromoCards(promoData) {
         promoSection.appendChild(promoCard);
     });
 
-    console.log("Sección de promociones creada:", promoSection); // Verifica la sección de promociones
-
     // Agregar animación de desplazamiento
     let scrollInterval;
     let isPaused = false;

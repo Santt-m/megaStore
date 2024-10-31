@@ -6,7 +6,7 @@
         "name": "Camiseta Hippie",
         "description": "Camiseta con diseño hippie.",
         "price": 2500,
-        "image": "./data/clientData/hippieStore/productsData/1/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     },
@@ -17,7 +17,7 @@
         "name": "Collar de Cuentas",
         "description": "Collar hecho a mano con cuentas de colores.",
         "price": 1500,
-        "image": "./data/clientData/hippieStore/productsData/2/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": false,
         "alcoholic": false
     },
@@ -28,7 +28,7 @@
         "name": "Pantalones de Lino",
         "description": "Pantalones de lino cómodos y frescos.",
         "price": 3500,
-        "image": "./data/clientData/hippieStore/productsData/3/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     },
@@ -39,7 +39,7 @@
         "name": "Pulsera de Cuero",
         "description": "Pulsera de cuero con diseño artesanal.",
         "price": 1200,
-        "image": "./data/clientData/hippieStore/productsData/4/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": false,
         "alcoholic": false
     },
@@ -50,7 +50,7 @@
         "name": "Poster Psicodélico",
         "description": "Poster con diseño psicodélico.",
         "price": 2000,
-        "image": "./data/clientData/hippieStore/productsData/5/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     }

@@ -6,7 +6,7 @@
         "name": "Camiseta",
         "description": "Camiseta de algodón",
         "price": 19.99,
-        "image": "./data/clientData/clothesStore/productsData/1/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     },
@@ -17,7 +17,7 @@
         "name": "Pantalones",
         "description": "Pantalones de mezclilla",
         "price": 39.99,
-        "image": "./data/clientData/clothesStore/productsData/2/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": false,
         "alcoholic": false
     },
@@ -28,7 +28,7 @@
         "name": "Vestido de Verano",
         "description": "Vestido de verano ligero y fresco.",
         "price": 29.99,
-        "image": "./data/clientData/clothesStore/productsData/3/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     },
@@ -39,7 +39,7 @@
         "name": "Abrigo de Invierno",
         "description": "Abrigo de invierno cálido y elegante.",
         "price": 79.99,
-        "image": "./data/clientData/clothesStore/productsData/4/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": false,
         "alcoholic": false
     },
@@ -50,7 +50,7 @@
         "name": "Sombrero de Paja",
         "description": "Sombrero de paja ideal para el verano.",
         "price": 15.99,
-        "image": "./data/clientData/clothesStore/productsData/5/img0.jpg",
+        "image": "https://picsum.photos/200",
         "promo": true,
         "alcoholic": false
     }

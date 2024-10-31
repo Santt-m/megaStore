@@ -1,83 +1,99 @@
-#hero{
+#hero {
     width: 100%;
-    height: 30vh;
-
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     text-align: center;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
 }
 
+#hero h1 {
+    font-size: 3em;
+    font-weight: var(--primary-font-weight);
+}
 
+#hero h2 {
+    font-size: 1.5em;
+    font-weight: var(--secondary-font-weight);
+}
 
-#secExamples{
+#hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#secExamples {
     width: 100%;
     min-height: 30vh;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     text-align: center;
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
 }
-#examples-list{
+
+#secExamples h3 {
+    font-size: 2em;
+    color: var(--secondary-font-color);
+}
+
+#secExamples p {
+    font-size: 1.2em;
+    color: var(--font-p-color);
+}
+
+#examples-list {
     width: 95%;
     min-height: 200px;
     height: auto;
     padding: 10px;
-    overflow-x: auto; /* scroll en eje x */
+    overflow-x: auto;
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    
-    border: 1px solid var(--std-borderColor);
-    border-radius: var(--std-borderRadius);
-
+    border: 1px solid var(--std-border-color);
+    border-radius: var(--std-border-radius);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
+
 #examples-list::-webkit-scrollbar {
     display: none;
 }
-#examples-list .store-card{
+
+#examples-list .store-card {
     min-width: 250px;
     height: 170px;
     padding: 10px;
-
-    border: 5px solid var(--std-borderColor);
-    border-radius: var(--std-borderRadius);
+    border: 5px solid var(--std-border-color);
+    border-radius: var(--std-border-radius);
     box-shadow: var(--std-box-shadow);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     transition: all 0.5s ease;
 }
-#examples-list .store-card:hover{
+
+#examples-list .store-card:hover {
     box-shadow: var(--std-box-shadow-hover);
 }
-#secBenefits{
-    width: 100%;
-    height: 30vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-}
-
-
-
-#secContact{
+#secBenefits {
     width: 100%;
     min-height: 30vh;
     padding: 20px;
@@ -87,22 +103,89 @@
     align-items: center;
     gap: 20px;
     text-align: center;
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
 }
-#secContact form{
+
+#secBenefits h3 {
+    font-size: 2em;
+    color: var(--secondary-font-color);
+}
+
+#secBenefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+#secBenefits li {
+    margin: 10px 0;
+    font-size: var(--font-p-size);
+    color: var(--font-p-color);
+}
+
+#secBenefits p {
+    font-size: 1.2em;
+    color: var(--font-p-color);
+    margin-top: 10px;
+}
+
+#secContact {
+    width: 100%;
+    min-height: 30vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+}
+
+#secContact h3 {
+    font-size: 2em;
+    color: var(--secondary-font-color);
+}
+
+#secContact p {
+    font-size: 1.2em;
+    color: var(--font-p-color);
+    margin-bottom: 20px;
+}
+
+#secContact form {
     width: 100%;
     max-width: 400px;
     padding: 20px;
     box-shadow: var(--std-box-shadow);
-    border-radius: var(--std-borderRadius);
-
+    border-radius: var(--std-border-radius);
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     background-color: var(--secondary-color);
 }
 
+#secContact input, #secContact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--std-border-color);
+    border-radius: var(--std-border-radius);
+    font-size: var(--font-p-size);
+}
 
+#secContact input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--font-p-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#secContact input[type="submit"]:hover {
+    background-color: var(--primary-color-hover);
+}
 
 @keyframes move {
     100% {
@@ -133,7 +216,6 @@
     animation-iteration-count: infinite;
 }
 
-
 .background span:nth-child(0) {
     color: #976589;
     top: 48%;
@@ -143,6 +225,7 @@
     transform-origin: -2vw -12vh;
     box-shadow: -2vmin 0 0.9469355342694492vmin currentColor;
 }
+
 .background span:nth-child(1) {
     color: #e05da7;
     top: 15%;
@@ -152,6 +235,7 @@
     transform-origin: -21vw 3vh;
     box-shadow: 2vmin 0 1.1980957316410477vmin currentColor;
 }
+
 .background span:nth-child(2) {
     color: #5800f0;
     top: 91%;
@@ -161,6 +245,7 @@
     transform-origin: -9vw -12vh;
     box-shadow: 2vmin 0 0.412128719125862vmin currentColor;
 }
+
 .background span:nth-child(3) {
     color: #ffc800;
     top: 26%;
@@ -170,6 +255,7 @@
     transform-origin: -13vw 1vh;
     box-shadow: 2vmin 0 0.4582133940855633vmin currentColor;
 }
+
 .background span:nth-child(4) {
     color: #9ae29b;
     top: 46%;
@@ -179,6 +265,7 @@
     transform-origin: -23vw -20vh;
     box-shadow: -2vmin 0 0.3449342288937074vmin currentColor;
 }
+
 .background span:nth-child(5) {
     color: #5800f0;
     top: 37%;
@@ -188,6 +275,7 @@
     transform-origin: 10vw 23vh;
     box-shadow: -2vmin 0 0.584144362608342vmin currentColor;
 }
+
 .background span:nth-child(6) {
     color: #b73687;
     top: 46%;
@@ -197,6 +285,7 @@
     transform-origin: -8vw 3vh;
     box-shadow: 2vmin 0 0.6545341891891279vmin currentColor;
 }
+
 .background span:nth-child(7) {
     color: #f50049;
     top: 93%;
@@ -206,6 +295,7 @@
     transform-origin: -2vw 11vh;
     box-shadow: -2vmin 0 0.48873889293839645vmin currentColor;
 }
+
 .background span:nth-child(8) {
     color: #9ae29b;
     top: 73%;
@@ -215,6 +305,7 @@
     transform-origin: -16vw 20vh;
     box-shadow: -2vmin 0 1.0923210530819802vmin currentColor;
 }
+
 .background span:nth-child(9) {
     color: #f50049;
     top: 15%;
@@ -224,6 +315,7 @@
     transform-origin: -2vw 25vh;
     box-shadow: -2vmin 0 0.6048604048751571vmin currentColor;
 }
+
 .background span:nth-child(10) {
     color: #901d2c;
     top: 49%;
@@ -233,6 +325,7 @@
     transform-origin: 7vw 10vh;
     box-shadow: -2vmin 0 0.27009904881341185vmin currentColor;
 }
+
 .background span:nth-child(11) {
     color: #5800f0;
     top: 44%;
@@ -242,6 +335,7 @@
     transform-origin: 7vw -3vh;
     box-shadow: 2vmin 0 1.0278633424285635vmin currentColor;
 }
+
 .background span:nth-child(12) {
     color: #901d2c;
     top: 50%;
@@ -251,6 +345,7 @@
     transform-origin: 7vw -24vh;
     box-shadow: 2vmin 0 0.9033994696809293vmin currentColor;
 }
+
 .background span:nth-child(13) {
     color: #976589;
     top: 72%;
@@ -260,6 +355,7 @@
     transform-origin: 6vw -24vh;
     box-shadow: 2vmin 0 0.6012071104996097vmin currentColor;
 }
+
 .background span:nth-child(14) {
     color: #ffc800;
     top: 8%;
@@ -269,6 +365,7 @@
     transform-origin: 10vw 15vh;
     box-shadow: 2vmin 0 1.048046076951026vmin currentColor;
 }
+
 .background span:nth-child(15) {
     color: #976589;
     top: 32%;
@@ -278,6 +375,7 @@
     transform-origin: 24vw 14vh;
     box-shadow: -2vmin 0 1.170679309232629vmin currentColor;
 }
+
 .background span:nth-child(16) {
     color: #976589;
     top: 12%;
@@ -287,6 +385,7 @@
     transform-origin: -3vw 12vh;
     box-shadow: -2vmin 0 0.9081796987610635vmin currentColor;
 }
+
 .background span:nth-child(17) {
     color: #b73687;
     top: 44%;
@@ -296,6 +395,7 @@
     transform-origin: -10vw -12vh;
     box-shadow: 2vmin 0 0.7642044471260501vmin currentColor;
 }
+
 .background span:nth-child(18) {
     color: #f50049;
     top: 35%;
@@ -305,6 +405,7 @@
     transform-origin: -18vw -15vh;
     box-shadow: -2vmin 0 1.0692298288985032vmin currentColor;
 }
+
 .background span:nth-child(19) {
     color: #b73687;
     top: 98%;
@@ -314,6 +415,7 @@
     transform-origin: 7vw -1vh;
     box-shadow: 2vmin 0 0.5779393364836545vmin currentColor;
 }
+
 .background span:nth-child(20) {
     color: #f50049;
     top: 87%;
@@ -323,6 +425,7 @@
     transform-origin: 25vw 2vh;
     box-shadow: 2vmin 0 0.6499048593653065vmin currentColor;
 }
+
 .background span:nth-child(21) {
     color: #ffc800;
     top: 31%;
@@ -332,6 +435,7 @@
     transform-origin: 7vw 16vh;
     box-shadow: 2vmin 0 0.7732337672182807vmin currentColor;
 }
+
 .background span:nth-child(22) {
     color: #976589;
     top: 80%;
@@ -341,6 +445,7 @@
     transform-origin: -2vw -9vh;
     box-shadow: -2vmin 0 0.6889219672280116vmin currentColor;
 }
+
 .background span:nth-child(23) {
     color: #b73687;
     top: 15%;
@@ -350,6 +455,7 @@
     transform-origin: -6vw 14vh;
     box-shadow: 2vmin 0 0.5618587636238435vmin currentColor;
 }
+
 .background span:nth-child(24) {
     color: #b73687;
     top: 91%;
@@ -359,6 +465,7 @@
     transform-origin: -15vw 1vh;
     box-shadow: -2vmin 0 0.6745929534714876vmin currentColor;
 }
+
 .background span:nth-child(25) {
     color: #901d2c;
     top: 89%;
@@ -368,6 +475,7 @@
     transform-origin: -14vw 9vh;
     box-shadow: -2vmin 0 0.2582124006678934vmin currentColor;
 }
+
 .background span:nth-child(26) {
     color: #976589;
     top: 6%;
@@ -377,6 +485,7 @@
     transform-origin: -15vw -14vh;
     box-shadow: -2vmin 0 0.6729289778950043vmin currentColor;
 }
+
 .background span:nth-child(27) {
     color: #f50049;
     top: 97%;
@@ -386,6 +495,7 @@
     transform-origin: -14vw 13vh;
     box-shadow: 2vmin 0 0.3973755451264356vmin currentColor;
 }
+
 .background span:nth-child(28) {
     color: #ffc800;
     top: 39%;
@@ -395,6 +505,7 @@
     transform-origin: 1vw 24vh;
     box-shadow: 2vmin 0 0.9662788879686983vmin currentColor;
 }
+
 .background span:nth-child(29) {
     color: #9ae29b;
     top: 90%;
@@ -404,6 +515,7 @@
     transform-origin: 25vw 20vh;
     box-shadow: 2vmin 0 0.7822099405917047vmin currentColor;
 }
+
 .background span:nth-child(30) {
     color: #f50049;
     top: 37%;
@@ -413,6 +525,7 @@
     transform-origin: 23vw -19vh;
     box-shadow: 2vmin 0 0.8191062770845767vmin currentColor;
 }
+
 .background span:nth-child(31) {
     color: #f50049;
     top: 76%;
@@ -422,6 +535,7 @@
     transform-origin: 9vw -24vh;
     box-shadow: 2vmin 0 1.0050126827347048vmin currentColor;
 }
+
 .background span:nth-child(32) {
     color: #ffc800;
     top: 83%;
@@ -431,6 +545,7 @@
     transform-origin: 15vw 12vh;
     box-shadow: -2vmin 0 0.42235986800787617vmin currentColor;
 }
+
 .background span:nth-child(33) {
     color: #e05da7;
     top: 29%;
@@ -440,6 +555,7 @@
     transform-origin: -5vw -11vh;
     box-shadow: -2vmin 0 1.0022349236743073vmin currentColor;
 }
+
 .background span:nth-child(34) {
     color: #5800f0;
     top: 7%;
@@ -449,6 +565,7 @@
     transform-origin: -3vw 21vh;
     box-shadow: -2vmin 0 0.3935677569163787vmin currentColor;
 }
+
 .background span:nth-child(35) {
     color: #e05da7;
     top: 96%;
@@ -458,6 +575,7 @@
     transform-origin: -7vw -17vh;
     box-shadow: 2vmin 0 0.5120940492791837vmin currentColor;
 }
+
 .background span:nth-child(36) {
     color: #b73687;
     top: 95%;
@@ -467,6 +585,7 @@
     transform-origin: 9vw -22vh;
     box-shadow: 2vmin 0 0.3876784463851972vmin currentColor;
 }
+
 .background span:nth-child(37) {
     color: #901d2c;
     top: 79%;
@@ -476,6 +595,7 @@
     transform-origin: -23vw 1vh;
     box-shadow: 2vmin 0 0.8737547497603093vmin currentColor;
 }
+
 .background span:nth-child(38) {
     color: #f50049;
     top: 6%;
@@ -485,6 +605,7 @@
     transform-origin: 22vw -2vh;
     box-shadow: -2vmin 0 0.9340864678580607vmin currentColor;
 }
+
 .background span:nth-child(39) {
     color: #b73687;
     top: 53%;
@@ -494,6 +615,7 @@
     transform-origin: 5vw 19vh;
     box-shadow: -2vmin 0 1.0980028596993459vmin currentColor;
 }
+
 .background span:nth-child(40) {
     color: #901d2c;
     top: 27%;
@@ -503,6 +625,7 @@
     transform-origin: -21vw -13vh;
     box-shadow: 2vmin 0 1.096662154991505vmin currentColor;
 }
+
 .background span:nth-child(41) {
     color: #b73687;
     top: 72%;
@@ -512,6 +635,7 @@
     transform-origin: -24vw -20vh;
     box-shadow: 2vmin 0 0.8487575712483812vmin currentColor;
 }
+
 .background span:nth-child(42) {
     color: #976589;
     top: 5%;
@@ -521,6 +645,7 @@
     transform-origin: 3vw -20vh;
     box-shadow: -2vmin 0 0.6830410946823235vmin currentColor;
 }
+
 .background span:nth-child(43) {
     color: #b73687;
     top: 55%;
@@ -530,6 +655,7 @@
     transform-origin: 23vw -18vh;
     box-shadow: -2vmin 0 1.0856586956279273vmin currentColor;
 }
+
 .background span:nth-child(44) {
     color: #e05da7;
     top: 83%;
@@ -539,6 +665,7 @@
     transform-origin: 24vw 23vh;
     box-shadow: 2vmin 0 0.5185929900533541vmin currentColor;
 }
+
 .background span:nth-child(45) {
     color: #976589;
     top: 70%;
@@ -548,6 +675,7 @@
     transform-origin: -2vw 24vh;
     box-shadow: -2vmin 0 0.5956261008495058vmin currentColor;
 }
+
 .background span:nth-child(46) {
     color: #901d2c;
     top: 78%;
@@ -557,6 +685,7 @@
     transform-origin: -5vw 0vh;
     box-shadow: -2vmin 0 0.45667459574687697vmin currentColor;
 }
+
 .background span:nth-child(47) {
     color: #5800f0;
     top: 42%;
@@ -566,6 +695,7 @@
     transform-origin: 3vw -6vh;
     box-shadow: -2vmin 0 0.7292844749366638vmin currentColor;
 }
+
 .background span:nth-child(48) {
     color: #976589;
     top: 86%;
@@ -575,6 +705,7 @@
     transform-origin: -11vw 1vh;
     box-shadow: 2vmin 0 0.8846567145665263vmin currentColor;
 }
+
 .background span:nth-child(49) {
     color: #ffc800;
     top: 38%;

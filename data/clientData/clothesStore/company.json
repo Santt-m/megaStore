@@ -2,49 +2,49 @@
     {
         "name": "Clothes Store",
         "description": "Ecomerse de ropa",
-        "image": "./data/clientData/clothesStore/logo.jpeg",
-        "icon": "./data/clientData/clothesStore/icon.png",
-        "heroBackgroundImage": "./data/clientData/clothesStore/hero_background.webp",
-        "whatsapp": "123456789",
+        "image": "https://picsum.photos/200",
+        "icon": "https://picsum.photos/50",
+        "heroBackgroundImage": "https://picsum.photos/800/400",
+        "whatsapp": "+1111111111",
         "address": "Calle 1 # 2 - 3",
         "phone": "123456789",
         "email": "info@clothesstore.com",
         "horarios": [
             {
-                "day": "Monday",
+                "day": "Lunes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Tuesday",
+                "day": "Martes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Wednesday",
+                "day": "Miércoles",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Thursday",
+                "day": "Jueves",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Friday",
+                "day": "Viernes",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Saturday",
+                "day": "Sábado",
                 "hours": "9:00 - 18:00"
             },
             {
-                "day": "Sunday",
+                "day": "Domingo",
                 "hours": "9:00 - 18:00"
             }
         ],
         "envios": [
-            { "day": "Monday", "hours": "10:00 - 17:00" },
-            { "day": "Tuesday", "hours": "10:00 - 17:00" },
-            { "day": "Wednesday", "hours": "10:00 - 17:00" },
-            { "day": "Thursday", "hours": "10:00 - 17:00" },
-            { "day": "Friday", "hours": "10:00 - 17:00" }
+            { "day": "Lunes", "hours": "10:00 - 17:00" },
+            { "day": "Martes", "hours": "10:00 - 17:00" },
+            { "day": "Miércoles", "hours": "10:00 - 17:00" },
+            { "day": "Jueves", "hours": "10:00 - 17:00" },
+            { "day": "Viernes", "hours": "10:00 - 17:00" }
         ],
         "socialNetworks": [
             {

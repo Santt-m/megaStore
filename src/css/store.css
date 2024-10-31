@@ -519,9 +519,14 @@ fieldset input[type="radio"] {
 /* Estilos para el modal de versión de muestra */
 .sample-modal-content {
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sample-modal-message {
+    width: 70%;
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;

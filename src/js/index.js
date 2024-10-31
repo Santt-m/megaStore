@@ -1,5 +1,5 @@
-// Importa las funciones de dataIO.js
 import { fetchDataList } from '../../data/dataIO.js';
+import "../components/header/header.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const examplesList = document.getElementById("examples-list");
@@ -28,27 +28,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         examplesList.appendChild(card);
     });
 
-// Parámetros de desplazamiento
-const scrollSpeed = 2; // Ajusta este valor para controlar el avance automático
-let scrollInterval;
+    // Parámetros de desplazamiento
+    const scrollSpeed = 2; // Ajusta este valor para controlar el avance automático
+    let scrollInterval;
 
-function autoScroll() {
-    // Incrementa la posición de desplazamiento sumando scrollSpeed a la posición actual
-    examplesList.scrollLeft += scrollSpeed;
+    function autoScroll() {
+        // Incrementa la posición de desplazamiento sumando scrollSpeed a la posición actual
+        examplesList.scrollLeft += scrollSpeed;
 
-    // Reinicia al principio si llega al final
-    if (examplesList.scrollLeft >= examplesList.scrollWidth - examplesList.clientWidth) {
-        examplesList.scrollLeft = 0;
+        // Reinicia al principio si llega al final
+        if (examplesList.scrollLeft >= examplesList.scrollWidth - examplesList.clientWidth) {
+            examplesList.scrollLeft = 0;
+        }
     }
-}
 
-// Inicia el desplazamiento automático
-function startAutoScroll() {
-    scrollInterval = setInterval(autoScroll, 100); // Ajusta el intervalo según prefieras
-}
+    // Inicia el desplazamiento automático
+    function startAutoScroll() {
+        scrollInterval = setInterval(autoScroll, 100); // Ajusta el intervalo según prefieras
+    }
 
-// Inicia el desplazamiento automático al cargar la página
-startAutoScroll();
-
-
+    // Inicia el desplazamiento automático al cargar la página
+    startAutoScroll();
 });
