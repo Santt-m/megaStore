@@ -47,7 +47,7 @@ export function renderCompanySection(companyData) {
             </div>
             <div class="companyInfo">
                 ${companyData.address ? `<p>Dirección: ${companyData.address}</p>` : ''}
-                ${companyData.whatsapp ? `<p><a class="btn" href="https://wa.me/${companyData.whatsapp}" target="_blank"><img class="icon" src="./src/icon/whatsapp.svg" alt="whatsapp icon"></a></p>` : ''}
+                ${companyData.whatsapp ? `<p><a  class="btn" href="https://wa.me/${companyData.whatsapp}" target="_blank"><img class="icon" src="./src/icon/whatsapp.svg" alt="whatsapp icon"> WhatsApp</a></p>` : ''}
             </div>
             <div id="company"></div>
             <div class="companyActions">

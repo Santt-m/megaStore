@@ -1,5 +1,7 @@
 // productsCard.js
 
+import { agregarAlCarrito, restarDelCarrito, obtenerCantidadEnCarrito, renderCart, initCart } from './cart.js';
+
 // Función para renderizar las secciones de productos
 export function renderProductSections(productsData) {
     const main = document.querySelector('main');
@@ -31,14 +33,14 @@ export function renderProductSections(productsData) {
         tagsUnicos.forEach(tag => {
             const filterButton = document.createElement('button');
             filterButton.textContent = tag;
-            filterButton.onclick = () => filtrarPorTag(secProducts, productsOfType, tag);
+            filterButton.addEventListener('click', () => filtrarPorTag(secProducts, productsOfType, tag));
             filterContainer.appendChild(filterButton);
         });
 
         // Botón para ver todos los productos
         const verTodosButton = document.createElement('button');
         verTodosButton.textContent = 'Ver Todos';
-        verTodosButton.onclick = () => mostrarTodosProductos(secProducts, productsOfType);
+        verTodosButton.addEventListener('click', () => mostrarTodosProductos(secProducts, productsOfType));
         filterContainer.appendChild(verTodosButton);
 
         secProducts.appendChild(sectionTitle);
@@ -48,12 +50,13 @@ export function renderProductSections(productsData) {
         productContainer.classList.add('product-container');
         secProducts.appendChild(productContainer);
 
-        mostrarProductos(productContainer, productsOfType);
+        mostrarProductos(productContainer, productsOfType, productsData); // Pasar productsData
         main.appendChild(secProducts);
     }
 
     // Renderizar el carrito al final de la carga de productos
-    renderCart();
+    initCart(productsData); // Inicializa el carrito con los datos de productos
+    initLazyLoading(); // Inicializa el lazy loading después de renderizar los productos
 }
 
 // Función para mostrar todos los productos sin filtros
@@ -76,10 +79,10 @@ function agruparPor(array, propiedad) {
 }
 
 // Función para mostrar todos los productos usando la estructura proporcionada
-function mostrarProductos(container, productos) {
+function mostrarProductos(container, productos, productsData) { // Asegúrate de pasar productsData
     container.innerHTML = ''; // Limpiar el contenedor antes de renderizar
     productos.forEach(producto => {
-        const productCard = crearProductCard(producto);
+        const productCard = crearProductCard(producto, productsData); // Pasar productsData
         container.appendChild(productCard);
     });
 }
@@ -103,11 +106,11 @@ function buscarProducto(section, productos, query) {
 }
 
 // Función para crear las tarjetas de productos usando la estructura proporcionada
-function crearProductCard(producto) {
+function crearProductCard(producto, productsData) { // Asegúrate de pasar productsData
     const card = document.createElement('div');
     card.classList.add('product-card');
     card.innerHTML = `
-        <img src="${producto.image}" alt="${producto.name}">
+        <img data-src="${producto.image}" alt="${producto.name}" class="lazy-image">
         <h3>${producto.name}</h3>
         <p>${producto.description}</p>
         <p>$ ${producto.price}</p>
@@ -120,41 +123,16 @@ function crearProductCard(producto) {
 
     // Eventos para sumar y restar productos en el carrito
     card.querySelector('.btn-sumar').addEventListener('click', () => {
-        agregarAlCarrito(producto.id);
+        agregarAlCarrito(producto.id); // No es necesario pasar productsData aquí
         actualizarCantidadEnSpan(producto.id); // Actualiza el span después de agregar
     });
 
     card.querySelector('.btn-restar').addEventListener('click', () => {
-        restarDelCarrito(producto.id);
+        restarDelCarrito(producto.id); // No es necesario pasar productsData aquí
         actualizarCantidadEnSpan(producto.id); // Actualiza el span después de restar
     });
 
     return card;
-}
-
-// Función para obtener la cantidad de un producto en el carrito
-function obtenerCantidadEnCarrito(productId) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    return cart[productId] || 0; // Devuelve la cantidad o 0 si no está en el carrito
-}
-
-// Función para agregar un producto al carrito
-function agregarAlCarrito(productId) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    cart[productId] = (cart[productId] || 0) + 1; // Incrementa la cantidad del producto
-    localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart();
-}
-
-// Función para restar un producto del carrito
-function restarDelCarrito(productId) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    if (cart[productId]) {
-        cart[productId] = Math.max(0, cart[productId] - 1); // Decrementa la cantidad del producto
-        if (cart[productId] === 0) delete cart[productId]; // Elimina el producto si la cantidad es 0
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart();
 }
 
 // Función para actualizar el span de cantidad del producto
@@ -165,17 +143,19 @@ function actualizarCantidadEnSpan(productId) {
     }
 }
 
-// Función para renderizar el carrito
-function renderCart() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    const cartCount = Object.values(cart).reduce((total, count) => total + count, 0);
-    const cartSpan = document.getElementById('cartCount');
-    if (cartSpan) {
-        cartSpan.textContent = cartCount; // Actualiza el número de productos en el carrito
-    }
-
-    // Actualizar todos los spans de cantidad de productos en el carrito
-    Object.keys(cart).forEach(productId => {
-        actualizarCantidadEnSpan(productId);
+// Función para inicializar el lazy loading de imágenes
+function initLazyLoading() {
+    const lazyImages = document.querySelectorAll('.lazy-image');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy-image');
+                observer.unobserve(img);
+            }
+        });
     });
+
+    lazyImages.forEach(img => observer.observe(img));
 }

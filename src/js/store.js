@@ -1,8 +1,12 @@
+// store.js
+
 // Importa las funciones necesarias
-import { loadCompanyData, loadProducts, fetchDataList } from '../../../data/dataIO.js';
+import { loadCompanyData, loadProducts, fetchDataList, fetchStoreFile } from '../../../data/dataIO.js'; // Importa fetchStoreFile
 import Modal from './modal.js';
 import { renderCompanySection } from './companyCard.js'; 
 import { renderProductSections } from './productsCard.js'; // Importa renderProductSections para la sección de productos
+import { renderCart, agregarAlCarrito, restarDelCarrito, eliminarDelCarrito } from './cart.js'; // Importa funciones del carrito
+import { renderPromoCards } from './promoCard.js'; // Importa renderPromoCards para la sección de promociones
 
 // Función para obtener el parámetro "store" de la URL
 function getStoreFromURL() {
@@ -41,7 +45,16 @@ async function loadStore() {
         console.log("Productos cargados:", productsData); // Verifica los datos de productos
 
         if (productsData && Array.isArray(productsData) && productsData.length > 0) {
+            // Filtrar productos promocionales
+            const promoData = productsData.filter(product => product.promo);
+            console.log("Promociones cargadas:", promoData); // Verifica los datos de promociones
+            if (promoData.length > 0) {
+                const promoSection = renderPromoCards(promoData);
+                main.appendChild(promoSection); // Agrega la sección de promociones debajo de secCompany
+            }
+
             renderProductSections(productsData); // Llama a la función para renderizar productos
+            renderCart(productsData); // Renderiza el carrito con los datos de productos
         } else {
             console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
             // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal
@@ -97,6 +110,11 @@ async function renderSearchSection(main) {
             window.location.href = `store.html?store=${foundStore.company}`;
         }
     });
+}
+
+// Función para cargar las promociones de la tienda desde promotions.json
+async function loadPromotions(storeName) {
+    return fetchStoreFile(storeName, 'promotions.json');
 }
 
 // Inicia la carga de la tienda al cargar el script
