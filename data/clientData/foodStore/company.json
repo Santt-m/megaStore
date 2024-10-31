@@ -7,6 +7,8 @@
     "heroBackgroundImage": "./data/clientData/foodStore/hero_background.webp",
     "whatsapp": "+1111111111",
     "address": "La concha de tu hermana",
+    "phone": "+1111111111",
+    "email": "W2ZdS@example.com",
 
     "horarios": [
       {
@@ -53,9 +55,21 @@
       {
         "name": "Instagram",
         "link": "https://www.instagram.com"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://www.twitter.com"
+      },
+      {
+        "name": "Youtube",
+        "link": "https://www.youtube.com"
+      },
+      {
+        "name": "Tiktok",
+        "link": "https://www.tiktok.com"
       }
-    ],
 
+    ],
     "store": "./clientData/foodStore/products.json"
   }
 ]

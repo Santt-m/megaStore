@@ -1,15 +1,14 @@
 [
     {
-        "name" : "Game Store",
+        "name": "Game Store",
         "description": "Ecomerse de videojuegos",
-
-        "image": "",
-        "icon": "",
-        "heroBackgroundImage": "",
-
-        "whatsapp": "",
-        "address": "",
-
+        "image": "./data/clientData/gameStore/logo.jpeg",
+        "icon": "./data/clientData/gameStore/icon.png",
+        "heroBackgroundImage": "./data/clientData/gameStore/hero_background.webp",
+        "whatsapp": "+1122334455",
+        "address": "Avenida Gamer 789",
+        "phone": "+1122334455",
+        "email": "support@gamestore.com",
         "horarios": [
             {
                 "day": "Monday",
@@ -40,19 +39,23 @@
                 "hours": "9:00 - 18:00"
             }
         ],
-        
+        "envios": [
+            { "day": "Monday", "hours": "10:00 - 17:00" },
+            { "day": "Tuesday", "hours": "10:00 - 17:00" },
+            { "day": "Wednesday", "hours": "10:00 - 17:00" },
+            { "day": "Thursday", "hours": "10:00 - 17:00" },
+            { "day": "Friday", "hours": "10:00 - 17:00" }
+        ],
         "socialNetworks": [
             {
                 "name": "Facebook",
-                "link": "www.facebook.com"
+                "link": "https://www.facebook.com"
             },
             {
                 "name": "Instagram",
-                "link": "www.instagram.com"
+                "link": "https://www.instagram.com"
             }
         ],
-
-        "store":"./clientData/gameStore/products.json"
-
+        "store": "./clientData/gameStore/products.json"
     }
 ]

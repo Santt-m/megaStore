@@ -47,7 +47,11 @@ export function renderCompanySection(companyData) {
             </div>
             <div class="companyInfo">
                 ${companyData.address ? `<p>Dirección: ${companyData.address}</p>` : ''}
-                ${companyData.whatsapp ? `<p><a  class="btn" href="https://wa.me/${companyData.whatsapp}" target="_blank"><img class="icon" src="./src/icon/whatsapp.svg" alt="whatsapp icon"> WhatsApp</a></p>` : ''}
+                ${companyData.phone ? `<p>Teléfono: <a href="tel:${companyData.phone}">${companyData.phone}</a></p>` : ''}
+                ${companyData.email ? `<p>Email: <a href="mailto:${companyData.email}">${companyData.email}</a></p>` : ''}
+                ${companyData.whatsapp ? `<p><a href="https://wa.me/${companyData.whatsapp}?text=Hola,%20me%20comunico%20desde%20la%20página%20web" target="_blank"><img class="icon" src="./src/icon/whatsapp.svg" alt="whatsapp icon"> WhatsApp</a></p>` : ''}
+                ${getStoreStatus(companyData.horarios)}
+                ${getDeliveryStatus(companyData.envios)}
             </div>
             <div id="company"></div>
             <div class="companyActions">
@@ -84,6 +88,68 @@ export function renderCompanySection(companyData) {
     }
 
     return secCompany;
+}
+
+// Función para obtener el estado del local
+function getStoreStatus(horarios) {
+    if (!horarios?.length) return '';
+
+    const now = new Date();
+    const currentDay = now.toLocaleDateString('es-ES', { weekday: 'long' });
+    const currentTime = now.getHours() + ':' + now.getMinutes();
+
+    const todaySchedule = horarios.find(horario => horario.day.toLowerCase() === currentDay.toLowerCase());
+
+    if (!todaySchedule) return '';
+
+    const [openTime, closeTime] = todaySchedule.hours.split(' - ');
+
+    const timeToClose = new Date();
+    const [closeHour, closeMinute] = closeTime.split(':');
+    timeToClose.setHours(closeHour, closeMinute, 0, 0);
+    const minutesToClose = (timeToClose - now) / 60000;
+
+    if (currentTime >= openTime && currentTime <= closeTime) {
+        if (minutesToClose <= 30) {
+            return `<p>Estado del local: Pronto a cerrar</p>`;
+        }
+        return `<p>Estado del local: Abierto</p>`;
+    } else if (currentTime < openTime) {
+        return `<p>Estado del local: Pronto a abrir</p>`;
+    } else {
+        return `<p>Estado del local: Cerrado</p>`;
+    }
+}
+
+// Función para obtener el estado de los envíos
+function getDeliveryStatus(envios) {
+    if (!envios?.length) return '';
+
+    const now = new Date();
+    const currentDay = now.toLocaleDateString('es-ES', { weekday: 'long' });
+    const currentTime = now.getHours() + ':' + now.getMinutes();
+
+    const todayDelivery = envios.find(envio => envio.day.toLowerCase() === currentDay.toLowerCase());
+
+    if (!todayDelivery) return '';
+
+    const [openTime, closeTime] = todayDelivery.hours.split(' - ');
+
+    const timeToClose = new Date();
+    const [closeHour, closeMinute] = closeTime.split(':');
+    timeToClose.setHours(closeHour, closeMinute, 0, 0);
+    const minutesToClose = (timeToClose - now) / 60000;
+
+    if (currentTime >= openTime && currentTime <= closeTime) {
+        if (minutesToClose <= 30) {
+            return `<p>Estado de envíos: Pronto a dejar de recibir pedidos</p>`;
+        }
+        return `<p>Estado de envíos: Disponible</p>`;
+    } else if (currentTime < openTime) {
+        return `<p>Estado de envíos: Pronto a iniciar</p>`;
+    } else {
+        return `<p>Estado de envíos: No disponible</p>`;
+    }
 }
 
 // Modal en formato tabla para horarios

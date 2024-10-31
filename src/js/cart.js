@@ -4,7 +4,12 @@ let productsDataGlobal = []; // Variable global para almacenar los productos
 
 // Inicializa el carrito desde localStorage
 function obtenerCarrito() {
-    return JSON.parse(localStorage.getItem('cart')) || {};
+    try {
+        return JSON.parse(localStorage.getItem('cart')) || {};
+    } catch (error) {
+        console.error('Error al obtener el carrito de localStorage:', error);
+        return {};
+    }
 }
 
 // Obtiene la cantidad de un producto específico en el carrito
@@ -158,6 +163,11 @@ export function renderCart() {
 
 // Función para inicializar el lazy loading de imágenes
 function initLazyLoading() {
+    if (!('IntersectionObserver' in window)) {
+        console.warn('IntersectionObserver no es compatible con este navegador.');
+        return;
+    }
+
     const lazyImages = document.querySelectorAll('.lazy-image');
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -199,7 +209,7 @@ export function resetProductsRenders() {
     });
 }
 
-// Función para abrir/cerrar el carrito
+// Función para abrir/cerrar el carrito y mostrar el div correspondiente
 export function toggleCart() {
     const cartMenu = document.getElementById('cartMenu');
     cartMenu.classList.toggle('show'); // Alterna la clase 'show'
@@ -210,18 +220,46 @@ export function toggleCart() {
     }
 }
 
-// Agregar el EventListener al cargar el documento
-document.addEventListener('DOMContentLoaded', () => {
-    const cartBtn = document.getElementById('cartBtn');
-    cartBtn.addEventListener('click', toggleCart); // Maneja el clic en el botón del carrito
-
-    // Agregar el EventListener para vaciar el carrito
-    const clearCartBtn = document.querySelector('.btn-clear-cart');
-    clearCartBtn.addEventListener('click', vaciarCarrito); // Maneja el clic en el botón para vaciar el carrito
-});
+// Función para mostrar el div correspondiente en cartHeader
+function showSection(target) {
+    const sections = document.querySelectorAll('#cartCont > div');
+    sections.forEach(section => {
+        if (section.classList.contains(target)) {
+            section.style.display = 'flex';
+        } else if (!section.classList.contains('cartHeader')) {
+            section.style.display = 'none';
+        }
+    });
+}
 
 // Función para inicializar el carrito
 export function initCart(productsData) {
     productsDataGlobal = productsData; // Almacena los datos de productos en la variable global
     renderCart(); // Renderiza el carrito inicialmente
+    actualizarContadorCarrito(); // Actualiza el contador del carrito
 }
+
+// Agregar el EventListener al cargar el documento
+document.addEventListener('DOMContentLoaded', () => {
+    const cartBtn = document.getElementById('cartBtn');
+    if (cartBtn) {
+        cartBtn.addEventListener('click', toggleCart); // Maneja el clic en el botón del carrito
+    }
+
+    // Agregar el EventListener para vaciar el carrito
+    const clearCartBtn = document.querySelector('.btn-clear-cart');
+    if (clearCartBtn) {
+        clearCartBtn.addEventListener('click', () => {
+            vaciarCarrito();
+        });
+    }
+
+    // Agregar EventListeners para los botones de cartHeader
+    const cartHeaderBtns = document.querySelectorAll('.cartHeader .btn');
+    cartHeaderBtns.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            const target = event.target.getAttribute('data-target');
+            showSection(target);
+        });
+    });
+});

@@ -1,14 +1,57 @@
 [
     {
         "id": 1,
+        "type": "ropa",
+        "tag": ["Camisetas"],
         "name": "Camiseta",
+        "description": "Camiseta de algodón",
         "price": 19.99,
-        "description": "Camiseta de algodón"
+        "image": "./data/clientData/clothesStore/productsData/1/img0.jpg",
+        "promo": true,
+        "alcoholic": false
     },
     {
         "id": 2,
+        "type": "ropa",
+        "tag": ["Pantalones"],
         "name": "Pantalones",
+        "description": "Pantalones de mezclilla",
         "price": 39.99,
-        "description": "Pantalones de mezclilla"
+        "image": "./data/clientData/clothesStore/productsData/2/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 3,
+        "type": "ropa",
+        "tag": ["Vestidos"],
+        "name": "Vestido de Verano",
+        "description": "Vestido de verano ligero y fresco.",
+        "price": 29.99,
+        "image": "./data/clientData/clothesStore/productsData/3/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    },
+    {
+        "id": 4,
+        "type": "ropa",
+        "tag": ["Abrigos"],
+        "name": "Abrigo de Invierno",
+        "description": "Abrigo de invierno cálido y elegante.",
+        "price": 79.99,
+        "image": "./data/clientData/clothesStore/productsData/4/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 5,
+        "type": "accesorios",
+        "tag": ["Sombreros"],
+        "name": "Sombrero de Paja",
+        "description": "Sombrero de paja ideal para el verano.",
+        "price": 15.99,
+        "image": "./data/clientData/clothesStore/productsData/5/img0.jpg",
+        "promo": true,
+        "alcoholic": false
     }
 ]

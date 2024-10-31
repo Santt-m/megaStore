@@ -5,7 +5,8 @@ import { loadCompanyData, loadProducts, fetchDataList, fetchStoreFile } from '..
 import Modal from './modal.js';
 import { renderCompanySection } from './companyCard.js'; 
 import { renderProductSections } from './productsCard.js'; // Importa renderProductSections para la sección de productos
-import { renderCart, agregarAlCarrito, restarDelCarrito, eliminarDelCarrito } from './cart.js'; // Importa funciones del carrito
+import { renderCart, agregarAlCarrito, restarDelCarrito, eliminarDelCarrito, initCart } from './cart.js'; // Importa funciones del carrito
+import { initUser } from './user.js'; // Importa funciones de user.js
 import { renderPromoCards } from './promoCard.js'; // Importa renderPromoCards para la sección de promociones
 
 // Función para obtener el parámetro "store" de la URL
@@ -40,6 +41,9 @@ async function loadStore() {
         const companySection = renderCompanySection(companyData);
         main.appendChild(companySection); // Asegúrate de agregarla al main
 
+        // Obtener el número de WhatsApp de los datos de la compañía
+        const whatsappNumber = companyData.whatsapp;
+
         // Cargar productos
         const productsData = await loadProducts(storeName);
         console.log("Productos cargados:", productsData); // Verifica los datos de productos
@@ -55,6 +59,8 @@ async function loadStore() {
 
             renderProductSections(productsData); // Llama a la función para renderizar productos
             renderCart(productsData); // Renderiza el carrito con los datos de productos
+            initCart(productsData); // Inicializa el carrito con los datos de productos
+            initUser(productsData, whatsappNumber); // Inicializa los datos del usuario y el pedido
         } else {
             console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
             // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal
@@ -110,11 +116,6 @@ async function renderSearchSection(main) {
             window.location.href = `store.html?store=${foundStore.company}`;
         }
     });
-}
-
-// Función para cargar las promociones de la tienda desde promotions.json
-async function loadPromotions(storeName) {
-    return fetchStoreFile(storeName, 'promotions.json');
 }
 
 // Inicia la carga de la tienda al cargar el script

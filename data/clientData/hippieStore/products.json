@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "type": "ropa",
+        "tag": ["Camisetas"],
+        "name": "Camiseta Hippie",
+        "description": "Camiseta con diseño hippie.",
+        "price": 2500,
+        "image": "./data/clientData/hippieStore/productsData/1/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    },
+    {
+        "id": 2,
+        "type": "accesorios",
+        "tag": ["Collares"],
+        "name": "Collar de Cuentas",
+        "description": "Collar hecho a mano con cuentas de colores.",
+        "price": 1500,
+        "image": "./data/clientData/hippieStore/productsData/2/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 3,
+        "type": "ropa",
+        "tag": ["Pantalones"],
+        "name": "Pantalones de Lino",
+        "description": "Pantalones de lino cómodos y frescos.",
+        "price": 3500,
+        "image": "./data/clientData/hippieStore/productsData/3/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    },
+    {
+        "id": 4,
+        "type": "accesorios",
+        "tag": ["Pulseras"],
+        "name": "Pulsera de Cuero",
+        "description": "Pulsera de cuero con diseño artesanal.",
+        "price": 1200,
+        "image": "./data/clientData/hippieStore/productsData/4/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 5,
+        "type": "decoracion",
+        "tag": ["Posters"],
+        "name": "Poster Psicodélico",
+        "description": "Poster con diseño psicodélico.",
+        "price": 2000,
+        "image": "./data/clientData/hippieStore/productsData/5/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    }
+]

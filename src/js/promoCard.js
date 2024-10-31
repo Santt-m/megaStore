@@ -11,6 +11,39 @@ export function renderPromoCards(promoData) {
     });
 
     console.log("Sección de promociones creada:", promoSection); // Verifica la sección de promociones
+
+    // Agregar animación de desplazamiento
+    let scrollInterval;
+    let isPaused = false;
+    let direction = 1;
+    const scrollSpeed = 100; // Velocidad de desplazamiento más lenta
+    const waitTime = 1000; // Tiempo de espera en milisegundos
+
+    function startScrolling() {
+        scrollInterval = setInterval(() => {
+            if (!isPaused) {
+                promoSection.scrollLeft += direction;
+                if (promoSection.scrollLeft + promoSection.clientWidth >= promoSection.scrollWidth || promoSection.scrollLeft <= 0) {
+                    direction *= -1;
+                }
+            }
+        }, scrollSpeed);
+    }
+
+    promoSection.addEventListener('mouseenter', () => {
+        isPaused = true;
+        clearInterval(scrollInterval);
+    });
+
+    promoSection.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            isPaused = false;
+            startScrolling();
+        }, waitTime);
+    });
+
+    startScrolling();
+
     return promoSection;
 }
 
@@ -64,21 +97,4 @@ function actualizarCantidadEnSpan(promoId) {
     if (cantidadSpan) {
         cantidadSpan.textContent = obtenerCantidadEnCarrito(promoId);
     }
-}
-
-// Función para inicializar el lazy loading de imágenes
-function initLazyLoading() {
-    const lazyImages = document.querySelectorAll('.lazy-image');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy-image');
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    lazyImages.forEach(img => observer.observe(img));
 }

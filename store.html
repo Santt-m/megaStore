@@ -23,14 +23,51 @@
         <div id="cartMenu">
             <div id="cartCont">
                 <div class="cartHeader">
-                    <button class="btn">Carrito</button>
-                    <button class="btn">Usuario</button>
-                    <button class="btn">completar pedido</button>
+                    <button class="btn" data-target="carrito">Carrito</button>
+                    <button class="btn" data-target="usuario">Usuario</button>
+                    <button class="btn" data-target="completarPedido">Completar Pedido</button>
                 </div>
                 <div class="carrito">
                     <h3>Carrito</h3>
                     <ul id="cartList"></ul>
                     <button class="btn-clear-cart">Vaciar carrito</button>
+                </div>
+                <div class="usuario" style="display: none;">
+                    <h3>Usuario</h3>
+                    <form id="userForm">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Nombre">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Apellido">
+                        <label for="phone">Teléfono</label>
+                        <input type="text" name="phone" id="phone" placeholder="Teléfono">
+                        <fieldset>
+                            <legend>Opción de entrega</legend>
+                            <input type="radio" id="takeAway" name="deliveryOption" value="takeAway" checked>
+                            <label for="takeAway">Pasar a buscar por el local</label><br>
+                            <input type="radio" id="delivery" name="deliveryOption" value="delivery">
+                            <label for="delivery">Envío a domicilio</label>
+                        </fieldset>
+                    </form>
+                    <form id="envioForm" style="display: none;">
+                        <label for="address">Dirección</label>
+                        <input type="text" name="address" id="address" placeholder="Dirección">
+                        <label for="addressNumber">N°</label>
+                        <input type="text" name="addressNumber" id="addressNumber" placeholder="N°">
+                        <label for="departamento">Departamento</label>
+                        <input type="text" name="departamento" id="departamento" placeholder="Departamento">
+                        <label for="notas">Notas</label>
+                        <input type="text" name="notas" id="notas" placeholder="Notas">
+                        <button type="button" id="saveDeliveryDataBtn">Guardar Datos de Envío</button>
+                    </form>
+                </div>
+                <div class="completarPedido" style="display: none;">
+                    <h3>Completar pedido</h3>
+                    <h4>Usuario</h4>
+                    <ol id="userData"></ol>
+                    <h4>Pedido</h4>
+                    <ol id="orderData"></ol>
+                    <button class="btn-wp-order"><img class="icon" src="./src/icon/whatsapp.svg" alt="whatsapp icon"> Enviar pedido</button>
                 </div>
             </div>
         </div>
@@ -68,9 +105,7 @@
 
     </footer>
 
-    
-    <script src="./app.js" type="module"></script>
-    <script src="./src//js/store.js" type="module"></script>
+    <script src="./src/js/store.js" type="module"></script>
 </body>
 
 </html>

@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "type": "videojuego",
+        "tag": ["Acción"],
+        "name": "Juego de Acción",
+        "description": "Juego de acción con gráficos impresionantes.",
+        "price": 6000,
+        "image": "./data/clientData/gameStore/productsData/1/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    },
+    {
+        "id": 2,
+        "type": "videojuego",
+        "tag": ["Aventura"],
+        "name": "Juego de Aventura",
+        "description": "Juego de aventura con una historia envolvente.",
+        "price": 5500,
+        "image": "./data/clientData/gameStore/productsData/2/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 3,
+        "type": "videojuego",
+        "tag": ["Deportes"],
+        "name": "Juego de Deportes",
+        "description": "Juego de deportes con modos multijugador.",
+        "price": 5000,
+        "image": "./data/clientData/gameStore/productsData/3/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    },
+    {
+        "id": 4,
+        "type": "videojuego",
+        "tag": ["Estrategia"],
+        "name": "Juego de Estrategia",
+        "description": "Juego de estrategia con múltiples niveles.",
+        "price": 4500,
+        "image": "./data/clientData/gameStore/productsData/4/img0.jpg",
+        "promo": false,
+        "alcoholic": false
+    },
+    {
+        "id": 5,
+        "type": "videojuego",
+        "tag": ["Carreras"],
+        "name": "Juego de Carreras",
+        "description": "Juego de carreras con vehículos personalizables.",
+        "price": 5000,
+        "image": "./data/clientData/gameStore/productsData/5/img0.jpg",
+        "promo": true,
+        "alcoholic": false
+    }
+]

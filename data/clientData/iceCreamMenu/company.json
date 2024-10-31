@@ -1,15 +1,14 @@
 [
     {
-        "name" : "Heladeria Ice Cream",
+        "name": "Heladeria Ice Cream",
         "description": "Menu de heladeria",
-
-        "image": "",
-        "icon": "",
-        "heroBackgroundImage": "",
-
-        "whatsapp": "",
-        "address": "",
-
+        "image": "./data/clientData/iceCreamMenu/logo.jpeg",
+        "icon": "./data/clientData/iceCreamMenu/icon.png",
+        "heroBackgroundImage": "./data/clientData/iceCreamMenu/hero_background.webp",
+        "whatsapp": "+1234567890",
+        "address": "Calle Falsa 123",
+        "phone": "+1234567890",
+        "email": "info@icecream.com",
         "horarios": [
             {
                 "day": "Monday",
@@ -40,17 +39,23 @@
                 "hours": "9:00 - 18:00"
             }
         ],
-        
+        "envios": [
+            { "day": "Monday", "hours": "10:00 - 17:00" },
+            { "day": "Tuesday", "hours": "10:00 - 17:00" },
+            { "day": "Wednesday", "hours": "10:00 - 17:00" },
+            { "day": "Thursday", "hours": "10:00 - 17:00" },
+            { "day": "Friday", "hours": "10:00 - 17:00" }
+        ],
         "socialNetworks": [
             {
                 "name": "Facebook",
-                "link": "www.facebook.com"
+                "link": "https://www.facebook.com"
             },
             {
                 "name": "Instagram",
-                "link": "www.instagram.com"
+                "link": "https://www.instagram.com"
             }
-        ]
-
+        ],
+        "store": "./clientData/iceCreamMenu/products.json"
     }
 ]

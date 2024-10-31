@@ -1,15 +1,14 @@
 [
     {
-        "name" : "Hippie Store",
+        "name": "Hippie Store",
         "description": "Ecomerse de cosas hipies",
-
-        "image": "",
-        "icon": "",
-        "heroBackgroundImage": "",
-
-        "whatsapp": "",
-        "address": "",
-
+        "image": "./data/clientData/hippieStore/logo.jpeg",
+        "icon": "./data/clientData/hippieStore/icon.png",
+        "heroBackgroundImage": "./data/clientData/hippieStore/hero_background.webp",
+        "whatsapp": "+9876543210",
+        "address": "Calle Real 456",
+        "phone": "+9876543210",
+        "email": "contact@hippiestore.com",
         "horarios": [
             {
                 "day": "Monday",
@@ -40,19 +39,23 @@
                 "hours": "9:00 - 18:00"
             }
         ],
-        
+        "envios": [
+            { "day": "Monday", "hours": "10:00 - 17:00" },
+            { "day": "Tuesday", "hours": "10:00 - 17:00" },
+            { "day": "Wednesday", "hours": "10:00 - 17:00" },
+            { "day": "Thursday", "hours": "10:00 - 17:00" },
+            { "day": "Friday", "hours": "10:00 - 17:00" }
+        ],
         "socialNetworks": [
             {
                 "name": "Facebook",
-                "link": "www.facebook.com"
+                "link": "https://www.facebook.com"
             },
             {
                 "name": "Instagram",
-                "link": "www.instagram.com"
+                "link": "https://www.instagram.com"
             }
         ],
-
-        "store":"./clientData/hippieStore/products.json"
-
+        "store": "./clientData/hippieStore/products.json"
     }
 ]

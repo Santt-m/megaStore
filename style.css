@@ -5,7 +5,7 @@
 /* Variables globales */
 :root {
     /* Paleta de colores */
-    --bodybackgroundcolor: #fcf5f5;
+    --body-background-color: #fcf5f5;
     --background-color: rgba(255, 255, 255, 0);
 
     --primary-color: #42b883;
@@ -14,42 +14,33 @@
     --secondary-color: #0c478a;
     --secondary-color-hover: #2b5d5d;
 
-
     /* Tipografía */
     --primary-font-color: #333;
     --secondary-font-color: #0036e9;
-    /* size */
-    --primary-font-size: 2em;
-    --secondary-font-size: 20px;
-    /* weight */
+    --primary-font-size: 1.5em; /* Ajuste de tamaño para mejor legibilidad */
+    --secondary-font-size: 18px; /* Ajuste de tamaño para mejor legibilidad */
     --primary-font-weight: 600;
-    --primary-font-weightHover: 700;
+    --primary-font-weight-hover: 700;
     --secondary-font-weight: 400;
-    --secondary-font-weightHover: 600;
-    /* letter-spacing */
-    --primary-lletter-spacing: 1.5px;
+    --secondary-font-weight-hover: 600;
+    --primary-letter-spacing: 1.2px; /* Ajuste de espaciado para mejor legibilidad */
     --secondary-letter-spacing: 1px;
 
-    --font-Color: #412e2e;
-    
+    --font-color: #412e2e;
     --font-p-color: #000000;
     --font-p-color-hover: #1eff00;
-
-    --font-p-size: 14px;
+    --font-p-size: 16px; /* Ajuste de tamaño para mejor legibilidad */
     --font-p-weight: 500;
     --font-p-letter-spacing: 1px;
 
     --primary-font-color-hover: #011b05;
 
     /* Bordes y sombras */
-    --std-borderRadius: 10px;
-    --std-borderRadius: 25px;
-    --std-borderColor: #333;
-    --std-borderColorHover: #93bd21;
-    --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --std-border-radius: 8px; /* Ajuste de radio para mejor estética */
+    --std-border-color: #333;
+    --std-border-color-hover: #93bd21;
+    --std-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajuste de sombra para mejor estética */
     --std-box-shadow-hover: 0px 2px 10px rgba(170, 153, 3, 0.473);
-
-
 }
 
 * {
@@ -62,11 +53,9 @@
 
 body {
     width: 100%;
-
     font-weight: 400;
-    background-color: var(--bodybackgroundcolor);
-    color: var(--font-Color);
-
+    background-color: var(--body-background-color);
+    color: var(--font-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +99,7 @@ header {
 .logoContainer img {
     width: auto;
     max-height: 75px;
-    border-radius: var(--std-borderRadius);
+    border-radius: var(--std-border-radius);
 }
 
 nav {
@@ -143,7 +132,7 @@ nav a {
     font-size: var(--secondary-font-size);
     font-weight: var(--secondary-font-weight);
     letter-spacing: var(--secondary-letter-spacing);
-    border-radius: var(--std-borderRadius);
+    border-radius: var(--std-border-radius);
     transition: all 0.5s ease;
 }
 
@@ -183,7 +172,7 @@ nav a:hover {
     width: 90%;
     height: 2px;
     background-color: var(--primary-color);
-    border-radius: 25px;
+    border-radius: var(--std-border-radius);
 }
 
 #cartBtn {
@@ -191,11 +180,187 @@ nav a:hover {
     height: 40px;
     padding: 5px;
     margin-right: 10px;
-
+    position: relative; /* Añadir posición relativa para el contador */
     transition: all 0.5s ease;
 }
-#cartBtn:hover{
-    scale: 1.1;
+
+#cartBtn:hover {
+    transform: scale(1.1); /* Cambiar 'scale' a 'transform' */
+}
+
+#cartCount {
+    position: absolute; /* Cambiar a posición absoluta */
+    top: -10px; /* Ajustar la posición */
+    right: -10px; /* Ajustar la posición */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: var(--font-p-color);
+    font-weight: var(--font-p-weight);
+    box-shadow: var(--std-box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+#cartCount:hover {
+    background-color: rgba(255, 0, 0, 1);
+    font-weight: 800;
+    color: var(--font-p-color-hover);
+    box-shadow: var(--std-box-shadow-hover);
+}
+
+#cartMenu {
+    display: none;
+    position: fixed; /* Cambiar a posición fija */
+    top: 10vh;
+    right: 0; /* Alinear a la derecha */
+    width: 100%;
+    height: 90vh;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.514);
+    z-index: 100; /* Asegurar que esté por encima de otros elementos */
+}
+
+#cartCont {
+    width: 100%;
+    height: 90%;
+    max-width: 400px; /* Reducir el ancho máximo */
+    padding: 10px; /* Aumentar el padding */
+    background-color: #ffffff; /* Cambiar el color de fondo */
+    box-shadow: var(--std-box-shadow); /* Añadir sombra */
+    border-radius: var(--std-border-radius); /* Añadir borde redondeado */
+    overflow-y: auto; /* Añadir scroll vertical */
+}
+
+.cartHeader {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc; /* Añadir borde inferior */
+}
+
+.cartHeader .btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--std-border-radius);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartHeader .btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.carrito {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Aumentar el espacio entre elementos */
+    padding: 10px; /* Añadir padding */
+}
+
+#cartList {
+    width: 100%;
+    max-width: 100%; /* Ajustar el ancho máximo */
+    height: auto; /* Ajustar la altura */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    box-shadow: var(--std-box-shadow);
+    border-radius: var(--std-border-radius);
+}
+
+.cart-item {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.5s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--std-box-shadow-hover);
+}
+
+.cart-item .product-controls {
+    width: auto; /* Ajustar el ancho */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px; /* Añadir espacio entre botones */
+}
+
+.cart-item img {
+    width: 60px; /* Reducir el tamaño de la imagen */
+    height: 60px; /* Reducir el tamaño de la imagen */
+    object-fit: cover;
+    border-radius: var(--std-border-radius);
+}
+
+.cart-item-details {
+    flex: 1; /* Permitir que el contenedor de detalles ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cart-item-details p {
+    margin: 0; /* Eliminar márgenes */
+}
+
+.remove-item {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: darkred;
+}
+
+.btn-clear-cart {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear-cart:hover {
+    background-color: darkorange;
 }
 
 main {
@@ -217,6 +382,7 @@ section {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
 }
+
 
 
 /* footer */
@@ -277,13 +443,11 @@ footer .ContIcons a {
     font-weight: var(--font-p-weight);
     letter-spacing: var(--font-p-letter-spacing);
 
-    border: 1px solid var(--std-borderColor);
-    border-radius: var(--std-borderRadius);
+    border: 1px solid var(--std-border-color);
+    border-radius: var(--std-border-radius);
     letter-spacing: var(--font-p-letter-spacing);
-    font-size: var();
 
     background: rgba(8, 58, 252, 0.5);
-    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -297,8 +461,7 @@ footer .ContIcons a:hover {
 
     /* From https://css.glass */
     background: rgb(8, 106, 252);
-    border-radius: 16px;
-    box-shadow: var(--std-hover-box-shadow);
+    box-shadow: var(--std-box-shadow-hover);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(8, 58, 252, 0.29);
@@ -394,7 +557,7 @@ footer .ContIcons img {
     padding: 10px;
 
     border: 2px solid green;
-    border-radius: var(--std-borderRadius);
+    border-radius: var(--std-border-radius);
     background-color: var(--primary-color);
     box-shadow: var(--std-box-shadow);
     text-align: center;
@@ -413,7 +576,7 @@ footer .ContIcons img {
 .btn:hover{
     background-color: var(--primary-color-hover);
     color: var(--primary-font-color-hover);
-    box-shadow: var(--std-hover-box-shadow);
+    box-shadow: var(--std-box-shadow-hover);
 }
 
 .icon{
