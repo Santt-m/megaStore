@@ -1,4 +1,5 @@
 import Modal from './modal.js'; // Importar Modal
+import { currentStoreName } from './cart.js'; // Importar currentStoreName
 
 let productsDataGlobal = []; // Variable global para almacenar los productos
 let whatsappNumber = ''; // Variable global para almacenar el número de WhatsApp
@@ -137,7 +138,7 @@ function displayUserData() {
 
 // Función para mostrar el resumen del pedido en orderData
 function displayOrderData() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const cart = JSON.parse(localStorage.getItem(`cart_${currentStoreName}`)) || {}; // Cambiar el nombre del carrito
     const orderDataList = document.getElementById('orderData');
     orderDataList.innerHTML = '';
 
@@ -206,7 +207,7 @@ function showValidationModal(messages) {
 // Función para enviar el pedido por WhatsApp
 function enviarPedidoPorWhatsApp() {
     const userData = JSON.parse(localStorage.getItem('userData')) || {};
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const cart = JSON.parse(localStorage.getItem(`cart_${currentStoreName}`)) || {}; // Cambiar el nombre del carrito
     const deliveryOption = document.querySelector('input[name="deliveryOption"]:checked').value;
     const address = document.getElementById('address').value;
     const addressNumber = document.getElementById('addressNumber').value;

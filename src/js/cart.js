@@ -1,7 +1,7 @@
 import Modal from './modal.js';
 
 let productsDataGlobal = []; // Variable global para almacenar los productos
-let currentStoreName = ''; // Variable global para almacenar el nombre de la tienda actual
+export let currentStoreName = ''; // Variable global para almacenar el nombre de la tienda actual
 
 // Inicializa el carrito desde localStorage
 function obtenerCarrito() {
@@ -160,6 +160,7 @@ export function renderCart() {
     // Actualiza el número total de items en el carrito
     actualizarContadorCarrito();
     initLazyLoading(); // Inicializa el lazy loading después de renderizar el carrito
+    resetProductsRenders(); // Actualiza las cantidades en todas las tarjetas de productos
 }
 
 // Función para inicializar el lazy loading de imágenes
