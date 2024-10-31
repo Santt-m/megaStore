@@ -64,6 +64,7 @@ function mostrarTodosProductos(section, productos) {
     const productContainer = section.querySelector('.product-container');
     productContainer.innerHTML = ''; // Limpiar la sección antes de renderizar
     mostrarProductos(productContainer, productos);
+    initLazyLoading(); // Inicializa el lazy loading después de mostrar todos los productos
 }
 
 // Función para agrupar productos por una propiedad (en este caso 'type')
@@ -85,6 +86,7 @@ function mostrarProductos(container, productos, productsData) { // Asegúrate de
         const productCard = crearProductCard(producto, productsData); // Pasar productsData
         container.appendChild(productCard);
     });
+    initLazyLoading(); // Inicializa el lazy loading después de mostrar los productos
 }
 
 // Función para filtrar productos por tag
@@ -93,6 +95,7 @@ function filtrarPorTag(section, productos, tag) {
     const productContainer = section.querySelector('.product-container');
     productContainer.innerHTML = ''; // Limpiar la sección antes de renderizar
     mostrarProductos(productContainer, productosFiltrados);
+    initLazyLoading(); // Inicializa el lazy loading después de filtrar los productos
 }
 
 // Función para buscar productos por nombre
@@ -103,6 +106,7 @@ function buscarProducto(section, productos, query) {
     const productContainer = section.querySelector('.product-container');
     productContainer.innerHTML = ''; // Limpiar la sección antes de renderizar
     mostrarProductos(productContainer, productosFiltrados);
+    initLazyLoading(); // Inicializa el lazy loading después de buscar productos
 }
 
 // Función para crear las tarjetas de productos usando la estructura proporcionada
@@ -120,6 +124,8 @@ function crearProductCard(producto, productsData) { // Asegúrate de pasar produ
             <button class="btn-sumar" data-id="${producto.id}">+</button>
         </div>
     `;
+
+    console.log(`Imagen cargada: ${producto.image}`); // Verificar la ruta de la imagen
 
     // Eventos para sumar y restar productos en el carrito
     card.querySelector('.btn-sumar').addEventListener('click', () => {

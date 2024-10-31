@@ -391,8 +391,6 @@ footer .ContIcons img {
 }
 
 .btn{
-    width: 100%;
-    max-width: 150px;
     padding: 10px;
 
     border: 2px solid green;
@@ -421,4 +419,8 @@ footer .ContIcons img {
 .icon{
     width: 30px;
     height: 30px;
+}
+
+vercel-live-feedback{
+    display: none !important;
 }
