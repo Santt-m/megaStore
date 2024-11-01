@@ -209,7 +209,6 @@
     justify-content: space-between;
     gap: 10px;
     background-color: #fff;
-    padding: 15px;
     padding-bottom: 25px;
     border-radius: 10px;
     box-shadow: var(--std-box-shadow);
@@ -224,12 +223,11 @@
 
 /* Imagen del producto */
 .product-card img {
-    width: auto;
-    max-width: 95%;
+    width: 100%;
     height: auto;
     max-height: 300px;
     object-fit: cover;
-    border-radius: var(--std-borderRadius);
+    border-radius: 8px 8px 0px 0px;
 }
 
 .product-card h3 {
