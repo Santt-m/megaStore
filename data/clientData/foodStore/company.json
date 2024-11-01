@@ -11,39 +11,41 @@
     "horarios": [
       {
         "day": "Lunes",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Martes",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Miércoles",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Jueves",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Viernes",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Sábado",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       },
       {
         "day": "Domingo",
-        "hours": "9:00 - 18:00"
+        "hours": "0:00 - 23:59"
       }
     ],
     "envios": [
-      { "day": "Lunes", "hours": "10:00 - 17:00" },
-      { "day": "Martes", "hours": "10:00 - 17:00" },
-      { "day": "Miércoles", "hours": "10:00 - 17:00" },
-      { "day": "Jueves", "hours": "10:00 - 17:00" },
-      { "day": "Viernes", "hours": "10:00 - 17:00" }
+      { "day": "Lunes", "hours": "00:00 - 23:59"},
+      { "day": "Martes", "hours": "00:00 - 23:59"},
+      { "day": "Miércoles", "hours": "00:00 - 23:59"},
+      { "day": "Jueves", "hours": "00:00 - 23:59" },
+      { "day": "Viernes", "hours": "00:00 - 23:59"},
+      { "day": "Sábado", "hours": "00:00 - 23:59"},
+      { "day": "Domingo", "hours": "00:00 - 23:59"}
     ],
     "socialNetworks": [
       {
@@ -66,7 +68,6 @@
         "name": "Tiktok",
         "link": "https://www.tiktok.com"
       }
-
     ],
     "store": "./clientData/foodStore/products.json"
   }

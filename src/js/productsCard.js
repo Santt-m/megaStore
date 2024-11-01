@@ -10,10 +10,18 @@ export function renderProductSections(productsData) {
     // Limpiar el contenedor principal antes de renderizar
     main.querySelectorAll('.product-section').forEach(section => section.remove());
 
+    let isFirstSection = true; // Variable para controlar el primer section
+
     for (const [type, productsOfType] of Object.entries(productsByType)) {
         const secProducts = document.createElement('section');
         secProducts.classList.add('product-section');
-        secProducts.id = `section-${type}`;
+        
+        if (isFirstSection) {
+            secProducts.id = 'secProducts'; // Asignar id solo al primer section
+            isFirstSection = false; // Cambiar el estado después del primer section
+        } else {
+            secProducts.id = `section-${type}`;
+        }
 
         const sectionTitle = document.createElement('h2');
         sectionTitle.textContent = type.charAt(0).toUpperCase() + type.slice(1);

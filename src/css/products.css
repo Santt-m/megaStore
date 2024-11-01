@@ -224,7 +224,7 @@
 /* Imagen del producto */
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 60%;
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px 8px 0px 0px;
