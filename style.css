@@ -1,5 +1,3 @@
-@import url(./src/css/index.css);
-
 @import url(./src/css/modal.css);
 
 /* Variables globales */
@@ -57,7 +55,6 @@ main {
     width: 100%;
     max-width: 1440px;
     min-height: 90vh;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +66,38 @@ section {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(20px);
 }
+/*  animacion de scroll */
 
+section div{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 10% cover 20%;
+    animation-fill-mode: both;
+}
+li{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 10% cover 20%;
+    animation-fill-mode: both;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
 p {
     color: var(--font-p-color);
     font-size: var(--font-p-size);
@@ -478,7 +506,32 @@ nav a:hover {
 .btn-clear-cart:hover {
     background-color: darkorange;
 }
+#secSearch{
+    width: 98%;
+    padding: 20px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+}
+/* search */
+#secSearch input {
+    width: 100%;
+    max-width: 400px;
+    min-height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+
+    transition: all 0.5s ease;
+}
+#secSearch input:hover{
+    border-color: var(--primary-color-hover);
+    scale: 1.05;
+}
 /* usuario */
 .usuario {
     width: 100%;
@@ -882,6 +935,7 @@ footer .ContIcons img {
 
 .show {
     display: flex !important;
+    transition: all 0.5s ease;
 }
 
 .btn {
@@ -909,8 +963,8 @@ footer .ContIcons img {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 30px !important;
+    height: 30px !important;
 }
 
 vercel-live-feedback {

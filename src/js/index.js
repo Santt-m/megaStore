@@ -1,5 +1,6 @@
 import { fetchDataList } from '../../data/dataIO.js';
 import "../components/header/header.js";
+import Modal from './modal.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
     const examplesList = document.getElementById("examples-list");
@@ -49,4 +50,87 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Inicia el desplazamiento automático al cargar la página
     startAutoScroll();
+
+    // Validación del formulario de contacto y envío por WhatsApp
+    const contactForm = document.querySelector("#secContact form");
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name) {
+            const modal = new Modal({
+                message: "Por favor, ingresa tu nombre.",
+                buttonText: "Cerrar",
+                type: "error"
+            });
+            modal.createAlert();
+            return;
+        }
+
+        if (!email) {
+            const modal = new Modal({
+                message: "Por favor, ingresa tu correo electrónico.",
+                buttonText: "Cerrar",
+                type: "error"
+            });
+            modal.createAlert();
+            return;
+        }
+
+        if (!message) {
+            const modal = new Modal({
+                message: "Por favor, ingresa tu mensaje.",
+                buttonText: "Cerrar",
+                type: "error"
+            });
+            modal.createAlert();
+            return;
+        }
+
+        const whatsappNumber = "541135966247";
+        const whatsappMessage = `Hola, soy ${name}. Mi correo es ${email}. ${message}`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappUrl, "_blank");
+    });
+
+    document.querySelectorAll("#venta li").forEach((li) => {
+        const hat = li.querySelector(".hat");
+        if (hat && hat.textContent.trim() !== "Mas popular") {
+            hat.style.display = "none";
+        }
+
+        li.addEventListener("mouseover", () => {
+            if (hat) {
+                hat.style.display = "flex";
+            }
+        });
+
+        li.addEventListener("mouseout", () => {
+            if (hat && hat.textContent.trim() !== "Mas popular") {
+                hat.style.display = "none";
+            }
+        });
+    });
+
+    function animateOnScroll() {
+        const elements = document.querySelectorAll("section,ol, #hero");
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                element.classList.add("show");
+            } else {
+                element.classList.remove("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", animateOnScroll);
+    animateOnScroll(); // Para animar los elementos visibles al cargar la página
 });

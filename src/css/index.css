@@ -1,18 +1,78 @@
+h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.05px
+}
+h5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1.05px
+}
+
 #hero {
-    width: 100%;
-    height: 50vh;
+    width: 95%;
+    min-height: 60vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     text-align: center;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to right, #42b8838f,  #09428344);
     color: white;
     padding: 20px;
     border-radius: var(--std-border-radius);
     box-shadow: var(--std-box-shadow);
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+#hero .heroTxt{
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#hero img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+#btn-hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 30px;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: var(--btnherofontweight);
+    letter-spacing: var(--primary-letter-spacing);
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    cursor: pointer;
+    transition:all 0.5s ease;
+}
+
+#btn-hero:hover {
+    background-color: var(--secondary-color-hover);
+    color: var(--btnherocolorhover);
+    font-weight: 500;
+}
+
 
 #hero h1 {
     font-size: 3em;
@@ -29,31 +89,6 @@
     margin-top: 10px;
 }
 
-#secExamples {
-    width: 100%;
-    min-height: 30vh;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    background-color: var(--background-color);
-    border-radius: var(--std-border-radius);
-    box-shadow: var(--std-box-shadow);
-}
-
-#secExamples h3 {
-    font-size: 2em;
-    color: var(--secondary-font-color);
-}
-
-#secExamples p {
-    font-size: 1.2em;
-    color: var(--font-p-color);
-}
-
 #examples-list {
     width: 95%;
     min-height: 200px;
@@ -63,7 +98,7 @@
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    border: 1px solid var(--std-border-color);
+    border: 1px solid grey;
     border-radius: var(--std-border-radius);
     display: flex;
     flex-direction: row;
@@ -79,7 +114,7 @@
     min-width: 250px;
     height: 170px;
     padding: 10px;
-    border: 5px solid var(--std-border-color);
+
     border-radius: var(--std-border-radius);
     box-shadow: var(--std-box-shadow);
     display: flex;
@@ -93,50 +128,238 @@
     box-shadow: var(--std-box-shadow-hover);
 }
 
-#secBenefits {
+/* beneficios */
+
+#beneficios{
     width: 100%;
-    min-height: 30vh;
-    padding: 20px;
+    min-height: 150vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     text-align: center;
     background-color: var(--background-color);
     border-radius: var(--std-border-radius);
+}
+#beneficios h3{
+    width: 100%;
+    text-align: center;
+}
+#beneficios ul{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+#beneficios li{
+    width: 100%;
+    max-width: 250px;
+    min-height: 200px;
+    
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    border-radius: var(--std-border-radius);
     box-shadow: var(--std-box-shadow);
+    background-color: rgb(245, 245, 245);
+    transition: all 0.5s ease;
+}
+#beneficios li:hover{
+    scale: 1.05;
+    box-shadow: var(--std-box-shadow-hover);
+}
+#beneficios li img{
+    width: 100px;
+    height: 100px;
+}
+#beneficios li h4{
+    width: 100%;
+    text-align: center;
+
+    font-size: var(--secondary-font-size);
+    font-weight: var(--secondary-font-weight);
+
 }
 
-#secBenefits h3 {
-    font-size: 2em;
-    color: var(--secondary-font-color);
+#beneficios img{
+    width: 150px;
+    height: auto;
 }
 
-#secBenefits ul {
-    list-style: none;
-    padding: 0;
+#beneficios .b_card{
+    width: 100%;
+    max-width: 200px;
+    height: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    background-color: rgb(245, 245, 245);
+    transition: all 0.5s ease;
+}
+#beneficios .b_card:hover{
+    scale: 1.05;
+}
+li .b_card{
+    background-color: #09428344;
+}
+.b_card img{
+    width: auto;
+    height: 100px;
 }
 
-#secBenefits li {
-    margin: 10px 0;
-    font-size: var(--font-p-size);
-    color: var(--font-p-color);
+/* venta section */
+
+#venta{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, #42b8838f,  #09428344);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#venta h4{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+
+    font-size: 30px;
+}
+#venta ol{
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
+#venta li{
+    width: 100%;
+    max-width: 200px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.5s ease;
+}
+#venta li:hover{
+    box-shadow: var(--std-box-shadow-hover);
+    scale: 1.05;
+}
+#venta li .hat{
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 28px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 8px 8px 0px 0px;
+
+    color: white;
+    display: none;
+
+    transition: all 0.5 ease;
 }
 
-#secBenefits p {
-    font-size: 1.2em;
-    color: var(--font-p-color);
-    margin-top: 10px;
+#venta li:hover .hat {
+    display: flex;
+    animation: hatAnim 0.5s ease;
 }
+@keyframes hatAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#venta li div{
+    width: 100%;
+    height: 270px;
+    padding: 5px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#venta li .type{
+    width: 100px;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: rgba(18, 82, 219, 0.336);
+
+    border-radius: 15px;
+    color: rgb(61, 60, 60);
+    text-align: center;
+    font-weight: 400;
+}
+#venta li h5{
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+
+    font-size: 18px;
+}
+#venta li h6{
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+#venta li .msg{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+#venta li a{
+    min-width: 100px;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+
+    color: var(--primary-color);
+    text-align: center;
+    transition: all 0.5 ease;
+}
+#venta li a:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
 #secContact {
     width: 100%;
     min-height: 30vh;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     text-align: center;
@@ -144,8 +367,13 @@
     border-radius: var(--std-border-radius);
     box-shadow: var(--std-box-shadow);
 }
-
+#secContact img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
 #secContact h3 {
+    width: 100%;
     font-size: 2em;
     color: var(--secondary-font-color);
 }
@@ -164,6 +392,7 @@
     border-radius: var(--std-border-radius);
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
     background-color: var(--secondary-color);
 }
@@ -177,6 +406,7 @@
 }
 
 #secContact input[type="submit"] {
+    width: 150px;
     background-color: var(--primary-color);
     color: var(--font-p-color);
     cursor: pointer;
@@ -192,6 +422,27 @@
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
+
+/* anim */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* background */
 
 .background {
     position: fixed;
@@ -715,3 +966,36 @@
     transform-origin: 24vw -9vh;
     box-shadow: -2vmin 0 0.8308674250242272vmin currentColor;
 }
+
+/* ...existing code... */
+
+#hero.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section, section * {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show, section.show * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ...existing code... */
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ...existing code... */

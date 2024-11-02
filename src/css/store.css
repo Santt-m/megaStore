@@ -98,15 +98,6 @@
     gap: 20px;
 }
 
-/* search */
-#secSearch input {
-    width: 100%;
-    max-width: 400px;
-    min-height: 30px;
-    padding: 5px;
-    border-radius: var(--std-borderRadius);
-}
-
 
 /* Responsividad para pantallas pequeñas */
 @media (min-width: 768px) {
