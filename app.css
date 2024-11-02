@@ -303,6 +303,7 @@ button:hover {
     width: auto;
     max-width: 150px;
     height: 100%;
+    max-height: 120px;
 }
 #typeContent .product-cardTxt{
     width: 150px;
