@@ -133,4 +133,45 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     window.addEventListener("scroll", animateOnScroll);
     animateOnScroll(); // Para animar los elementos visibles al cargar la página
+
+    document.getElementById("btnAsesorate").addEventListener("click", () => {
+        const modal = new Modal({
+            title: "Formulario de Asesoramiento",
+            content: `
+                <form id="modal-form">
+                    <input type="text" id="modal-name" placeholder="Nombre" required>
+                    <input type="email" id="modal-email" placeholder="Email" required>
+                    <textarea id="modal-message" placeholder="Mensaje" required></textarea>
+                </form>
+            `,
+            buttonText: "Cerrar"
+        });
+        modal.createModal();
+
+        // Enviar el formulario por WhatsApp
+        document.querySelector(".modal-footer").insertAdjacentHTML('afterbegin', `
+            <button class="modal-send-btn">Enviar</button>
+        `);
+
+        document.querySelector(".modal-send-btn").addEventListener("click", () => {
+            const name = document.getElementById("modal-name").value.trim();
+            const email = document.getElementById("modal-email").value.trim();
+            const message = document.getElementById("modal-message").value.trim();
+
+            if (name && email && message) {
+                const whatsappNumber = "541135966247";
+                const whatsappMessage = `Hola, soy ${name}. Mi correo es ${email}. ${message}`;
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappUrl, "_blank");
+                modal.closeModal(document.querySelector(".modal-overlay"));
+            } else {
+                const alertModal = new Modal({
+                    message: "Por favor, completa todos los campos.",
+                    buttonText: "Cerrar",
+                    type: "error"
+                });
+                alertModal.createAlert();
+            }
+        });
+    });
 });

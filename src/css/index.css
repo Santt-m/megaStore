@@ -141,6 +141,7 @@ h5{
 #beneficios{
     width: 100%;
     min-height: 150vh;
+    padding-top: 15vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -221,10 +222,9 @@ h5{
 }
 #beneficios .b_card:hover{
     scale: 1.05;
+    box-shadow: var(--std-box-shadow-hover);
 }
-li .b_card{
-    background-color: #09428344;
-}
+
 .b_card img{
     width: auto;
     height: 100px;
@@ -234,8 +234,8 @@ li .b_card{
 
 #venta{
     width: 100%;
-    min-height: 100vh;
-    padding-top: 10vh;
+    min-height: 120vh;
+    padding-top: 15vh;
     padding-bottom: 20px;
     background: linear-gradient(to right, #42b8838f,  #09428344);
 
@@ -347,7 +347,7 @@ li .b_card{
     width: 100%;
     text-align: center;
 }
-#venta li a{
+#venta li button{
     min-width: 100px;
     padding: 7px;
     margin-bottom: 10px;
@@ -358,7 +358,7 @@ li .b_card{
     text-align: center;
     transition: all 0.5 ease;
 }
-#venta li a:hover{
+#venta li button:hover{
     background-color: var(--primary-color);
     color: white;
 }
