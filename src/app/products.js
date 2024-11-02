@@ -28,11 +28,12 @@ export function renderProducts(products) {
         li.appendChild(h2);
 
         const filters = document.createElement('ol');
-        filters.id = 'filters';
+        filters.id = `filters-${type}`;
 
         const searchInput = document.createElement('input');
         searchInput.type = 'text';
         searchInput.placeholder = 'Buscar...';
+        searchInput.addEventListener('input', () => filterProductsBySearch(type, searchInput.value, products));
         filters.appendChild(searchInput);
 
         const viewAllButton = document.createElement('button');
@@ -40,11 +41,11 @@ export function renderProducts(products) {
         viewAllButton.addEventListener('click', () => displayProducts(type, products.filter(product => product.type === type)));
         filters.appendChild(viewAllButton);
 
-        const tags = [...new Set(products.filter(product => product.type === type).flatMap(product => product.tags))];
+        const tags = [...new Set(products.filter(product => product.type === type).flatMap(product => product.tag))];
         tags.forEach(tag => {
             const button = document.createElement('button');
             button.textContent = tag;
-            button.addEventListener('click', () => filterProductsByTag(type, tag));
+            button.addEventListener('click', () => filterProductsByTag(type, tag, products));
             filters.appendChild(button);
         });
 
@@ -66,9 +67,15 @@ export function renderProducts(products) {
     });
 }
 
-function filterProductsByTag(type, tag) {
+function filterProductsByTag(type, tag, products) {
     const productsContainer = document.getElementById(`productsContainer-${type}`);
-    const filteredProducts = products.filter(product => product.type === type && product.tags.includes(tag));
+    const filteredProducts = products.filter(product => product.type === type && product.tag && product.tag.includes(tag));
+    displayProducts(type, filteredProducts);
+}
+
+function filterProductsBySearch(type, searchTerm, products) {
+    const productsContainer = document.getElementById(`productsContainer-${type}`);
+    const filteredProducts = products.filter(product => product.type === type && product.name.toLowerCase().includes(searchTerm.toLowerCase()));
     displayProducts(type, filteredProducts);
 }
 

@@ -288,8 +288,8 @@ button:hover {
 }
 
 #typeContent .product-card{
-    width: 100%;
-    max-width: 350px;
+    width: 95%;
+    max-width: 400px;
     min-height: 120px;
 
     display: flex;
@@ -303,11 +303,32 @@ button:hover {
     width: auto;
     max-width: 150px;
     height: 100%;
-    max-height: 120px;
+
+    box-shadow: var(--std-box-shadow);
 }
 #typeContent .product-cardTxt{
-    width: 150px;
-    padding-left: 10px;
+    min-width: 175px;
+    max-width: 200px;
+    min-height: 100px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    text-align: center;
+}
+.product-cardTxt h4{
+    color: grey;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.05px;
+    font-style: italic;
+}
+.product-cardTxt h5{
+    width: 100%;
+    text-align: center;
 }
 /* footer */
 footer {
