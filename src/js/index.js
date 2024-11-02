@@ -138,9 +138,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const modal = new Modal({
             title: "Formulario de Asesoramiento",
             content: `
-                <form id="modal-form">
+                <form>
+                    <label for="modal-name">Nombre</label>
                     <input type="text" id="modal-name" placeholder="Nombre" required>
+                    <label for="modal-email">Email</label>
                     <input type="email" id="modal-email" placeholder="Email" required>
+                    <label for="modal-message">Mensaje</label>
                     <textarea id="modal-message" placeholder="Mensaje" required></textarea>
                 </form>
             `,
