@@ -1,4 +1,3 @@
-import { loadCompanyData } from '../../../data/dataIO.js';
 import { getIconUrl } from '../icon/icons.js';
 
 export function createCompanyHeader() {

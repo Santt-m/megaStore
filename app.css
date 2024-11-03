@@ -1,27 +1,35 @@
 :root {
     --body-background-color: #c5c1c1;
     --background-color: rgba(255, 255, 255, 0.97);
+
     --primary-color: #42b883;
     --primary-color-hover: #93bd21;
+
     --secondary-color: #0c478a;
     --secondary-color-hover: #2b5d5d;
+
     --primary-font-color: #333;
-    --secondary-font-color: #0036e9;
+    --primary-font-color-hover: #011b05;
     --primary-font-size: 1.5em;
+    --primary-font-weight: 400;
+    --primary-font-weight-hover: 500;
+    --primary-letter-spacing: 1.2px;
+
+    --secondary-font-color: #0036e9;
+    --secondary-font-color-hover: #2b5d5d;
     --secondary-font-size: 18px;
-    --primary-font-weight: 600;
-    --primary-font-weight-hover: 700;
     --secondary-font-weight: 400;
     --secondary-font-weight-hover: 600;
-    --primary-letter-spacing: 1.2px;
     --secondary-letter-spacing: 1px;
+
     --font-color: #412e2e;
+
     --font-p-color: #000000;
     --font-p-color-hover: #1eff00;
     --font-p-size: 16px;
     --font-p-weight: 500;
     --font-p-letter-spacing: 1px;
-    --primary-font-color-hover: #011b05;
+
     --std-border-radius: 8px;
     --std-border-color: #333;
     --std-border-color-hover: #93bd21;
@@ -45,7 +53,54 @@ body {
     flex-direction: column;
     align-items: center;
 }
+header {
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    top: 0;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+header .colgante {
+    margin-right: 75px;
+    width: 5px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    background-color: var(--primary-color);
+}
+#cartBtn {
+    position: absolute;
+    top: 30px;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    background-color:rgba(255, 255, 255, 0.562);
+    border-radius: 100%;
+    border: 1px solid var(--std-border-color);
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.5s ease;
+}
+#cartBtn:hover {
+    transform: scale(1.1);
+}
+#cartBtn img {
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+}
+#cartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+}
 main {
     width: 100%;
     max-width: 1440px;
@@ -130,6 +185,23 @@ button:hover {
     color: white;
     border-color: var(--std-border-color-hover);
     box-shadow: var(--std-box-shadow-hover);
+}
+input{
+    height: 40px;
+    padding: 10px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--primary-color);
+    background-color:white;
+    border: 1px solid var(--std-border-color);
+    border-radius:8px;
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.5s ease;
+}
+input:hover{
+    border-color: var(--std-border-color-hover);
+    box-shadow: var(--std-box-shadow-hover);
+    scale: 1.05;
 }
 
 /* main */
@@ -239,8 +311,9 @@ button:hover {
 }
 #productsContentNav{
     width: 100%;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -248,7 +321,21 @@ button:hover {
 
     box-shadow: var(--std-box-shadow);
 }
+#productsContentNav a{
+    min-width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.164);
+    color:var(--primary-font-color);
 
+    transition: all 0.5s ease;
+}
+#productsContentNav a:hover{
+    background-color:var(--primary-color-hover);
+    color: var(--primary-font-color-hover);
+    font-weight: var(--primary-font-weight-hover);
+}
 #typeContent{
     width: 100%;
     padding: 5px;
@@ -278,6 +365,8 @@ button:hover {
 
 #typeContent ol{
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     display: flex;
     flex-direction: row;
@@ -290,7 +379,7 @@ button:hover {
 #typeContent .product-card{
     width: 95%;
     max-width: 400px;
-    min-height: 120px;
+    height: 150px;
 
     display: flex;
     flex-direction: row;
@@ -298,11 +387,15 @@ button:hover {
     justify-content: start;
     align-items: center;
     box-shadow: var(--std-box-shadow);
+
+    transition: all 0.5s ease;
+}
+#typeContent .product-card:hover{
+    box-shadow: var(--std-box-shadow-hover);
 }
 #typeContent img{
-    width: auto;
-    max-width: 150px;
-    height: 100%;
+    width: 150px;
+    height: 150px;
 
     box-shadow: var(--std-box-shadow);
 }
