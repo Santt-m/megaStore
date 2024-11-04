@@ -10,31 +10,31 @@
         "horarios": [
             {
               "day": "Lunes",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Martes",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Miércoles",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Jueves",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Viernes",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Sábado",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             },
             {
               "day": "Domingo",
-              "hours": "0:00 - 23:59"
+              "hours": "00:00 - 23:59"
             }
           ],
           "envios": [

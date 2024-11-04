@@ -11,7 +11,7 @@ export function updateStatus(companyData) {
     const currentTime = now.toTimeString().slice(0, 5); // Formato HH:MM
 
     if (!companyData.horarios) {
-        statusElement.textContent = 'no companyData.horarios';
+        statusElement.textContent = 'Horario no disponible';
         statusElement.className = 'closed';
         return;
     }
