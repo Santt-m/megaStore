@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         card.innerHTML = `
             <h3>${item.company}</h3>
             <p>${item.description}</p>
-            <a class="btn" href="../store.html?store=${item.company}" target="_blank">Ver tienda</a>
+            <a class="btn" href="../app.html?store=${item.company}" target="_blank">Ver tienda</a>
         `;
 
         // Agrega la tarjeta al contenedor examples-list

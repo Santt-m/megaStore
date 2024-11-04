@@ -1,11 +1,20 @@
+import './src/app/header.js';
+import './src/app/cart.js';
 import Modal from './src/js/modal.js';
 import { loadCompanyData, loadProducts, fetchDataList } from '../../../data/dataIO.js';
 import { createCompanyHeader, updateCompanyHeader } from './src/app/company.js';
 import { createStatusElement, updateStatus } from './src/app/status.js';
 import { renderProducts } from './src/app/products.js';
+import { renderIndexSection } from './src/app/index.js';
+
+let companyWhatsApp = '';
+
+export function getCompanyWhatsApp() {
+    return companyWhatsApp;
+}
 
 // Función para obtener el parámetro "store" de la URL
-function getStoreFromURL() {
+export function getStoreFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('store');
 }
@@ -19,7 +28,7 @@ async function loadApp() {
     main.innerHTML = '';
 
     if (!storeName) {
-        renderSearchSection(main);
+        renderIndexSection(main);
         return;
     }
 
@@ -30,6 +39,8 @@ async function loadApp() {
 
         if (!companyData) throw new Error(`No se encontraron datos para la tienda: ${storeName}`);
 
+        companyWhatsApp = companyData.whatsapp; // Guardar el número de WhatsApp de la compañía
+
         // Crear y actualizar el estado del local
         const statusElement = createStatusElement();
         main.appendChild(statusElement);
@@ -38,12 +49,14 @@ async function loadApp() {
         // Crear y actualizar el encabezado de la compañía
         const companyHeader = createCompanyHeader();
         main.appendChild(companyHeader);
-        updateCompanyHeader(companyData);
+        updateCompanyHeader(companyData); // Asegurarse de que los datos de horarios se pasen correctamente
 
         // Cargar productos
         const products = await loadProducts(storeName);
         if (products && Array.isArray(products) && products.length > 0) {
             renderProducts(products);
+            // Asegurarse de que la animación se ejecute después de renderizar los productos
+            setTimeout(animateOnScroll, 100);
         } else {
             console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
             // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal
@@ -67,39 +80,27 @@ function displayErrorModal(message) {
     modal.createModal();
 }
 
-// Función para renderizar la sección de búsqueda con autocompletado
-async function renderSearchSection(main) {
-    const dataList = await fetchDataList();
+// Función para animar elementos al hacer scroll
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.product-card');
+    const windowHeight = window.innerHeight;
 
-    const secSearch = document.createElement('section');
-    secSearch.id = 'secSearch';
-    secSearch.innerHTML = `
-        <h2>Buscar tienda</h2>
-        <input type="text" id="searchInput" list="storeSuggestions" placeholder="Escribe el nombre de la tienda...">
-        <datalist id="storeSuggestions"></datalist>
-    `;
-
-    main.appendChild(secSearch);
-
-    const searchInput = document.getElementById('searchInput');
-    const suggestions = document.getElementById('storeSuggestions');
-
-    // Llenar el datalist con las tiendas disponibles
-    dataList.forEach(store => {
-        const option = document.createElement('option');
-        option.value = store.company;
-        suggestions.appendChild(option);
-    });
-
-    // Evento de selección de sugerencia para redirigir a la tienda seleccionada
-    searchInput.addEventListener('change', () => {
-        const selectedStore = searchInput.value;
-        const foundStore = dataList.find(store => store.company === selectedStore);
-        if (foundStore) {
-            window.location.href = `app.html?store=${foundStore.company}`;
+    elements.forEach((element, index) => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100 || index < 3) {
+            element.style.transitionDelay = `${(index % 3) * 0.2}s`;
+            element.classList.add('visible');
+        } else {
+            element.classList.remove('visible');
         }
     });
 }
+
+// Llamar a la función para animar los elementos visibles al cargar la página
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+// Escuchar el evento de scroll para animar los elementos
+window.addEventListener('scroll', animateOnScroll);
 
 // Inicia la carga de la tienda al cargar el script
 document.addEventListener('DOMContentLoaded', loadApp);

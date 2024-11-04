@@ -12,20 +12,77 @@
 <header>
     <div class="colgante">
         <div id="cartBtn">
-            <img src="./src/icon/cart-emply.svg" alt="carrito de compras" loading="lazy">
+            <p id="cartCount">0</p>
+            <img id ="cartImg" src="./src/icon/cart-emply.svg" alt="carrito de compras" loading="lazy">
         </div>
     </div>
-    <div class="colgante">
-        <div class="navBtn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    </div>
+    <div id="cartContent">
+        <div class="cartHeader">
+            <nav>
+                <button id="cartBtnCart">Carrito</button>
+                <button id="cartBtnUser">Mis datos</button>
+                <button id="cartBtnFinish">Finalizar</button>
+            </nav>
+            <button id="cartBtnClose">X</button>
+        </div>
+        <div id="cart">
+            <h3>Carrito de compras</h3>
+            <ol id="cartList"></ol>
+            <p id="cartTotal"></p>
+            <button id="emptyCartButton">Vaciar Carrito</button>
+        </div>
+        <div id="userDataContent">
+            <h3>Mis datos</h3>
+            <form action="userData">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+                <label for="lastName">Apellido</label>
+                <input type="text" name="lastName" id="lastName">
+                <label for="number">Nº de celular:</label>
+                <input type="text" name="number" id="number">
+                <fieldset>
+                    <legend>Método de recibo de pedido</legend>
+                    <input type="radio" name="method" id="takeAway">
+                    <label for="takeAway">Retiro por el local</label>
+                    <input type="radio" name="method" id="envio">
+                    <label for="envio">Envío</label>
+                </fieldset>
+            </form>
+            <form id="envioDetails" style="display: none;">
+                <label for="address">Dirección</label>
+                <input type="text" name="address" id="address">
+                <label for="addressNumber">Nº de dirección</label>
+                <input type="number" name="addressNumber" id="addressNumber">
+                <label for="floor">Piso</label>
+                <input type="text" name="floor" id="floor">
+                <label for="apartment">Departamento</label>
+                <input type="text" name="apartment" id="apartment">
+                <label for="reference">Referencia</label>
+                <input type="text" name="reference" id="reference">
+                <label for="city">Ciudad</label>
+                <input type="text" name="city" id="city">
+                <label for="country">País</label>
+                <input type="text" name="country" id="country">
+                <label for="postalCode">Código Postal</label>
+                <input type="text" name="postalCode" id="postalCode">
+            </form>
+            <button id="saveUserData">Guardar Datos</button>
+        </div>
+        <div id="buy">
+            <h3>Finalizar pedido</h3>
+            <h4>Resumen</h4>
+            <ul id="userList"></ul>
+            <ul id="buyList"></ul>
+            <p id="buyTotal"></p>
+            <button id="buyBtn">Enviar Pedido</button>
         </div>
     </div>
 </header>
+
 <body>
     <main>
-        <!--  -->
+        <!-- Contenido principal -->
     </main>
     <footer>
         <div class="firma">
@@ -37,8 +94,10 @@
             ...
         </div>
         <div class="ContIcons">
-            <a href="https://github.com/santt-m"><img src="./src/icon/github-light.svg" alt="github icon" loading="lazy"> github</a>
-            <a href="https://www.linkedin.com/in/santiagomaruottolo/"><img src="./src/icon/linkedin.svg" alt="linkedin icon" loading="lazy"> linkedin</a>
+            <a href="https://github.com/santt-m"><img src="./src/icon/github-light.svg" alt="github icon"
+                    loading="lazy"> github</a>
+            <a href="https://www.linkedin.com/in/santiagomaruottolo/"><img src="./src/icon/linkedin.svg"
+                    alt="linkedin icon" loading="lazy"> linkedin</a>
         </div>
 
     </footer>
