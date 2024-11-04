@@ -55,8 +55,6 @@ async function loadApp() {
         const products = await loadProducts(storeName);
         if (products && Array.isArray(products) && products.length > 0) {
             renderProducts(products);
-            // Asegurarse de que la animación se ejecute después de renderizar los productos
-            setTimeout(animateOnScroll, 100);
         } else {
             console.warn(`No hay productos disponibles para la tienda: ${storeName}`);
             // Mostrar una advertencia o un mensaje, en vez de lanzar el error y el modal
@@ -79,28 +77,6 @@ function displayErrorModal(message) {
     });
     modal.createModal();
 }
-
-// Función para animar elementos al hacer scroll
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.product-card');
-    const windowHeight = window.innerHeight;
-
-    elements.forEach((element, index) => {
-        const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100 || index < 3) {
-            element.style.transitionDelay = `${(index % 3) * 0.2}s`;
-            element.classList.add('visible');
-        } else {
-            element.classList.remove('visible');
-        }
-    });
-}
-
-// Llamar a la función para animar los elementos visibles al cargar la página
-document.addEventListener('DOMContentLoaded', animateOnScroll);
-
-// Escuchar el evento de scroll para animar los elementos
-window.addEventListener('scroll', animateOnScroll);
 
 // Inicia la carga de la tienda al cargar el script
 document.addEventListener('DOMContentLoaded', loadApp);

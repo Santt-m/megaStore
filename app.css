@@ -77,6 +77,38 @@ header .colgante {
 
     background-color: white;
 }
+/*  animacion de scroll */
+
+section div{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 10% cover 20%;
+    animation-fill-mode: both;
+}
+li{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 10% cover 20%;
+    animation-fill-mode: both;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
 #cartBtn {
     z-index: 10;
     position: absolute;
@@ -1021,12 +1053,7 @@ li.visible {
 }
 
 .product-card {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.product-card.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
+    transition: none;
 }

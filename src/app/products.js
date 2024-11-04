@@ -91,7 +91,7 @@ function displayProducts(type, products) {
     const productsContainer = document.getElementById(`productsContainer-${type}`);
     productsContainer.innerHTML = ''; // Limpiar contenedor
 
-    products.forEach(product => {
+    products.forEach((product, index) => {
         const productCard = document.createElement('li');
         productCard.classList.add('product-card');
         productCard.dataset.id = product.id;
@@ -116,6 +116,10 @@ function displayProducts(type, products) {
             window.updateProductQuantity(product.id);
         });
         productsContainer.appendChild(productCard);
+
+        // Hacer visibles los productos filtrados inmediatamente
+        productCard.style.transitionDelay = `${(index % 3) * 0.2}s`;
+        productCard.classList.add('visible');
     });
 
     // Actualizar las cantidades de los productos en la interfaz
