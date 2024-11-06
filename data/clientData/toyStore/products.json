@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "type": "juguete",
+        "tag": ["Figuras"],
+        "name": "Figura de Acción",
+        "description": "Figura de acción articulada.",
+        "price": 1999,
+        "image": "https://picsum.photos/200/300?random=30",
+        "promo": true
+    },
+    {
+        "id": 2,
+        "type": "juguete",
+        "tag": ["Bloques"],
+        "name": "Bloques de Construcción",
+        "description": "Set de bloques de construcción.",
+        "price": 2999,
+        "image": "https://picsum.photos/200/300?random=31",
+        "promo": false
+    },
+    {
+        "id": 3,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Catan",
+        "description": "Juego de mesa de estrategia y comercio.",
+        "price": 3500,
+        "image": "https://picsum.photos/200/300?random=32",
+        "promo": true
+    },
+    {
+        "id": 4,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Monopoly",
+        "description": "El clásico juego de compra y venta de propiedades.",
+        "price": 2800,
+        "image": "https://picsum.photos/200/300?random=33",
+        "promo": false
+    },
+    {
+        "id": 5,
+        "type": "juego de mesa",
+        "tag": ["Cartas"],
+        "name": "Uno",
+        "description": "El juego de cartas que nunca pasa de moda.",
+        "price": 500,
+        "image": "https://picsum.photos/200/300?random=34",
+        "promo": true
+    },
+    {
+        "id": 6,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Dixit",
+        "description": "Juego de cartas ilustradas para la creatividad.",
+        "price": 4000,
+        "image": "https://picsum.photos/200/300?random=35",
+        "promo": false
+    },
+    {
+        "id": 7,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Risk",
+        "description": "Juego de conquista y estrategia militar.",
+        "price": 3000,
+        "image": "https://picsum.photos/200/300?random=36",
+        "promo": true
+    },
+    {
+        "id": 8,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Pandemic",
+        "description": "Juego cooperativo para salvar al mundo de enfermedades.",
+        "price": 3500,
+        "image": "https://picsum.photos/200/300?random=37",
+        "promo": false
+    },
+    {
+        "id": 9,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Scrabble",
+        "description": "Juego de palabras cruzadas.",
+        "price": 2500,
+        "image": "https://picsum.photos/200/300?random=38",
+        "promo": true
+    },
+    {
+        "id": 10,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Clue",
+        "description": "Juego de misterio y deducción.",
+        "price": 2200,
+        "image": "https://picsum.photos/200/300?random=39",
+        "promo": false
+    },
+    {
+        "id": 11,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Carcassonne",
+        "description": "Juego de colocación de losetas en el que se construye un paisaje.",
+        "price": 3300,
+        "image": "https://picsum.photos/200/300?random=40",
+        "promo": true
+    },
+    {
+        "id": 12,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Ticket to Ride",
+        "description": "Juego de construcción de rutas de tren.",
+        "price": 3000,
+        "image": "https://picsum.photos/200/300?random=41",
+        "promo": false
+    },
+    {
+        "id": 13,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "7 Wonders",
+        "description": "Juego de construcción de civilizaciones.",
+        "price": 3700,
+        "image": "https://picsum.photos/200/300?random=42",
+        "promo": true
+    },
+    {
+        "id": 14,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Pictionary",
+        "description": "Juego de dibujo y adivinanza.",
+        "price": 1800,
+        "image": "https://picsum.photos/200/300?random=43",
+        "promo": false
+    },
+    {
+        "id": 15,
+        "type": "juego de mesa",
+        "tag": ["Cartas"],
+        "name": "Exploding Kittens",
+        "description": "Juego de cartas de estrategia y humor.",
+        "price": 2000,
+        "image": "https://picsum.photos/200/300?random=44",
+        "promo": true
+    },
+    {
+        "id": 16,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Blokus",
+        "description": "Juego de estrategia con piezas de colores.",
+        "price": 2200,
+        "image": "https://picsum.photos/200/300?random=45",
+        "promo": false
+    },
+    {
+        "id": 17,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "The Game of Life",
+        "description": "Simula la vida real y las decisiones que tomamos.",
+        "price": 2600,
+        "image": "https://picsum.photos/200/300?random=46",
+        "promo": true
+    },
+    {
+        "id": 18,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Codenames",
+        "description": "Juego de palabras en equipos.",
+        "price": 2400,
+        "image": "https://picsum.photos/200/300?random=47",
+        "promo": false
+    },
+    {
+        "id": 19,
+        "type": "juego de mesa",
+        "tag": ["Estrategia"],
+        "name": "Sushi Go!",
+        "description": "Juego de cartas rápido y divertido.",
+        "price": 1500,
+        "image": "https://picsum.photos/200/300?random=48",
+        "promo": true
+    },
+    {
+        "id": 20,
+        "type": "juego de mesa",
+        "tag": ["Familia"],
+        "name": "Taboo",
+        "description": "Juego de palabras prohibidas.",
+        "price": 2100,
+        "image": "https://picsum.photos/200/300?random=49",
+        "promo": false
+    },
+    {
+        "id": 21,
+        "type": "juguete",
+        "tag": ["Muñecas"],
+        "name": "Muñeca de Trapo",
+        "description": "Muñeca hecha a mano de trapo.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=50",
+        "promo": true
+    },
+    {
+        "id": 22,
+        "type": "juguete",
+        "tag": ["Vehículos"],
+        "name": "Auto de Juguete",
+        "description": "Auto de juguete a control remoto.",
+        "price": 1299,
+        "image": "https://picsum.photos/200/300?random=51",
+        "promo": false
+    },
+    {
+        "id": 23,
+        "type": "juguete",
+        "tag": ["Construcción"],
+        "name": "Set de Construcción Magnética",
+        "description": "Set de piezas magnéticas para construir.",
+        "price": 2499,
+        "image": "https://picsum.photos/200/300?random=52",
+        "promo": true
+    },
+    {
+        "id": 24,
+        "type": "juguete",
+        "tag": ["Figuras"],
+        "name": "Conjunto de Figuras de Dinosaurios",
+        "description": "Set de figuras de dinosaurios de plástico.",
+        "price": 799,
+        "image": "https://picsum.photos/200/300?random=53",
+        "promo": false
+    },
+    {
+        "id": 25,
+        "type": "juguete",
+        "tag": ["Muñecas"],
+        "name": "Muñeca de Moda",
+        "description": "Muñeca de moda con accesorios.",
+        "price": 1499,
+        "image": "https://picsum.photos/200/300?random=54",
+        "promo": true
+    },
+    {
+        "id": 26,
+        "type": "juguete",
+        "tag": ["Vehículos"],
+        "name": "Camión de Bomberos",
+        "description": "Camión de bomberos a control remoto.",
+        "price": 1799,
+        "image": "https://picsum.photos/200/300?random=55",
+        "promo": false
+    },
+    {
+        "id": 27,
+        "type": "juguete",
+        "tag": ["Construcción"],
+        "name": "Set de Legos",
+        "description": "Set de bloques de Lego para construir.",
+        "price": 2999,
+        "image": "https://picsum.photos/200/300?random=56",
+        "promo": true
+    },
+    {
+        "id": 28,
+        "type": "juguete",
+        "tag": ["Muñecas"],
+        "name": "Muñeca Interactiva",
+        "description": "Muñeca que habla y responde.",
+        "price": 2199,
+        "image": "https://picsum.photos/200/300?random=57",
+        "promo": false
+    },
+    {
+        "id": 29,
+        "type": "juguete",
+        "tag": ["Figuras"],
+        "name": "Superhéroe de Acción",
+        "description": "Figura de superhéroe articulada.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=58",
+        "promo": true
+    },
+    {
+        "id": 30,
+        "type": "juguete",
+        "tag": ["Vehículos"],
+        "name": "Set de Carros de Carreras",
+        "description": "Set de autos de carreras a escala.",
+        "price": 2499,
+        "image": "https://picsum.photos/200/300?random=59",
+        "promo": false
+    }
+]

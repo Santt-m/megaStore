@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Cuaderno",
+        "description": "Cuaderno de 100 hojas.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=33",
+        "promo": true
+    },
+    {
+        "id": 2,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Bolígrafo",
+        "description": "Bolígrafo de tinta azul.",
+        "price": 149,
+        "image": "https://picsum.photos/200/300?random=34",
+        "promo": false
+    },
+    {
+        "id": 3,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Resma de papel",
+        "description": "Resma de papel tamaño carta.",
+        "price": 499,
+        "image": "https://picsum.photos/200/300?random=35",
+        "promo": true
+    },
+    {
+        "id": 4,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Lápiz",
+        "description": "Lápiz de grafito.",
+        "price": 99,
+        "image": "https://picsum.photos/200/300?random=36",
+        "promo": false
+    },
+    {
+        "id": 5,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Marcador",
+        "description": "Marcador permanente.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=37",
+        "promo": true
+    },
+    {
+        "id": 6,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Block de notas",
+        "description": "Block de notas adhesivas.",
+        "price": 249,
+        "image": "https://picsum.photos/200/300?random=38",
+        "promo": false
+    },
+    {
+        "id": 7,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Pluma estilográfica",
+        "description": "Pluma estilográfica de lujo.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=39",
+        "promo": true
+    },
+    {
+        "id": 8,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Carpeta",
+        "description": "Carpeta tamaño oficio.",
+        "price": 399,
+        "image": "https://picsum.photos/200/300?random=40",
+        "promo": false
+    },
+    {
+        "id": 9,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Tinta para pluma",
+        "description": "Tinta negra para pluma estilográfica.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=41",
+        "promo": true
+    },
+    {
+        "id": 10,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Sobre",
+        "description": "Sobre tamaño carta.",
+        "price": 49,
+        "image": "https://picsum.photos/200/300?random=42",
+        "promo": false
+    },
+    {
+        "id": 11,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Corrector líquido",
+        "description": "Corrector líquido blanco.",
+        "price": 129,
+        "image": "https://picsum.photos/200/300?random=43",
+        "promo": true
+    },
+    {
+        "id": 12,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel fotográfico",
+        "description": "Papel fotográfico brillante.",
+        "price": 599,
+        "image": "https://picsum.photos/200/300?random=44",
+        "promo": false
+    },
+    {
+        "id": 13,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Portaminas",
+        "description": "Portaminas de 0.5 mm.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=45",
+        "promo": true
+    },
+    {
+        "id": 14,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel reciclado",
+        "description": "Papel reciclado tamaño carta.",
+        "price": 349,
+        "image": "https://picsum.photos/200/300?random=46",
+        "promo": false
+    },
+    {
+        "id": 15,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Rotulador",
+        "description": "Rotulador de colores.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=47",
+        "promo": true
+    },
+    {
+        "id": 16,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel de colores",
+        "description": "Papel de colores surtidos.",
+        "price": 449,
+        "image": "https://picsum.photos/200/300?random=48",
+        "promo": false
+    },
+    {
+        "id": 17,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Goma de borrar",
+        "description": "Goma de borrar blanca.",
+        "price": 49,
+        "image": "https://picsum.photos/200/300?random=49",
+        "promo": true
+    },
+    {
+        "id": 18,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel kraft",
+        "description": "Papel kraft para manualidades.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=50",
+        "promo": false
+    },
+    {
+        "id": 19,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Plumón",
+        "description": "Plumón para pizarra blanca.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=51",
+        "promo": true
+    },
+    {
+        "id": 20,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel bond",
+        "description": "Papel bond tamaño carta.",
+        "price": 399,
+        "image": "https://picsum.photos/200/300?random=52",
+        "promo": false
+    },
+    {
+        "id": 21,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Tijeras",
+        "description": "Tijeras escolares.",
+        "price": 149,
+        "image": "https://picsum.photos/200/300?random=53",
+        "promo": true
+    },
+    {
+        "id": 22,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel cebolla",
+        "description": "Papel cebolla para calcar.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=54",
+        "promo": false
+    },
+    {
+        "id": 23,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Sacapuntas",
+        "description": "Sacapuntas metálico.",
+        "price": 99,
+        "image": "https://picsum.photos/200/300?random=55",
+        "promo": true
+    },
+    {
+        "id": 24,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel de calco",
+        "description": "Papel de calco tamaño carta.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=56",
+        "promo": false
+    },
+    {
+        "id": 25,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Regla",
+        "description": "Regla de 30 cm.",
+        "price": 99,
+        "image": "https://picsum.photos/200/300?random=57",
+        "promo": true
+    },
+    {
+        "id": 26,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel de regalo",
+        "description": "Papel de regalo decorado.",
+        "price": 149,
+        "image": "https://picsum.photos/200/300?random=58",
+        "promo": false
+    },
+    {
+        "id": 27,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Cinta adhesiva",
+        "description": "Cinta adhesiva transparente.",
+        "price": 99,
+        "image": "https://picsum.photos/200/300?random=59",
+        "promo": true
+    },
+    {
+        "id": 28,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel crepé",
+        "description": "Papel crepé de colores.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=60",
+        "promo": false
+    },
+    {
+        "id": 29,
+        "type": "papelería",
+        "tag": ["Escritura"],
+        "name": "Pegamento en barra",
+        "description": "Pegamento en barra escolar.",
+        "price": 99,
+        "image": "https://picsum.photos/200/300?random=61",
+        "promo": true
+    },
+    {
+        "id": 30,
+        "type": "papelería",
+        "tag": ["Papel"],
+        "name": "Papel de seda",
+        "description": "Papel de seda de colores.",
+        "price": 249,
+        "image": "https://picsum.photos/200/300?random=62",
+        "promo": false
+    },
+    {
+        "id": 31,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Mouse inalámbrico",
+        "description": "Mouse inalámbrico ergonómico.",
+        "price": 799,
+        "image": "https://picsum.photos/200/300?random=63",
+        "promo": true
+    },
+    {
+        "id": 32,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Teclado mecánico",
+        "description": "Teclado mecánico retroiluminado.",
+        "price": 1299,
+        "image": "https://picsum.photos/200/300?random=64",
+        "promo": false
+    },
+    {
+        "id": 33,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Auriculares",
+        "description": "Auriculares con cancelación de ruido.",
+        "price": 1599,
+        "image": "https://picsum.photos/200/300?random=65",
+        "promo": true
+    },
+    {
+        "id": 34,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Cargador portátil",
+        "description": "Cargador portátil de 10000mAh.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=66",
+        "promo": false
+    },
+    {
+        "id": 35,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Cable USB-C",
+        "description": "Cable USB-C de 1 metro.",
+        "price": 199,
+        "image": "https://picsum.photos/200/300?random=67",
+        "promo": true
+    },
+    {
+        "id": 36,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Adaptador HDMI",
+        "description": "Adaptador HDMI a VGA.",
+        "price": 299,
+        "image": "https://picsum.photos/200/300?random=68",
+        "promo": false
+    },
+    {
+        "id": 37,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Memoria USB",
+        "description": "Memoria USB de 32GB.",
+        "price": 499,
+        "image": "https://picsum.photos/200/300?random=69",
+        "promo": true
+    },
+    {
+        "id": 38,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Disco duro externo",
+        "description": "Disco duro externo de 1TB.",
+        "price": 2499,
+        "image": "https://picsum.photos/200/300?random=70",
+        "promo": false
+    },
+    {
+        "id": 39,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Soporte para laptop",
+        "description": "Soporte ajustable para laptop.",
+        "price": 699,
+        "image": "https://picsum.photos/200/300?random=71",
+        "promo": true
+    },
+    {
+        "id": 40,
+        "type": "tecnología",
+        "tag": ["Accesorios"],
+        "name": "Cámara web",
+        "description": "Cámara web HD.",
+        "price": 899,
+        "image": "https://picsum.photos/200/300?random=72",
+        "promo": false
+    }
+]

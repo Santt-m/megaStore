@@ -33,7 +33,7 @@ async function fetchDataFromUrl(url) {
  */
 async function getStoreInfo(storeName) {
     const dataList = await fetchDataList();
-    return dataList.find(item => item.company === storeName) || null;
+    return dataList.find(item => item.name === storeName) || null;
 }
 
 /**

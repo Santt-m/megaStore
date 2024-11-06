@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "type": "deporte",
+        "tag": ["Pelotas"],
+        "name": "Balón de Fútbol",
+        "description": "Balón de fútbol profesional.",
+        "price": 2599,
+        "image": "https://picsum.photos/200/300?random=36",
+        "promo": true
+    },
+    {
+        "id": 2,
+        "type": "deporte",
+        "tag": ["Raquetas"],
+        "name": "Raqueta de Tenis",
+        "description": "Raqueta de tenis de alta calidad.",
+        "price": 8999,
+        "image": "https://picsum.photos/200/300?random=37",
+        "promo": false
+    },
+    {
+        "id": 3,
+        "type": "deporte",
+        "tag": ["Pelotas"],
+        "name": "Balón de Baloncesto",
+        "description": "Balón de baloncesto oficial.",
+        "price": 2999,
+        "image": "https://picsum.photos/200/300?random=39",
+        "promo": true
+    },
+    {
+        "id": 4,
+        "type": "deporte",
+        "tag": ["Pelotas"],
+        "name": "Balón de Voleibol",
+        "description": "Balón de voleibol de playa.",
+        "price": 1999,
+        "image": "https://picsum.photos/200/300?random=40",
+        "promo": false
+    },
+    {
+        "id": 5,
+        "type": "deporte",
+        "tag": ["Raquetas"],
+        "name": "Raqueta de Bádminton",
+        "description": "Raqueta ligera para bádminton.",
+        "price": 4999,
+        "image": "https://picsum.photos/200/300?random=41",
+        "promo": true
+    },
+    {
+        "id": 6,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Guantes de Boxeo",
+        "description": "Guantes de boxeo profesionales.",
+        "price": 5999,
+        "image": "https://picsum.photos/200/300?random=42",
+        "promo": false
+    },
+    {
+        "id": 7,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Cinta de Correr",
+        "description": "Cinta de correr eléctrica.",
+        "price": 15999,
+        "image": "https://picsum.photos/200/300?random=43",
+        "promo": true
+    },
+    {
+        "id": 8,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Bicicleta Estática",
+        "description": "Bicicleta estática para ejercicio.",
+        "price": 12999,
+        "image": "https://picsum.photos/200/300?random=44",
+        "promo": false
+    },
+    {
+        "id": 9,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Mancuernas",
+        "description": "Juego de mancuernas ajustables.",
+        "price": 7999,
+        "image": "https://picsum.photos/200/300?random=45",
+        "promo": true
+    },
+    {
+        "id": 10,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Esterilla de Yoga",
+        "description": "Esterilla antideslizante para yoga.",
+        "price": 1999,
+        "image": "https://picsum.photos/200/300?random=46",
+        "promo": false
+    },
+    {
+        "id": 11,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Rueda de Abdominales",
+        "description": "Rueda para ejercicios abdominales.",
+        "price": 1499,
+        "image": "https://picsum.photos/200/300?random=47",
+        "promo": true
+    },
+    {
+        "id": 12,
+        "type": "deporte",
+        "tag": ["Accesorios"],
+        "name": "Comba de Salto",
+        "description": "Comba de salto ajustable.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=48",
+        "promo": false
+    },
+    {
+        "id": 13,
+        "type": "ropa",
+        "tag": ["Remeras"],
+        "name": "Remera Deportiva",
+        "description": "Remera deportiva de alta calidad.",
+        "price": 1999,
+        "image": "https://picsum.photos/200/300?random=49",
+        "promo": true
+    },
+    {
+        "id": 14,
+        "type": "ropa",
+        "tag": ["Zapatillas"],
+        "name": "Zapatillas de Running",
+        "description": "Zapatillas ligeras para correr.",
+        "price": 5999,
+        "image": "https://picsum.photos/200/300?random=50",
+        "promo": false
+    },
+    {
+        "id": 15,
+        "type": "ropa",
+        "tag": ["Pantalones"],
+        "name": "Pantalones Deportivos",
+        "description": "Pantalones cómodos para deporte.",
+        "price": 2999,
+        "image": "https://picsum.photos/200/300?random=51",
+        "promo": true
+    },
+    {
+        "id": 16,
+        "type": "ropa",
+        "tag": ["Shorts"],
+        "name": "Shorts de Entrenamiento",
+        "description": "Shorts ligeros para entrenamiento.",
+        "price": 1499,
+        "image": "https://picsum.photos/200/300?random=52",
+        "promo": false
+    },
+    {
+        "id": 17,
+        "type": "ropa",
+        "tag": ["Sudaderas"],
+        "name": "Sudadera con Capucha",
+        "description": "Sudadera con capucha para deporte.",
+        "price": 3999,
+        "image": "https://picsum.photos/200/300?random=53",
+        "promo": true
+    },
+    {
+        "id": 18,
+        "type": "ropa",
+        "tag": ["Calcetines"],
+        "name": "Calcetines Deportivos",
+        "description": "Calcetines transpirables para deporte.",
+        "price": 499,
+        "image": "https://picsum.photos/200/300?random=54",
+        "promo": false
+    },
+    {
+        "id": 19,
+        "type": "ropa",
+        "tag": ["Gorras"],
+        "name": "Gorra Deportiva",
+        "description": "Gorra ligera para deporte.",
+        "price": 999,
+        "image": "https://picsum.photos/200/300?random=55",
+        "promo": true
+    },
+    {
+        "id": 20,
+        "type": "ropa",
+        "tag": ["Chaquetas"],
+        "name": "Chaqueta Deportiva",
+        "description": "Chaqueta impermeable para deporte.",
+        "price": 4999,
+        "image": "https://picsum.photos/200/300?random=56",
+        "promo": false
+    },
+    {
+        "id": 21,
+        "type": "ropa",
+        "tag": ["Guantes"],
+        "name": "Guantes Deportivos",
+        "description": "Guantes transpirables para deporte.",
+        "price": 1499,
+        "image": "https://picsum.photos/200/300?random=57",
+        "promo": true
+    },
+    {
+        "id": 22,
+        "type": "ropa",
+        "tag": ["Mallas"],
+        "name": "Mallas Deportivas",
+        "description": "Mallas ajustadas para deporte.",
+        "price": 2499,
+        "image": "https://picsum.photos/200/300?random=58",
+        "promo": false
+    }
+]

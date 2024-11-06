@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         
         // Genera el contenido HTML de la tarjeta
         card.innerHTML = `
-            <h3>${item.company}</h3>
+            <h3>${item.name}</h3>
             <p>${item.description}</p>
-            <a class="btn" href="../app.html?store=${item.company}" target="_blank">Ver tienda</a>
+            <a class="btn" href="../app.html?store=${item.name}" target="_blank">Ver tienda</a>
         `;
 
         // Agrega la tarjeta al contenedor examples-list

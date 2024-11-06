@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "libro",
+    "tag": ["Ficción"],
+    "name": "El señor de los anillos",
+    "description": "Una épica novela de fantasía escrita por J.R.R. Tolkien.",
+    "price": 5000,
+    "image": "https://picsum.photos/200/300?random=24",
+    "promo": true
+  },
+  {
+    "id": 2,
+    "type": "libro",
+    "tag": ["Ciencia Ficción"],
+    "name": "Dune",
+    "description": "Una novela de ciencia ficción escrita por Frank Herbert.",
+    "price": 6000,
+    "image": "https://picsum.photos/200/300?random=25",
+    "promo": false
+  }
+]

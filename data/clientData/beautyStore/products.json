@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "belleza",
+    "tag": ["Maquillaje"],
+    "name": "Labial Rojo",
+    "description": "Labial rojo de larga duración.",
+    "price": 1500,
+    "image": "https://picsum.photos/200/300?random=27",
+    "promo": true
+  },
+  {
+    "id": 2,
+    "type": "belleza",
+    "tag": ["Cuidado de la piel"],
+    "name": "Crema Hidratante",
+    "description": "Crema hidratante para todo tipo de piel.",
+    "price": 3000,
+    "image": "https://picsum.photos/200/300?random=28",
+    "promo": false
+  }
+]

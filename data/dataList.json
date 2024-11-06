@@ -1,32 +1,114 @@
 [
     {
-        "company": "ClothesStore",
+        "name": "ClothesStore",
         "description": "Ecommerce de ropa",
+        "image": "https://picsum.photos/200?random=1",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=1",
         "url": "./clientData/clothesStore"
     },
     {
-        "company": "foodStore",
-        "description": "Ecommerce de comida",
+        "name": "Food Store",
+        "description": "Ecomerse de comida",
+        "image": "./data/clientData/foodStore/logo.jpeg",
+        "heroBackgroundImage": "./data/clientData/foodStore/hero_background.webp",
         "url": "./clientData/foodStore"
     },
     {
-        "company": "gameStore",
-        "description": "Ecommerce de videojuegos",
+        "name": "Game Store",
+        "description": "Ecomerse de videojuegos",
+        "image": "https://picsum.photos/200?random=3",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=3",
         "url": "./clientData/gameStore"
     },
     {
-        "company": "hippieStore",
-        "description": "Ecommerce de cosas hippies",
+        "name": "Hippie Store",
+        "description": "Ecomerse de cosas hipies",
+        "image": "https://picsum.photos/200?random=4",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=4",
         "url": "./clientData/hippieStore"
     },
     {
-        "company": "icecreamMenu",
+        "name": "icecreamMenu",
         "description": "Menú de heladería",
+        "image": "https://picsum.photos/200?random=5",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=5",
         "url": "./clientData/icecreamMenu"
     },
     {
-        "company": "restoMenu",
+        "name": "restoMenu",
         "description": "Menú para restaurantes",
+        "image": "https://picsum.photos/200?random=6",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=6",
         "url": "./clientData/restoMenu"
+    },
+    {
+        "name": "Book Store",
+        "description": "Ecommerce de libros",
+        "image": "https://picsum.photos/200?random=7",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=7",
+        "url": "./clientData/bookStore"
+    },
+    {
+        "name": "Toy Store",
+        "description": "Ecommerce de juguetes",
+        "image": "https://picsum.photos/200?random=8",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=8",
+        "url": "./clientData/toyStore"
+    },
+    {
+        "name": "Electronics Store",
+        "description": "Ecommerce de electrónicos",
+        "image": "https://picsum.photos/200?random=9",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=9",
+        "url": "./clientData/electronicsStore"
+    },
+    {
+        "name": "Furniture Store",
+        "description": "Ecommerce de muebles",
+        "image": "https://picsum.photos/200?random=10",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=10",
+        "url": "./clientData/furnitureStore"
+    },
+    {
+        "name": "Pet Store",
+        "description": "Ecommerce de mascotas",
+        "image": "https://picsum.photos/200?random=11",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=11",
+        "url": "./clientData/petStore"
+    },
+    {
+        "name": "Music Store",
+        "description": "Ecommerce de música",
+        "image": "https://picsum.photos/200?random=12",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=12",
+        "url": "./clientData/musicStore"
+    },
+    {
+        "name": "Sports Store",
+        "description": "Ecommerce de artículos deportivos",
+        "image": "https://picsum.photos/200?random=13",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=13",
+        "url": "./clientData/sportsStore"
+    },
+    {
+        "name": "Beauty Store",
+        "description": "Ecommerce de productos de belleza",
+        "image": "https://picsum.photos/200?random=14",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=14",
+        "url": "./clientData/beautyStore"
+    },
+    {
+        "name": "Garden Store",
+        "description": "Ecommerce de productos de jardinería",
+        "image": "https://picsum.photos/200?random=15",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=15",
+        "url": "./clientData/gardenStore"
+    },
+    {
+        "name": "Stationery Store",
+        "description": "Ecommerce de papelería",
+        "image": "https://picsum.photos/200?random=16",
+        "heroBackgroundImage": "https://picsum.photos/800/400?random=16",
+        "url": "./clientData/stationeryStore"
     }
 ]

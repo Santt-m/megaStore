@@ -6,52 +6,498 @@
         "name": "Ensalada César",
         "description": "Ensalada César con aderezo casero.",
         "price": 1200,
-        "image": "https://picsum.photos/200",
-        "promo": true,
-        "alcoholic": false
+        "image": "https://picsum.photos/800/400?random=1",
+        "promo": true
     },
     {
         "id": 2,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Bruschetta",
+        "description": "Bruschetta con tomate y albahaca.",
+        "price": 700,
+        "image": "https://picsum.photos/800/400?random=2",
+        "promo": false
+    },
+    {
+        "id": 3,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Gazpacho",
+        "description": "Sopa fría de tomate y vegetales.",
+        "price": 650,
+        "image": "https://picsum.photos/800/400?random=3",
+        "promo": true
+    },
+    {
+        "id": 4,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Hummus",
+        "description": "Hummus con pan pita.",
+        "price": 600,
+        "image": "https://picsum.photos/800/400?random=4",
+        "promo": false
+    },
+    {
+        "id": 5,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Guacamole",
+        "description": "Guacamole con nachos.",
+        "price": 700,
+        "image": "https://picsum.photos/800/400?random=5",
+        "promo": true
+    },
+    {
+        "id": 6,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Tabbouleh",
+        "description": "Ensalada de tabbouleh con perejil.",
+        "price": 750,
+        "image": "https://picsum.photos/800/400?random=6",
+        "promo": false
+    },
+    {
+        "id": 7,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Queso Fundido",
+        "description": "Queso fundido con chorizo.",
+        "price": 900,
+        "image": "https://picsum.photos/800/400?random=7",
+        "promo": true
+    },
+    {
+        "id": 8,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Crostini",
+        "description": "Crostini de salmón ahumado y crema.",
+        "price": 800,
+        "image": "https://picsum.photos/800/400?random=8",
+        "promo": false
+    },
+    {
+        "id": 9,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Sopa de Cebolla",
+        "description": "Sopa de cebolla gratinada.",
+        "price": 850,
+        "image": "https://picsum.photos/800/400?random=9",
+        "promo": true
+    },
+    {
+        "id": 10,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Paté de Champiñones",
+        "description": "Paté de champiñones con tostadas.",
+        "price": 650,
+        "image": "https://picsum.photos/800/400?random=10",
+        "promo": false
+    },
+    {
+        "id": 11,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Rollitos Primavera",
+        "description": "Rollitos primavera con vegetales.",
+        "price": 700,
+        "image": "https://picsum.photos/800/400?random=11",
+        "promo": true
+    },
+    {
+        "id": 12,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Tempura de Verduras",
+        "description": "Verduras en tempura crujiente.",
+        "price": 750,
+        "image": "https://picsum.photos/800/400?random=12",
+        "promo": false
+    },
+    {
+        "id": 13,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Nachos con Queso",
+        "description": "Nachos gratinados con queso cheddar.",
+        "price": 850,
+        "image": "https://picsum.photos/800/400?random=13",
+        "promo": true
+    },
+    {
+        "id": 14,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Mini Pizzas",
+        "description": "Mini pizzas de vegetales y queso.",
+        "price": 800,
+        "image": "https://picsum.photos/800/400?random=14",
+        "promo": false
+    },
+    {
+        "id": 15,
+        "type": "entrada",
+        "tag": ["Vegetariano"],
+        "name": "Falafel",
+        "description": "Bolas de falafel con salsa de yogurt.",
+        "price": 600,
+        "image": "https://picsum.photos/800/400?random=15",
+        "promo": true
+    },
+    {
+        "id": 16,
         "type": "plato principal",
         "tag": ["Carne"],
         "name": "Bife de Chorizo",
         "description": "Bife de chorizo a la parrilla con guarnición.",
         "price": 2500,
-        "image": "https://picsum.photos/200",
-        "promo": false,
-        "alcoholic": false
+        "image": "https://picsum.photos/800/400?random=16",
+        "promo": false
     },
     {
-        "id": 3,
-        "type": "postre",
-        "tag": ["Dulce"],
-        "name": "Tiramisú",
-        "description": "Tiramisú clásico italiano.",
-        "price": 800,
-        "image": "https://picsum.photos/200",
-        "promo": true,
-        "alcoholic": false
+        "id": 17,
+        "type": "plato principal",
+        "tag": ["Pasta"],
+        "name": "Spaghetti Carbonara",
+        "description": "Spaghetti con salsa carbonara.",
+        "price": 1500,
+        "image": "https://picsum.photos/800/400?random=17",
+        "promo": true
     },
     {
-        "id": 4,
+        "id": 18,
+        "type": "plato principal",
+        "tag": ["Pescado"],
+        "name": "Salmón a la Parrilla",
+        "description": "Salmón a la parrilla con salsa de limón.",
+        "price": 2200,
+        "image": "https://picsum.photos/800/400?random=18",
+        "promo": false
+    },
+    {
+        "id": 19,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Costillas BBQ",
+        "description": "Costillas de cerdo con salsa BBQ.",
+        "price": 2400,
+        "image": "https://picsum.photos/800/400?random=19",
+        "promo": true
+    },
+    {
+        "id": 20,
+        "type": "plato principal",
+        "tag": ["Pasta"],
+        "name": "Lasagna",
+        "description": "Lasagna de carne con queso.",
+        "price": 1800,
+        "image": "https://picsum.photos/800/400?random=20",
+        "promo": false
+    },
+    {
+        "id": 21,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Pollo al Curry",
+        "description": "Pollo al curry con arroz.",
+        "price": 1600,
+        "image": "https://picsum.photos/800/400?random=21",
+        "promo": true
+    },
+    {
+        "id": 22,
+        "type": "plato principal",
+        "tag": ["Pescado"],
+        "name": "Atún a la Parrilla",
+        "description": "Atún a la parrilla con ensalada.",
+        "price": 2200,
+        "image": "https://picsum.photos/800/400?random=22",
+        "promo": false
+    },
+    {
+        "id": 23,
+        "type": "plato principal",
+        "tag": ["Pasta"],
+        "name": "Penne Arrabbiata",
+        "description": "Penne con salsa picante.",
+        "price": 1400,
+        "image": "https://picsum.photos/800/400?random=23",
+        "promo": true
+    },
+    {
+        "id": 24,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Lomo al Oporto",
+        "description": "Lomo de res con salsa de oporto.",
+        "price": 2800,
+        "image": "https://picsum.photos/800/400?random=24",
+        "promo": false
+    },
+    {
+        "id": 25,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Hamburguesa Gourmet",
+        "description": "Hamburguesa de res con queso cheddar.",
+        "price": 1500,
+        "image": "https://picsum.photos/800/400?random=25",
+        "promo": true
+    },
+    {
+        "id": 26,
+        "type": "plato principal",
+        "tag": ["Pasta"],
+        "name": "Raviolis de Espinaca",
+        "description": "Raviolis rellenos de espinaca con salsa de tomate.",
+        "price": 1300,
+        "image": "https://picsum.photos/800/400?random=26",
+        "promo": false
+    },
+    {
+        "id": 27,
+        "type": "plato principal",
+        "tag": ["Pescado"],
+        "name": "Filete de Merluza",
+        "description": "Filete de merluza al limón.",
+        "price": 1700,
+        "image": "https://picsum.photos/800/400?random=27",
+        "promo": true
+    },
+    {
+        "id": 28,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Steak Frites",
+        "description": "Bistec de res con papas fritas.",
+        "price": 2500,
+        "image": "https://picsum.photos/800/400?random=28",
+        "promo": false
+    },
+    {
+        "id": 29,
+        "type": "plato principal",
+        "tag": ["Carne"],
+        "name": "Pechuga de Pollo a la Plancha",
+        "description": "Pechuga de pollo con verduras al vapor.",
+        "price": 1600,
+        "image": "https://picsum.photos/800/400?random=29",
+        "promo": true
+    },
+    {
+        "id": 30,
+        "type": "plato principal",
+        "tag": ["Pasta"],
+        "name": "Fettuccine Alfredo",
+        "description": "Fettuccine con salsa cremosa Alfredo.",
+        "price": 1700,
+        "image": "https://picsum.photos/800/400?random=30",
+        "promo": false
+    },
+    {
+        "id": 31,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Puré de Papas",
+        "description": "Puré de papas casero.",
+        "price": 400,
+        "image": "https://picsum.photos/800/400?random=31",
+        "promo": true
+    },
+    {
+        "id": 32,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Ensalada Mixta",
+        "description": "Ensalada con lechuga, tomate y zanahoria.",
+        "price": 450,
+        "image": "https://picsum.photos/800/400?random=32",
+        "promo": false
+    },
+    {
+        "id": 33,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Papas Fritas",
+        "description": "Papas fritas crujientes.",
+        "price": 350,
+        "image": "https://picsum.photos/800/400?random=33",
+        "promo": true
+    },
+    {
+        "id": 34,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Arroz Pilaf",
+        "description": "Arroz con almendras y pasas.",
+        "price": 500,
+        "image": "https://picsum.photos/800/400?random=34",
+        "promo": false
+    },
+    {
+        "id": 35,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Verduras al Vapor",
+        "description": "Verduras al vapor con aceite de oliva.",
+        "price": 550,
+        "image": "https://picsum.photos/800/400?random=35",
+        "promo": true
+    },
+    {
+        "id": 36,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Gratinado de Papas",
+        "description": "Papas gratinadas con queso.",
+        "price": 600,
+        "image": "https://picsum.photos/800/400?random=36",
+        "promo": false
+    },
+    {
+        "id": 37,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Pan de Ajo",
+        "description": "Pan de ajo crujiente.",
+        "price": 400,
+        "image": "https://picsum.photos/800/400?random=37",
+        "promo": true
+    },
+    {
+        "id": 38,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Puré de Zanahorias",
+        "description": "Puré de zanahorias con crema.",
+        "price": 450,
+        "image": "https://picsum.photos/800/400?random=38",
+        "promo": false
+    },
+    {
+        "id": 39,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Ensalada de Quinoa",
+        "description": "Ensalada de quinoa con vegetales.",
+        "price": 550,
+        "image": "https://picsum.photos/800/400?random=39",
+        "promo": true
+    },
+    {
+        "id": 40,
+        "type": "guarnicion",
+        "tag": ["Vegetariano"],
+        "name": "Champiñones Salteados",
+        "description": "Champiñones salteados con mantequilla.",
+        "price": 600,
+        "image": "https://picsum.photos/800/400?random=40",
+        "promo": false
+    },
+    {
+        "id": 41,
         "type": "bebida",
         "tag": ["Sin Alcohol"],
         "name": "Limonada",
         "description": "Limonada fresca con menta.",
         "price": 500,
-        "image": "https://picsum.photos/200",
-        "promo": false,
-        "alcoholic": false
+        "image": "https://picsum.photos/800/400?random=41",
+        "promo": false
     },
     {
-        "id": 5,
+        "id": 42,
         "type": "bebida",
         "tag": ["Con Alcohol"],
         "name": "Mojito",
         "description": "Mojito clásico cubano.",
         "price": 900,
-        "image": "https://picsum.photos/200",
-        "promo": true,
-        "alcoholic": true
+        "image": "https://picsum.photos/800/400?random=42",
+        "promo": true
+    },
+    {
+        "id": 43,
+        "type": "bebida",
+        "tag": ["Sin Alcohol"],
+        "name": "Jugo de Naranja",
+        "description": "Jugo de naranja natural.",
+        "price": 600,
+        "image": "https://picsum.photos/800/400?random=43",
+        "promo": true
+    },
+    {
+        "id": 44,
+        "type": "bebida",
+        "tag": ["Con Alcohol"],
+        "name": "Cerveza Artesanal",
+        "description": "Cerveza artesanal de trigo.",
+        "price": 700,
+        "image": "https://picsum.photos/800/400?random=44",
+        "promo": false
+    },
+    {
+        "id": 45,
+        "type": "bebida",
+        "tag": ["Sin Alcohol"],
+        "name": "Agua Mineral",
+        "description": "Agua mineral con gas.",
+        "price": 300,
+        "image": "https://picsum.photos/800/400?random=45",
+        "promo": true
+    },
+    {
+        "id": 46,
+        "type": "bebida",
+        "tag": ["Sin Alcohol"],
+        "name": "Té Helado",
+        "description": "Té helado de durazno.",
+        "price": 500,
+        "image": "https://picsum.photos/800/400?random=46",
+        "promo": false
+    },
+    {
+        "id": 47,
+        "type": "bebida",
+        "tag": ["Con Alcohol"],
+        "name": "Vino Tinto",
+        "description": "Vino tinto crianza.",
+        "price": 1800,
+        "image": "https://picsum.photos/800/400?random=47",
+        "promo": true
+    },
+    {
+        "id": 48,
+        "type": "bebida",
+        "tag": ["Con Alcohol"],
+        "name": "Gin Tonic",
+        "description": "Gin tonic con rodajas de pepino.",
+        "price": 800,
+        "image": "https://picsum.photos/800/400?random=48",
+        "promo": false
+    },
+    {
+        "id": 49,
+        "type": "bebida",
+        "tag": ["Sin Alcohol"],
+        "name": "Smoothie de Fresas",
+        "description": "Smoothie de fresas y yogurt.",
+        "price": 700,
+        "image": "https://picsum.photos/800/400?random=49",
+        "promo": true
+    },
+    {
+        "id": 50,
+        "type": "bebida",
+        "tag": ["Con Alcohol"],
+        "name": "Piña Colada",
+        "description": "Piña colada tropical.",
+        "price": 1000,
+        "image": "https://picsum.photos/800/400?random=50",
+        "promo": false
     }
+
 ]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "electrónica",
+    "tag": ["Smartphones"],
+    "name": "iPhone 13",
+    "description": "El último modelo de iPhone con tecnología avanzada y diseño elegante.",
+    "price": 100000,
+    "image": "https://picsum.photos/200/300?random=21",
+    "promo": true
+  },
+  {
+    "id": 2,
+    "type": "electrónica",
+    "tag": ["Laptops"],
+    "name": "MacBook Pro",
+    "description": "Potente laptop con procesador M1 y pantalla Retina.",
+    "price": 200000,
+    "image": "https://picsum.photos/200/300?random=22",
+    "promo": false
+  }
+]

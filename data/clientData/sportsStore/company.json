@@ -1,0 +1,35 @@
+[{
+    "name": "Sports Store",
+    "description": "Ecommerce de productos deportivos",
+    "image": "https://picsum.photos/200/300?random=38",
+    "icon": "",
+    "heroBackgroundImage": "https://picsum.photos/800/400?random=38",
+    "whatsapp": "+1111111111",
+    "address": "Calle del Deporte",
+    "horarios": [
+        { "day": "Lunes", "hours": "09:00 - 18:00" },
+        { "day": "Martes", "hours": "09:00 - 18:00" },
+        { "day": "Miércoles", "hours": "09:00 - 18:00" },
+        { "day": "Jueves", "hours": "09:00 - 18:00" },
+        { "day": "Viernes", "hours": "09:00 - 18:00" },
+        { "day": "Sábado", "hours": "10:00 - 14:00" },
+        { "day": "Domingo", "hours": "Cerrado" }
+    ],
+    "envios": [
+        { "day": "Lunes", "hours": "09:00 - 18:00" },
+        { "day": "Martes", "hours": "09:00 - 18:00" },
+        { "day": "Miércoles", "hours": "09:00 - 18:00" },
+        { "day": "Jueves", "hours": "09:00 - 18:00" },
+        { "day": "Viernes", "hours": "09:00 - 18:00" },
+        { "day": "Sábado", "hours": "10:00 - 14:00" },
+        { "day": "Domingo", "hours": "Cerrado" }
+    ],
+    "socialNetworks": [
+        { "name": "Facebook", "link": "https://www.facebook.com" },
+        { "name": "Instagram", "link": "https://www.instagram.com" },
+        { "name": "Twitter", "link": "https://www.twitter.com" },
+        { "name": "Youtube", "link": "https://www.youtube.com" },
+        { "name": "Tiktok", "link": "https://www.tiktok.com" }
+    ],
+    "store": "./clientData/sportsStore/products.json"
+}]

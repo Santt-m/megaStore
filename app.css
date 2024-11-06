@@ -223,6 +223,7 @@ span{
     width: 100%;
     height: 80%;
     padding-top: 5px;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -233,8 +234,8 @@ span{
 }
 #cartList li{
     width: 95%;
-    min-height: 75px;
-    max-height: 100px;
+    height: auto;
+    
     padding: 3px;
     display: flex;
     flex-direction: row;
@@ -248,6 +249,7 @@ span{
     width: auto;
     max-width: 20%;
     height: 100%;
+    max-height: 120px;
     border-radius: 8px;
     box-shadow: var(--std-box-shadow);
 }
@@ -652,7 +654,7 @@ input:hover[type="text"]{
 #productsContentNav{
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 100;
     width: 100%;
     padding: 5px;
     padding-left: 20px;
@@ -997,27 +999,6 @@ vercel-live-feedback {
     transform: translateY(0);
 }
 
-li.animate-on-scroll {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-li.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-#typeContent > li {
-    opacity: 1;
-    transform: none;
-    transition: none;
-}
-
-#typeContent > li.visible {
-    opacity: 1;
-    transform: none;
-}
 
 @keyframes slideDown {
     from {
@@ -1041,19 +1022,140 @@ li.animate-on-scroll.visible {
     }
 }
 
-li {
-    opacity: 1;
-    transform: none;
-    transition: none;
+.store-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
 }
 
-li.visible {
-    opacity: 1;
-    transform: none;
+.store-card:hover {
+    box-shadow: var(--std-box-shadow-hover);
 }
 
-.product-card {
-    opacity: 1;
-    transform: none;
-    transition: none;
+.store-card-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: var(--std-border-radius);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.store-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-info h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.store-info p {
+    margin: 5px 0;
+    color: var(--font-color);
+}
+
+.store-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--std-border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.store-link:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.store-social-networks {
+    margin-top: 10px;
+}
+
+.store-social-networks a {
+    margin-right: 10px;
+}
+
+.store-social-networks img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ...sec Index... */
+
+#secIndex {
+    width: 99%;
+    margin-top: 13vh;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    text-align: center;
+}
+
+#secIndex h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#secIndex input[type="text"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--std-border-color);
+    border-radius: var(--std-border-radius);
+    box-shadow: var(--std-box-shadow);
+    transition: all 0.3s ease;
+}
+
+#secIndex input[type="text"]:hover,
+#secIndex input[type="text"]:focus {
+    border-color: var(--std-border-color-hover);
+    box-shadow: var(--std-box-shadow-hover);
+}
+
+#secIndex h3 {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#secIndex ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#secIndex .store-card {
+    width: 100%;
+    max-width: 300px;
+    
 }
